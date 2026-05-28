@@ -79,7 +79,12 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 .loading{display:none;text-align:center;padding:40px;color:var(--muted)}.loading.active{display:block}.spinner{width:36px;height:36px;border:3px solid var(--line);border-top-color:var(--brand);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 12px}@keyframes spin{to{transform:rotate(360deg)}}
 .emptyState{padding:48px 24px;text-align:center;color:var(--muted);background:var(--card);border-radius:22px;box-shadow:var(--shadow)}.emptyState b{display:block;font-size:18px;color:var(--text);margin-bottom:8px}.emptyState p{margin:0;font-size:14px}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--dark);color:#fff;padding:12px 24px;border-radius:999px;z-index:90;font-size:14px;animation:toastIn .3s ease,toastOut .3s .7s ease forwards;pointer-events:none}@keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(12px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}@keyframes toastOut{from{opacity:1}to{opacity:0}}
-.editToggle.adminHidden{display:none}
+.editToggle.adminHidden{display:none !important}
+.whatsappFloat{position:fixed;bottom:30px;left:30px;z-index:99;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 20px rgba(37,211,102,.3);transition:.3s}
+.whatsappFloat:hover{transform:scale(1.1) translateY(-5px)}
+.whatsappFloat svg{width:32px;height:32px;fill:currentColor}
+@media (max-width:768px){.whatsappFloat{bottom:20px;left:20px;width:50px;height:50px}}
+
 @media(max-width:1120px){.hero,.catalog,.contact{grid-template-columns:1fr}.sidebar{position:static;display:none}.sidebar.open{display:block}.mobileFilter{display:inline-flex}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.features{grid-template-columns:repeat(2,1fr)}.statGrid{grid-template-columns:1fr}}
 @media(max-width:760px){.navlinks{display:none}.hamburger{display:flex}.heroCopy{padding:32px}.heroVisual{grid-template-columns:1fr}.heroTile:first-child{grid-row:auto}.grid,.compare,.modalCard,.intro{grid-template-columns:1fr}.features{grid-template-columns:1fr}.contact{padding:26px}.form{grid-template-columns:1fr}.form textarea,.form button{grid-column:1}.toolsRight,.tools input,.tools select{width:100%;min-width:0}.sectionTitle{display:block}.specs{grid-template-columns:1fr}.thumbs{grid-template-columns:repeat(2,1fr)}.editGrid{grid-template-columns:1fr}.imgList{grid-template-columns:repeat(3,1fr)}}
 </style>
@@ -112,7 +117,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 </div>
 <header class="header">
   <nav class="nav">
-    <a class="logo" href="#" onclick="handleLogoClick(event)"><span class="logoMark">JY</span><span id="brandName"></span></a>
+    <a class="logo" href="javascript:void(0)" onclick="handleLogoClick(event)"><span class="logoMark">JY</span><span id="brandName"></span></a>
     <div class="navlinks">
       <a href="#products">Products</a><a href="#customization">Customization</a><a href="#compare">Custom Type</a><a href="#contact">Contact</a>
     </div>
@@ -313,22 +318,29 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
         <label class="btn btnSoft" style="cursor:pointer">Import Data<input type="file" accept="application/json" style="display:none" onchange="importData(event)"></label>
         <button class="btn btnDanger" onclick="resetDemo()">Reset Demo</button>
       </div>
-      <div class="editSmall" style="margin-top:10px">提示：这个 HTML 可以直接打开。若要发给别人，图片和修改后的产品最好用 Export Data 备份。</div>
+      <div class="editSmall" style="margin-top:10px">提示：这个 HTML 可以直接打开。若要发给别人，图片 and 修改后的产品最好用 Export Data 备份。</div>
     </div>
   </div>
 </div>
 
+<a id="waFloat" class="whatsappFloat" href="#" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
 <script>
+
 const defaultCompany = {"name": "Tianjin Junyi Premium Trading Co.,Ltd.", "email": "annawei@nameerbag.com", "whatsapp": "008615102249548", "wechat": "15102249548"};
-const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 × 12 × 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 × 20 × 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
-let company = JSON.parse(localStorage.getItem("jy_company") || "null") || defaultCompany;
-let products = JSON.parse(localStorage.getItem("jy_products") || "null"); if(!products || products.length===0) products = defaultProducts;
-let activeCategory = "All Bags";
+const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 u00d7 12 u00d7 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 u00d7 20 u00d7 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
+let company = JSON.parse(localStorage.getItem("jy_company") || "null");
+if(!company || !company.email) company = defaultCompany;
+let products = JSON.parse(localStorage.getItem("jy_products") || "null"); 
+if(!products || products.length===0) products = defaultProducts;
 let currentCode = products[0]?.id || "";
 const categories = ["All Bags","Waist Bag","Chest Bag","Sling Bag","Shoulder Bag","Logo Ready","Sport","OEM"];
 let isAdmin = new URLSearchParams(location.search).has("admin");
 let logoClicks = 0;
 function handleLogoClick(e){
+  e.preventDefault();
   logoClicks++;
   if(logoClicks >= 5){
     const pw = prompt("Enter Admin Password:");
@@ -358,10 +370,15 @@ function closeMobileNav(){document.querySelector(".hamburger").classList.remove(
 function saveAll(){localStorage.setItem("jy_products",JSON.stringify(products));localStorage.setItem("jy_company",JSON.stringify(company));}
 function $(id){return document.getElementById(id)}
 function renderCompany(){
-  $("topCompany").textContent = company.name;
-  $("brandName").textContent = company.name;
-  $("contactInfo").innerHTML = `<span><b>Company:</b> ${company.name}</span><a href="mailto:${company.email}"><b>Email:</b> ${company.email}</a><a href="https://wa.me/${company.whatsapp.replace(/\D/g,'')}" target="_blank"><b>WhatsApp:</b> ${company.whatsapp}</a><span><b>WeChat:</b> ${company.wechat}</span>`;
-  $("footer").textContent = `© ${company.name} · Email: ${company.email} · WhatsApp: ${company.whatsapp} · WeChat: ${company.wechat}`;
+  try {
+    $("topCompany").textContent = company.name;
+    $("brandName").textContent = company.name;
+    const waUrl = `https://wa.me/${company.whatsapp.replace(/\D/g,'')}`;
+    $("contactInfo").innerHTML = `<span><b>Company:</b> ${company.name}</span><a href="mailto:${company.email}"><b>Email:</b> ${company.email}</a><a href="${waUrl}" target="_blank"><b>WhatsApp:</b> ${company.whatsapp}</a><span><b>WeChat:</b> ${company.wechat}</span>`;
+    $("footer").textContent = `© ${company.name} · Email: ${company.email} · WhatsApp: ${company.whatsapp} · WeChat: ${company.wechat}`;
+    const float = $("waFloat");
+    if(float) float.href = waUrl;
+  } catch(e) { console.error("renderCompany error:", e); }
 }
 function renderHero(){
   const imgs = products.flatMap(p=>p.images||[]).filter(Boolean).slice(0,3);
@@ -371,7 +388,7 @@ function renderCategories(){
   $("categoryStrip").innerHTML = categories.map(c=>`<button class="cat ${c===activeCategory?'active':''}" onclick="setCategory('${c}')">${c}</button>`).join("");
 }
 function setCategory(c){activeCategory=c;renderCategories();renderProducts();}
-function getChecked(name){return Array.from(document.querySelectorAll(\`input[data-filter="\${name}"]:checked\`)).map(x=>x.value)}
+function getChecked(name){return Array.from(document.querySelectorAll(`input[data-filter="${name}"]:checked`)).map(x=>x.value)}
 function productMatches(p){
   const q=$("searchInput").value.trim().toLowerCase();
   const cks=getChecked("category"), tks=getChecked("type"), uks=getChecked("use");
@@ -384,43 +401,45 @@ function renderProducts(){
   if($("sortSelect").value==="newest") list=[...list].reverse();
   if($("sortSelect").value==="name") list=[...list].sort((a,b)=>a.name.localeCompare(b.name));
   const shown=list.slice(0,Number($("showSelect").value));
-  $("resultCount").textContent=\`Showing \${shown.length} of \${list.length} bag styles\`;
-  $("productGrid").innerHTML = shown.length? shown.map(p=>\`
+  $("resultCount").textContent=`Showing ${shown.length} of ${list.length} bag styles`;
+  $("productGrid").innerHTML = shown.length? shown.map(p=>`
     <article class="productCard">
-      <div class="prodImage"><div class="badges">\${(p.tags||[]).slice(0,3).map((t,i)=>\`<span class="badge \${i===0?'gold':''}">\${t}</span>\`).join("")}</div>\${p.images?.[0]?\`<img src="\${p.images[0]}" alt="\${p.name}" loading="lazy">\`:\`<div class="empty">No image</div>\`}</div>
+      <div class="prodImage"><div class="badges">${(p.tags||[]).slice(0,3).map((t,i)=>`<span class="badge ${i===0?'gold':''}">${t}</span>`).join("")}</div>${p.images?.[0]?`<img src="${p.images[0]}" alt="${p.name}" loading="lazy">`:`<div class="empty">No image</div>`}</div>
       <div class="prodBody">
-        <h3 class="prodTitle">\${p.name}</h3><p class="prodDesc">\${p.description||""}</p>
-        <div class="meta"><div class="row"><span>Code</span><span>\${p.id}</span></div><div class="row"><span>Material</span><span>\${p.material}</span></div><div class="row"><span>MOQ</span><span>\${p.moq}</span></div><div class="row"><span>Custom</span><span>\${p.type}</span></div></div>
+        <h3 class="prodTitle">${p.name}</h3><p class="prodDesc">${p.description||""}</p>
+        <div class="meta"><div class="row"><span>Code</span><span>${p.id}</span></div><div class="row"><span>Material</span><span>${p.material}</span></div><div class="row"><span>MOQ</span><span>${p.moq}</span></div><div class="row"><span>Custom</span><span>${p.type}</span></div></div>
         <div class="qty"><span>100</span><span>300</span><span>500</span><span>1000</span><span>Custom</span></div>
-        <div class="actions"><button class="btn btnGhost" onclick="openModal('\${p.id}')">Quick View</button><button class="btn btnPrimary" onclick="fillInquiry('\${p.id}')">Get Quote</button></div>
+        <div class="actions"><button class="btn btnGhost" onclick="openModal('${p.id}')">Quick View</button><button class="btn btnPrimary" onclick="fillInquiry('${p.id}')">Get Quote</button></div>
       </div>
-    </article>\`).join("") : \`<div class="emptyState"><b>No products match your search</b><p>Try adjusting your filters, clearing the search bar, or browsing a different category.</p></div>\`;
+    </article>`).join("") : `<div class="emptyState"><b>No products match your search</b><p>Try adjusting your filters, clearing the search bar, or browsing a different category.</p></div>`;
 }
 function clearFilters(){document.querySelectorAll("#filters input").forEach(i=>i.checked=false);$("searchInput").value="";activeCategory="All Bags";renderCategories();renderProducts();}
 function toggleFilters(){$("filters").classList.toggle("open")}
 function openModal(code){
   const p=products.find(x=>x.id===code); if(!p)return; currentCode=code;
   $("modalTitle").textContent=p.name; $("modalDesc").textContent=p.description||"";
-  $("modalImage").innerHTML=p.images?.[0]?\`<img src="\${p.images[0]}" alt="\${p.name}">\`:\`<div>No image</div>\`;
-  $("modalThumbs").innerHTML=(p.images||[]).map((src,i)=>\`<div class="thumb" onclick="setModalImg('\${p.id}',\${i})"><img src="\${src}" alt="\${p.name} \${i+1}"></div>\`).join("");
+  $("modalImage").innerHTML=p.images?.[0]?`<img src="${p.images[0]}" alt="${p.name}">`:`<div>No image</div>`;
+  $("modalThumbs").innerHTML=(p.images||[]).map((src,i)=>`<div class="thumb" onclick="setModalImg('${p.id}',${i})"><img src="${src}" alt="${p.name} ${i+1}"></div>`).join("");
   $("modalSpecs").innerHTML=[
     ["Product Code",p.id],["Category",p.category],["Custom Type",p.type],["Material",p.material],["Size",p.size],["Weight",p.weight],["MOQ",p.moq],["Colors",p.colors],["Customization",p.customization],["Use For",p.use]
-  ].map(([k,v])=>\`<div class="spec"><small>\${k}</small><b>\${v||"-"}</b></div>\`).join("");
+  ].map(([k,v])=>`<div class="spec"><small>${k}</small><b>${v||"-"}</b></div>`).join("");
   $("quickModal").classList.add("open");
 }
-function setModalImg(code,i){const p=products.find(x=>x.id===code); if(p?.images?.[i]) $("modalImage").innerHTML=\`<img src="\${p.images[i]}" alt="\${p.name}">\`;}
+function setModalImg(code,i){const p=products.find(x=>x.id===code); if(p?.images?.[i]) $("modalImage").innerHTML=`<img src="${p.images[i]}" alt="${p.name}">`;}
 function closeModal(e){if(e.target.id==="quickModal"||e.target.classList.contains("close"))$("quickModal").classList.remove("open")}
 function scrollToContact(){
   const el = $("contact");
   if(el) window.scrollTo({top: el.offsetTop - 80, behavior: "smooth"});
 }
-function fillInquiry(code){$("fMsg").value=\`I am interested in product code \${code}. Please send quotation and customization details.\`;scrollToContact();}
+function fillInquiry(code){$("fMsg").value=`I am interested in product code ${code}. Please send quotation and customization details.`;scrollToContact();}
 function quoteCurrent(){fillInquiry(currentCode);$("quickModal").classList.remove("open")}
 function sendByEmail(e){
   e.preventDefault();
-  const subject=encodeURIComponent("Custom Bag Inquiry");
-  const body=encodeURIComponent(\`Name: \${$("fName").value}\\nContact: \${$("fEmail").value}\\nProduct Type: \${$("fType").value}\\nQuantity: \${$("fQty").value}\\nMessage: \${$("fMsg").value}\`);
-  location.href=\`mailto:\${company.email}?subject=\${subject}&body=\${body}\`;
+  const subject=encodeURIComponent("Custom Bag Inquiry from NameerBag");
+  const body=encodeURIComponent(`Name: ${$("fName").value}\nContact: ${$("fEmail").value}\nProduct Type: ${$("fType").value}\nQuantity: ${$("fQty").value}\nMessage: ${$("fMsg").value}`);
+  const mailtoUrl = `mailto:${company.email}?subject=${subject}&body=${body}`;
+  showToast("Opening your email client...");
+  setTimeout(() => { window.location.href = mailtoUrl; }, 500);
 }
 
 /* Editor */
@@ -434,7 +453,7 @@ function openEditor(){
 function closeEditor(){ $("editDrawer").classList.remove("open"); }
 function renderEditor(){
   $("editCompany").value=company.name; $("editEmail").value=company.email; $("editWhatsapp").value=company.whatsapp; $("editWechat").value=company.wechat;
-  $("productSelect").innerHTML=products.map(p=>\`<option value="\${p.id}">\${p.id} - \${p.name}</option>\`).join("");
+  $("productSelect").innerHTML=products.map(p=>`<option value="${p.id}">${p.id} - ${p.name}</option>`).join("");
   if(currentCode && products.some(p=>p.id===currentCode)) $("productSelect").value=currentCode;
   loadProductForm();
 }
@@ -445,7 +464,7 @@ function loadProductForm(){
   renderEditImages(p);
 }
 function renderEditImages(p){
-  $("editImages").innerHTML=(p.images||[]).map((src,i)=>\`<div class="imgBox"><img src="\${src}"><button title="Delete image" onclick="deleteImage(\${i})">×</button></div>\`).join("") || \`<div class="editSmall">No images. Click Upload Product Images.</div>\`;
+  $("editImages").innerHTML=(p.images||[]).map((src,i)=>`<div class="imgBox"><img src="${src}"><button title="Delete image" onclick="deleteImage(${i})">×</button></div>`).join("") || `<div class="editSmall">No images. Click Upload Product Images.</div>`;
 }
 function getFormProduct(oldImages){
   return {id:$("editId").value.trim()||("P-"+Date.now()),name:$("editName").value.trim(),category:$("editCategory").value,type:$("editType").value.trim(),material:$("editMaterial").value.trim(),size:$("editSize").value.trim(),weight:$("editWeight").value.trim(),moq:$("editMoq").value.trim(),colors:$("editColors").value.trim(),customization:$("editCustom").value.trim(),use:$("editUse").value.trim(),tags:$("editTags").value.split(",").map(s=>s.trim()).filter(Boolean),description:$("editDesc").value.trim(),images:oldImages||[]}
@@ -480,7 +499,7 @@ function uploadImages(e){
   let done=0;
   files.forEach(file=>{
     const reader=new FileReader();
-    reader.onload=ev=>{p.images=p.images||[];p.images.push(ev.target.result);done++;if(done===files.length){saveAll();init();loadProductForm();e.target.value="";showToast(\`\${done} image(s) uploaded.\`)}};
+    reader.onload=ev=>{p.images=p.images||[];p.images.push(ev.target.result);done++;if(done===files.length){saveAll();init();loadProductForm();e.target.value="";showToast(`${done} image(s) uploaded.`)}};
     reader.readAsDataURL(file);
   });
 }
@@ -503,6 +522,3 @@ function init(){renderCompany();renderHero();renderCategories();renderProducts()
 $("searchInput").addEventListener("input",debounce(renderProducts,300));$("sortSelect").addEventListener("change",renderProducts);$("showSelect").addEventListener("change",renderProducts);document.querySelectorAll("#filters input").forEach(i=>i.addEventListener("change",renderProducts));
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("quickModal").classList.remove("open");$("editDrawer").classList.remove("open");closeMobileNav()}});
 init();
-</script>
-</body>
-</html>
