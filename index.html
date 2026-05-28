@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.nameerbag.com" />
 <meta property="og:title" content="Custom Waist, Chest & Sling Bags Catalog - Tianjin Junyi Premium Trading" />
-<meta property="og:description" content="Custom solid-color waist bags, chest bags, sling bags and shoulder bags. Logo printing, light custom and full OEM/ODM." />
+<meta property="og:description" content="Custom solid-color bags available for logo printing, light customization, and full OEM/ODM development." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.nameerbag.com/custom-bag-catalog" />
 <meta property="og:site_name" content="Tianjin Junyi Premium Trading Co.,Ltd." />
@@ -112,7 +112,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 </div>
 <header class="header">
   <nav class="nav">
-    <a class="logo" href="#"><span class="logoMark">JY</span><span id="brandName"></span></a>
+    <a class="logo" href="#" onclick="handleLogoClick(event)"><span class="logoMark">JY</span><span id="brandName"></span></a>
     <div class="navlinks">
       <a href="#products">Products</a><a href="#customization">Customization</a><a href="#compare">Custom Type</a><a href="#contact">Contact</a>
     </div>
@@ -236,7 +236,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 
 <footer class="footer" id="footer"></footer>
 
-<button class="editToggle" onclick="openEditor()">Edit / Upload Products</button>
+<button class="editToggle adminHidden" id="editToggle" onclick="openEditor()">Edit / Upload Products</button>
 
 <div class="modal" id="quickModal" onclick="closeModal(event)">
   <div class="modalCard">
@@ -313,23 +313,43 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
         <label class="btn btnSoft" style="cursor:pointer">Import Data<input type="file" accept="application/json" style="display:none" onchange="importData(event)"></label>
         <button class="btn btnDanger" onclick="resetDemo()">Reset Demo</button>
       </div>
-      <div class="editSmall" style="margin-top:10px">提示：这个 HTML 可以直接打开。若要发给别人，图片 and 修改后的产品最好用 Export Data 备份。</div>
+      <div class="editSmall" style="margin-top:10px">提示：这个 HTML 可以直接打开。若要发给别人，图片和修改后的产品最好用 Export Data 备份。</div>
     </div>
   </div>
 </div>
 
 <script>
 const defaultCompany = {"name": "Tianjin Junyi Premium Trading Co.,Ltd.", "email": "annawei@nameerbag.com", "whatsapp": "008615102249548", "wechat": "15102249548"};
-const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 × 12 × 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 × 20 × 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
+const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 \u00d7 12 \u00d7 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 \u00d7 20 \u00d7 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
 let company = JSON.parse(localStorage.getItem("jy_company") || "null") || defaultCompany;
 let products = JSON.parse(localStorage.getItem("jy_products") || "null"); if(!products || products.length===0) products = defaultProducts;
 let activeCategory = "All Bags";
 let currentCode = products[0]?.id || "";
 const categories = ["All Bags","Waist Bag","Chest Bag","Sling Bag","Shoulder Bag","Logo Ready","Sport","OEM"];
-const isAdmin = new URLSearchParams(location.search).has("admin");
+let isAdmin = new URLSearchParams(location.search).has("admin") || localStorage.getItem("jy_admin") === "true";
+let logoClicks = 0;
+function handleLogoClick(e){
+  logoClicks++;
+  if(logoClicks >= 5){
+    const pw = prompt("Enter Admin Password:");
+    if(pw === "junyi2026"){
+      isAdmin = true;
+      localStorage.setItem("jy_admin", "true");
+      showAdminUI();
+      showToast("Admin access granted.");
+    }
+    logoClicks = 0;
+  }
+}
+function showAdminUI(){
+  if(isAdmin){
+    const btn = $("btnEdit"), toggle = $("editToggle");
+    if(btn) btn.style.display="inline-flex";
+    if(toggle) toggle.classList.remove("adminHidden");
+  }
+}
+showAdminUI();
 let searchTimer = null;
-
-if(isAdmin){$("btnEdit").style.display="inline-flex";$("editToggle").classList.remove("adminHidden");}
 
 function debounce(fn,ms=300){let t;return function(...args){clearTimeout(t);t=setTimeout(()=>fn.apply(this,args),ms)}}
 function showToast(msg){const t=document.createElement("div");t.className="toast";t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),1200)}
@@ -466,7 +486,7 @@ function uploadImages(e){
   });
 }
 function saveCompany(){
-  company={name:$("editCompany").value.trim(),email:$("editEmail").value.trim(),whatsapp:$("editWhatsapp").value.trim(),wechat:$("editWechat").value.trim()};
+  company={name:$("editCompany").value.trim(),email:$("editEmail").value.trim(),whatsapp:$("editUsername").value.trim(),wechat:$("editWechat").value.trim()};
   saveAll(); init(); alert("Company info saved.");
 }
 function exportData(){
