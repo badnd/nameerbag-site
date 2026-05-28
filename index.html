@@ -257,7 +257,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
       <div class="specs" id="modalSpecs"></div>
       <div class="modalBtns">
         <button class="btn btnPrimary" onclick="quoteCurrent()">Get Quote for This Product</button>
-        <button class="btn btnGhost" onclick="openEditor()">Edit This Page</button>
+        <button class="btn btnGhost adminHidden" id="btnModalEdit" onclick="openEditor()">Edit This Page</button>
       </div>
     </div>
   </div>
@@ -331,7 +331,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 <script>
 
 const defaultCompany = {"name": "Tianjin Junyi Premium Trading Co.,Ltd.", "email": "annawei@nameerbag.com", "whatsapp": "008615102249548", "wechat": "15102249548"};
-const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 \u00d7 12 \u00d7 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 \u00d7 20 \u00d7 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
+const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 × 12 × 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 × 20 × 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
 let company = JSON.parse(localStorage.getItem("jy_company") || "null");
 if(!company || !company.email) company = defaultCompany;
 let products = JSON.parse(localStorage.getItem("jy_products") || "null"); 
@@ -356,10 +356,10 @@ function handleLogoClick(e){
 }
 function showAdminUI(){
   if(isAdmin){
-    document.body.classList.add("isAdmin");
-    const btn = $("btnEdit"), toggle = $("editToggle");
+    const btn = $("btnEdit"), toggle = $("editToggle"), mBtn = $("btnModalEdit");
     if(btn) btn.style.display="inline-flex";
     if(toggle) toggle.classList.remove("adminHidden");
+    if(mBtn) mBtn.classList.remove("adminHidden");
   }
 }
 showAdminUI();
