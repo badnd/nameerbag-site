@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Custom Waist, Chest & Sling Bags Catalog - Tianjin Junyi (俊逸) Premium Trading</title>
+<title>Custom Waist, Chest & Sling Bags Catalog - Tianjin Junyi Premium Trading</title>
 <meta name="description" content="Custom solid-color waist bags, chest bags, sling bags and shoulder bags. Logo printing, light custom and full OEM/ODM. Browse ready styles for your brand. Send inquiry online." />
 <meta name="keywords" content="custom bags, waist bag, chest bag, sling bag, shoulder bag, OEM bag, logo printing, custom bag manufacturer, Tianjin" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.nameerbag.com" />
-<meta property="og:title" content="Custom Waist, Chest & Sling Bags Catalog - Tianjin Junyi (俊逸) Premium Trading" />
+<meta property="og:title" content="Custom Waist, Chest & Sling Bags Catalog - Tianjin Junyi Premium Trading" />
 <meta property="og:description" content="Custom solid-color waist bags, chest bags, sling bags and shoulder bags. Logo printing, light custom and full OEM/ODM." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.nameerbag.com/custom-bag-catalog" />
-<meta property="og:site_name" content="Tianjin Junyi (俊逸) Premium Trading Co.,Ltd." />
+<meta property="og:site_name" content="Tianjin Junyi Premium Trading Co.,Ltd." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Custom Bags Catalog - Tianjin Junyi (俊逸) Premium Trading" />
+<meta name="twitter:title" content="Custom Bags Catalog - Tianjin Junyi Premium Trading" />
 <meta name="twitter:description" content="Custom waist, chest & sling bags with logo printing and full customization." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +96,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 {
   "@context":"https://schema.org",
   "@type":"Organization",
-  "name":"Tianjin Junyi (俊逸) Premium Trading Co.,Ltd.",
+  "name":"Tianjin Junyi Premium Trading Co.,Ltd.",
   "url":"https://www.nameerbag.com",
   "email":"annawei@nameerbag.com",
   "description":"Custom bag manufacturer specializing in waist bags, chest bags, sling bags and shoulder bags with logo printing and OEM/ODM services.",
@@ -309,16 +309,23 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
         <button class="btn btnGhost" onclick="addProduct()">Add New Product</button>
         <button class="btn btnDanger" onclick="deleteProduct()">Delete Product</button>
       </div>
+      <div class="editSmall" style="margin-top:8px; color:var(--brand)">Note: Upload images here or paste Alibaba/GitHub URLs in the image list. Images are stored locally first.</div>
       <div class="imgList" id="editImages"></div>
     </div>
 
     <div class="editBlock">
-      <h3>Backup / Restore</h3>
+      <h3>Sync & Deploy (Pro 2.0)</h3>
       <div class="editActions">
-        <button class="btn btnGhost" onclick="exportData()">Export Data</button>
-        <label class="btn btnSoft" style="cursor:pointer">Import Data<input type="file" accept="application/json" style="display:none" onchange="importData(event)"></label>
+        <button class="btn btnPrimary" onclick="commitAndDeploy()" style="background:#28a745;border-color:#218838">Commit & Deploy</button>
+        <button class="btn btnGhost" onclick="exportFullHTML()">Export Full HTML</button>
+      </div>
+      <div class="editActions" style="margin-top:10px">
+        <button class="btn btnGhost" onclick="exportData()">Export JSON Data</button>
+        <label class="btn btnSoft" style="cursor:pointer">Import JSON<input type="file" accept="application/json" style="display:none" onchange="importData(event)"></label>
         <button class="btn btnDanger" onclick="resetDemo()">Reset Demo</button>
       </div>
+      <div class="editSmall" style="margin-top:10px">Sync Logic: "Commit & Deploy" allows the AI agent to sync your LocalStorage changes back to the repository.</div>
+    </div>
       <div class="editSmall" style="margin-top:10px">提示：这个 HTML 可以直接打开。若要发给别人，图片和修改后的产品最好用 Export Data 备份。</div>
     </div>
   </div>
@@ -330,8 +337,8 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 
 <script>
 
-const defaultCompany = {"name": "Tianjin Junyi (俊逸) Premium Trading Co.,Ltd. (Junyi (俊逸))", "email": "annawei@nameerbag.com", "whatsapp": "008615102249548", "wechat": "15102249548"};
-const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 × 12 × 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 × 20 × 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
+const defaultCompany = {"name": "Tianjin Junyi Premium Trading Co.,Ltd. (Junyi)", "email": "annawei@nameerbag.com", "whatsapp": "008615102249548", "wechat": "15102249548"};
+const defaultProducts = [{"id": "JY-CB-001", "name": "Tactical Mini Sling Chest Bag", "category": "Chest Bag", "type": "Light Custom", "material": "High-Density Oxford / Polyester lining", "size": "18 \u00d7 12 \u00d7 5 cm", "weight": "0.2 kg", "moq": "200 pcs+", "colors": "Black, Army Green, Khaki, CP Camo", "customization": "Logo printing, woven label, custom buckle", "use": "Tactical gear, outdoor sports, travel, promotional gift", "description": "Durable tactical-style mini chest bag made of water-resistant oxford fabric. Multi-pocket design for essentials. Ideal for brand customization.", "tags": ["Tactical", "Outdoor", "Top Seller"], "images": ["https://sc01.alicdn.com/kf/A8f9e6d4a13e64c208465492f58e4726ar.jpg", "https://sc01.alicdn.com/kf/A99587889da8d49a4993170e591741160z.jpg", "https://sc01.alicdn.com/kf/Ac7c02c6b39d146909db564177d70428ey.jpg", "https://sc01.alicdn.com/kf/A35b1d9ed30134ef08f1f513d705c7a01z.jpg", "https://sc01.alicdn.com/kf/A088c3a164b38466699ec173f4e5da3beS.jpg"]}, {"id": "SB-001", "name": "Solid Color Mini Sling Bag", "category": "Sling Bag", "type": "Light Custom", "material": "Soft PU / Polyester lining", "size": "15 \u00d7 20 \u00d7 5 cm", "weight": "0.15 kg", "moq": "100 pcs+", "colors": "White, Pink, Khaki, Black, Grey, Navy", "customization": "Logo printing, woven label, zipper puller, color customization", "use": "Travel, daily carry, corporate gifts, retail brand", "description": "Compact plain-color sling bag with front pocket and adjustable shoulder strap. Suitable for logo-ready light customization and small retail collections.", "tags": ["Logo Ready", "Solid Color", "Low MOQ"], "images": ["https://sc01.alicdn.com/kf/A23db9bfb6c904f98a64b1c0d01f203a2m.png"]}];
 let company = JSON.parse(localStorage.getItem("jy_company") || "null");
 if(!company || !company.email) company = defaultCompany;
 let products = JSON.parse(localStorage.getItem("jy_products") || "null"); 
@@ -398,7 +405,7 @@ function renderCategories(){
   $("categoryStrip").innerHTML = categories.map(c=>`<button class="cat ${c===activeCategory?'active':''}" onclick="setCategory('${c}')">${c}</button>`).join("");
 }
 function setCategory(c){activeCategory=c;renderCategories();renderProducts();}
-function getChecked(name){return Array.from(document.querySelectorAll(`input[data-filter="${name}"]:checked`)).map(x=>x.value)}
+function getChecked(name){return Array.from(document.querySelectorAll(\`input[data-filter="\${name}"]:checked\`)).map(x=>x.value)}
 function productMatches(p){
   const q=$("searchInput").value.trim().toLowerCase();
   const cks=getChecked("category"), tks=getChecked("type"), uks=getChecked("use");
@@ -411,43 +418,43 @@ function renderProducts(){
   if($("sortSelect").value==="newest") list=[...list].reverse();
   if($("sortSelect").value==="name") list=[...list].sort((a,b)=>a.name.localeCompare(b.name));
   const shown=list.slice(0,Number($("showSelect").value));
-  $("resultCount").textContent=`Showing ${shown.length} of ${list.length} bag styles`;
-  $("productGrid").innerHTML = shown.length? shown.map(p=>`
+  $("resultCount").textContent=\`Showing \${shown.length} of \${list.length} bag styles\`;
+  $("productGrid").innerHTML = shown.length? shown.map(p=>\`
     <article class="productCard">
-      <div class="prodImage"><div class="badges">${(p.tags||[]).slice(0,3).map((t,i)=><span class="badge ${i===0?'gold':''}">\${t}</span>).join("")}</div>\${p.images?.[0]?<img src="${p.images[0]}" alt="${p.name}" loading="lazy">:<div class="empty">No image</div>}</div>
+      <div class="prodImage"><div class="badges">\${(p.tags||[]).slice(0,3).map((t,i)=>\`<span class="badge \${i===0?'gold':''}">\${t}</span>\`).join("")}</div>\${p.images?.[0]?\`<img src="\${p.images[0]}" alt="\${p.name}" loading="lazy">\`:\`<div class="empty">No image</div>\`}</div>
       <div class="prodBody">
-        <h3 class="prodTitle">${p.name}</h3><p class="prodDesc">${p.description||""}</p>
-        <div class="meta"><div class="row"><span>Code</span><span>${p.id}</span></div><div class="row"><span>Material</span><span>${p.material}</span></div><div class="row"><span>MOQ</span><span>${p.moq}</span></div><div class="row"><span>Custom</span><span>${p.type}</span></div></div>
+        <h3 class="prodTitle">\${p.name}</h3><p class="prodDesc">\${p.description||""}</p>
+        <div class="meta"><div class="row"><span>Code</span><span>\${p.id}</span></div><div class="row"><span>Material</span><span>\${p.material}</span></div><div class="row"><span>MOQ</span><span>\${p.moq}</span></div><div class="row"><span>Custom</span><span>\${p.type}</span></div></div>
         <div class="qty"><span>100</span><span>300</span><span>500</span><span>1000</span><span>Custom</span></div>
-        <div class="actions"><button class="btn btnGhost" onclick="openModal('${p.id}')">Quick View</button><button class="btn btnPrimary" onclick="fillInquiry('${p.id}')">Get Quote</button></div>
+        <div class="actions"><button class="btn btnGhost" onclick="openModal('\${p.id}')">Quick View</button><button class="btn btnPrimary" onclick="fillInquiry('\${p.id}')">Get Quote</button></div>
       </div>
-    </article>`).join("") : `<div class="emptyState"><b>No products match your search</b><p>Try adjusting your filters, clearing the search bar, or browsing a different category.</p></div>`;
+    </article>\`).join("") : \`<div class="emptyState"><b>No products match your search</b><p>Try adjusting your filters, clearing the search bar, or browsing a different category.</p></div>\`;
 }
 function clearFilters(){document.querySelectorAll("#filters input").forEach(i=>i.checked=false);$("searchInput").value="";activeCategory="All Bags";renderCategories();renderProducts();}
 function toggleFilters(){$("filters").classList.toggle("open")}
 function openModal(code){
   const p=products.find(x=>x.id===code); if(!p)return; currentCode=code;
   $("modalTitle").textContent=p.name; $("modalDesc").textContent=p.description||"";
-  $("modalImage").innerHTML=p.images?.[0]?`<img src="${p.images[0]}" alt="${p.name}">`:`<div>No image</div>`;
-  $("modalThumbs").innerHTML=(p.images||[]).map((src,i)=>`<div class="thumb" onclick="setModalImg('${p.id}',${i})"><img src="${src}" alt="${p.name} ${i+1}"></div>`).join("");
+  $("modalImage").innerHTML=p.images?.[0]?\`<img src="\${p.images[0]}" alt="\${p.name}">\`:\`<div>No image</div>\`;
+  $("modalThumbs").innerHTML=(p.images||[]).map((src,i)=>\`<div class="thumb" onclick="setModalImg('\${p.id}',\${i})"><img src="\${src}" alt="\${p.name} \${i+1}"></div>\`).join("");
   $("modalSpecs").innerHTML=[
     ["Product Code",p.id],["Category",p.category],["Custom Type",p.type],["Material",p.material],["Size",p.size],["Weight",p.weight],["MOQ",p.moq],["Colors",p.colors],["Customization",p.customization],["Use For",p.use]
-  ].map(([k,v])=>`<div class="spec"><small>${k}</small><b>${v||"-"}</b></div>`).join("");
+  ].map(([k,v])=>\`<div class="spec"><small>\${k}</small><b>\${v||"-"}</b></div>\`).join("");
   $("quickModal").classList.add("open");
 }
-function setModalImg(code,i){const p=products.find(x=>x.id===code); if(p?.images?.[i]) $("modalImage").innerHTML=`<img src="${p.images[i]}" alt="${p.name}">`;}
+function setModalImg(code,i){const p=products.find(x=>x.id===code); if(p?.images?.[i]) $("modalImage").innerHTML=\`<img src="\${p.images[i]}" alt="\${p.name}">\`;}
 function closeModal(e){if(e.target.id==="quickModal"||e.target.classList.contains("close"))$("quickModal").classList.remove("open")}
 function scrollToContact(){
   const el = $("contact");
   if(el) window.scrollTo({top: el.offsetTop - 80, behavior: "smooth"});
 }
-function fillInquiry(code){$("fMsg").value=`I am interested in product code ${code}. Please send quotation and customization details.`;scrollToContact();}
+function fillInquiry(code){$("fMsg").value=\`I am interested in product code \${code}. Please send quotation and customization details.\`;scrollToContact();}
 function quoteCurrent(){fillInquiry(currentCode);$("quickModal").classList.remove("open")}
 function sendByEmail(e){
   e.preventDefault();
   const subject=encodeURIComponent("Custom Bag Inquiry from NameerBag");
-  const body=encodeURIComponent(`Name: ${$("fName").value}\nContact: ${$("fEmail").value}\nProduct Type: ${$("fType").value}\nQuantity: ${$("fQty").value}\nMessage: ${$("fMsg").value}`);
-  const mailtoUrl = `mailto:${company.email}?subject=${subject}&body=${body}`;
+  const body=encodeURIComponent(\`Name: \${\$("fName").value}\\nContact: \${\$("fEmail").value}\\nProduct Type: \${\$("fType").value}\\nQuantity: \${\$("fQty").value}\\nMessage: \${\$("fMsg").value}\`);
+  const mailtoUrl = \`mailto:\${company.email}?subject=\${subject}&body=\${body}\`;
   showToast("Opening your email client...");
   setTimeout(() => { window.location.href = mailtoUrl; }, 500);
 }
@@ -463,7 +470,7 @@ function openEditor(){
 function closeEditor(){ $("editDrawer").classList.remove("open"); }
 function renderEditor(){
   $("editCompany").value=company.name; $("editEmail").value=company.email; $("editWhatsapp").value=company.whatsapp; $("editWechat").value=company.wechat;
-  $("productSelect").innerHTML=products.map(p=>`<option value="${p.id}">${p.id} - ${p.name}</option>`).join("");
+  $("productSelect").innerHTML=products.map(p=>\`<option value="\${p.id}">\${p.id} - \${p.name}</option>\`).join("");
   if(currentCode && products.some(p=>p.id===currentCode)) $("productSelect").value=currentCode;
   loadProductForm();
 }
@@ -474,7 +481,7 @@ function loadProductForm(){
   renderEditImages(p);
 }
 function renderEditImages(p){
-  $("editImages").innerHTML=(p.images||[]).map((src,i)=>`<div class="imgBox"><img src="${src}"><button title="Delete image" onclick="deleteImage(${i})">×</button></div>`).join("") || `<div class="editSmall">No images. Click Upload Product Images.</div>`;
+  $("editImages").innerHTML=(p.images||[]).map((src,i)=>\`<div class="imgBox"><img src="\${src}"><button title="Delete image" onclick="deleteImage(\${i})">\u00d7</button></div>\`).join("") || \`<div class="editSmall">No images. Click Upload Product Images.</div>\`;
 }
 function getFormProduct(oldImages){
   return {id:$("editId").value.trim()||("P-"+Date.now()),name:$("editName").value.trim(),category:$("editCategory").value,type:$("editType").value.trim(),material:$("editMaterial").value.trim(),size:$("editSize").value.trim(),weight:$("editWeight").value.trim(),moq:$("editMoq").value.trim(),colors:$("editColors").value.trim(),customization:$("editCustom").value.trim(),use:$("editUse").value.trim(),tags:$("editTags").value.split(",").map(s=>s.trim()).filter(Boolean),description:$("editDesc").value.trim(),images:oldImages||[]}
@@ -509,7 +516,7 @@ function uploadImages(e){
   let done=0;
   files.forEach(file=>{
     const reader=new FileReader();
-    reader.onload=ev=>{p.images=p.images||[];p.images.push(ev.target.result);done++;if(done===files.length){saveAll();init();loadProductForm();e.target.value="";showToast(`${done} image(s) uploaded.`)}};
+    reader.onload=ev=>{p.images=p.images||[];p.images.push(ev.target.result);done++;if(done===files.length){saveAll();init();loadProductForm();e.target.value="";showToast(\`\${done} image(s) uploaded.\`)}};
     reader.readAsDataURL(file);
   });
 }
@@ -517,17 +524,27 @@ function saveCompany(){
   company={name:$("editCompany").value.trim(),email:$("editEmail").value.trim(),whatsapp:$("editWhatsapp").value.trim(),wechat:$("editWechat").value.trim()};
   saveAll(); init(); alert("Company info saved.");
 }
-function exportData(){
-  const blob=new Blob([JSON.stringify({company,products},null,2)],{type:"application/json"});
-  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="custom-bag-catalog-data.json";a.click();URL.revokeObjectURL(a.href);
+
+function togglePreviewMode(){
+  const isPreview = document.body.classList.toggle("preview-mode");
+  $("btnPreviewToggle").textContent = isPreview ? "Exit Preview" : "Preview Mode";
+  if(isPreview){
+    document.querySelectorAll(".adminOnly, .adminHidden").forEach(el=>el.style.setProperty("display","none","important"));
+    closeEditor();
+  } else {
+    document.querySelectorAll(".adminOnly, .adminHidden").forEach(el=>el.style.removeProperty("display"));
+    showAdminUI();
+  }
 }
-function importData(e){
-  const file=e.target.files?.[0]; if(!file)return;
-  const reader=new FileReader(); reader.onload=ev=>{try{const data=JSON.parse(ev.target.result); if(data.company)company=data.company;if(data.products)products=data.products;currentCode=products[0]?.id||"";saveAll();init();renderEditor();alert("Data imported.");}catch(err){alert("Invalid JSON file.");}}; reader.readAsText(file);
+
+function commitAndDeploy(){
+  showToast("Syncing data for deployment...");
+  // Sync Logic: Export data to console for the agent to read
+  console.log("SYNC_DATA_START");
+  console.log(JSON.stringify({company, products}));
+  console.log("SYNC_DATA_END");
+  alert("Data synced to console. Please tell the AI agent 'Sync my changes and deploy' to finalize GitHub deployment.");
 }
-function resetDemo(){
-  if(confirm("Reset to the original demo catalog? Your browser edits will be replaced.")){localStorage.removeItem("jy_company");localStorage.removeItem("jy_products");company=defaultCompany;products=defaultProducts;currentCode=products[0].id;init();renderEditor();}
-}
-function init(){
-  renderCompany();
-  renderHero();
+
+function exportFullHTML(){
+  const html = document.documentElement.
