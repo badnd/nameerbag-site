@@ -113,7 +113,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 </script>
 <div class="topbar">
   <span>Custom Solid Color Bags</span>
-  <span>Logo Printing \u00b7 Light Custom \u00b7 Full OEM/ODM</span>
+  <span>Logo Printing · Light Custom · Full OEM/ODM</span>
   <span id="topCompany"></span>
 </div>
 <header class="header">
@@ -246,7 +246,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 
 <div class="modal" id="quickModal" onclick="closeModal(event)">
   <div class="modalCard">
-    <button class="close" onclick="closeModal(event)">\u00d7</button>
+    <button class="close" onclick="closeModal(event)">×</button>
     <div class="gallery">
       <div class="mainImg" id="modalImage"></div>
       <div class="thumbs" id="modalThumbs"></div>
@@ -266,12 +266,12 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
 <div class="editDrawer" id="editDrawer">
   <div class="editPanel">
     <div class="editHead">
-      <div><h2>Edit Catalog</h2><div class="editSmall">\u76f4\u63a5\u5728\u8fd9\u91cc\u4e0a\u4f20\u3001\u5220\u9664\u3001\u4fee\u6539\u4ea7\u54c1\u3002\u4fee\u6539\u4f1a\u4fdd\u5b58\u5728\u5f53\u524d\u6d4f\u89c8\u5668\u91cc\u3002\u9700\u8981\u5907\u4efd\u65f6\u70b9 Export Data\u3002</div></div>
+      <div><h2>Edit Catalog</h2><div class="editSmall">直接在这里上传、删除、修改产品。修改会保存在当前浏览器里。需要备份时点 Export Data。</div></div>
       <button class="btn btnGhost" onclick="closeEditor()">Close</button>
     </div>
 
     <div class="notice">
-      \u64cd\u4f5c\u65b9\u6cd5\uff1a\u9009\u62e9\u4ea7\u54c1 \u2192 \u4fee\u6539\u6587\u5b57\u6216\u4e0a\u4f20\u56fe\u7247 \u2192 \u70b9\u51fb Save Product\u3002\u56fe\u7247\u53f3\u4e0a\u89d2 \u00d7 \u53ef\u5220\u9664\u3002Add New Product \u53ef\u65b0\u589e\u4ea7\u54c1\u3002Reset Demo \u4f1a\u6062\u590d\u6211\u7ed9\u4f60\u505a\u597d\u7684\u521d\u59cb\u7248\u672c\u3002
+      操作方法：选择产品 → 修改文字或上传图片 → 点击 Save Product。图片右上角 × 可删除。Add New Product 可新增产品。Reset Demo 会恢复我给你做好的初始版本。
     </div>
 
     <div class="editBlock">
@@ -319,7 +319,7 @@ h1{font-size:clamp(38px,5.4vw,72px);line-height:.95;margin:0 0 20px;letter-spaci
         <label class="btn btnSoft" style="cursor:pointer">Import Data<input type="file" accept="application/json" style="display:none" onchange="importData(event)"></label>
         <button class="btn btnDanger" onclick="resetDemo()">Reset Demo</button>
       </div>
-      <div class="editSmall" style="margin-top:10px">\u63d0\u793a\uff1a\u8fd9\u4e2a HTML \u53ef\u4ee5\u76f4\u63a5\u6253\u5f00\u3002\u82e5\u8981\u53d1\u7ed9\u522b\u4eba\uff1a\u56fe\u7247\u548c\u4fee\u6539\u540e\u7684\u4ea7\u54c1\u6700\u597d\u7528 Export Data \u5907\u4efd\u3002</div>
+      <div class="editSmall" style="margin-top:10px">提示：这个 HTML 可以直接打开。若要发给别人，图片和修改后的产品最好用 Export Data 备份。</div>
     </div>
   </div>
 </div>
@@ -385,7 +385,7 @@ function renderCompany(){
     const cInfo = $("contactInfo");
     if(cInfo) cInfo.innerHTML = `<span><b>Company:</b> ${company.name}</span><a href="mailto:${company.email}"><b>Email:</b> ${company.email}</a><a href="${waUrl}" target="_blank"><b>WhatsApp:</b> ${company.whatsapp}</a><span><b>WeChat:</b> ${company.wechat}</span>`;
     const footer = $("footer");
-    if(footer) footer.textContent = `\u00a9 ${company.name} \u00b7 Email: ${company.email} \u00b7 WhatsApp: ${company.whatsapp} \u00b7 WeChat: ${company.wechat}`;
+    if(footer) footer.textContent = `© ${company.name} · Email: ${company.email} · WhatsApp: ${company.whatsapp} · WeChat: ${company.wechat}`;
     const float = $("waFloat");
     if(float) float.href = waUrl;
   } catch(e) { console.error("renderCompany error:", e); }
@@ -474,7 +474,7 @@ function loadProductForm(){
   renderEditImages(p);
 }
 function renderEditImages(p){
-  $("editImages").innerHTML=(p.images||[]).map((src,i)=>`<div class="imgBox"><img src="${src}"><button title="Delete image" onclick="deleteImage(${i})">\u00d7</button></div>`).join("") || `<div class="editSmall">No images. Click Upload Product Images.</div>`;
+  $("editImages").innerHTML=(p.images||[]).map((src,i)=>`<div class="imgBox"><img src="${src}"><button title="Delete image" onclick="deleteImage(${i})">×</button></div>`).join("") || `<div class="editSmall">No images. Click Upload Product Images.</div>`;
 }
 function getFormProduct(oldImages){
   return {id:$("editId").value.trim()||("P-"+Date.now()),name:$("editName").value.trim(),category:$("editCategory").value,type:$("editType").value.trim(),material:$("editMaterial").value.trim(),size:$("editSize").value.trim(),weight:$("editWeight").value.trim(),moq:$("editMoq").value.trim(),colors:$("editColors").value.trim(),customization:$("editCustom").value.trim(),use:$("editUse").value.trim(),tags:$("editTags").value.split(",").map(s=>s.trim()).filter(Boolean),description:$("editDesc").value.trim(),images:oldImages||[]}
@@ -519,3 +519,31 @@ function saveCompany(){
 }
 function exportData(){
   const blob=new Blob([JSON.stringify({company,products},null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="custom-bag-catalog-data.json";a.click();URL.revokeObjectURL(a.href);
+}
+function importData(e){
+  const file=e.target.files?.[0]; if(!file)return;
+  const reader=new FileReader(); reader.onload=ev=>{try{const data=JSON.parse(ev.target.result); if(data.company)company=data.company;if(data.products)products=data.products;currentCode=products[0]?.id||"";saveAll();init();renderEditor();alert("Data imported.");}catch(err){alert("Invalid JSON file.");}}; reader.readAsText(file);
+}
+function resetDemo(){
+  if(confirm("Reset to the original demo catalog? Your browser edits will be replaced.")){localStorage.removeItem("jy_company");localStorage.removeItem("jy_products");company=defaultCompany;products=defaultProducts;currentCode=products[0].id;init();renderEditor();}
+}
+function init(){
+  renderCompany();
+  renderHero();
+  renderCategories();
+  renderProducts();
+  showAdminUI();
+}
+function attachListeners(){
+  const sInput = $("searchInput"); if(sInput) sInput.addEventListener("input",debounce(renderProducts,300));
+  const sSort = $("sortSelect"); if(sSort) sSort.addEventListener("change",renderProducts);
+  const sShow = $("showSelect"); if(sShow) sShow.addEventListener("change",renderProducts);
+  document.querySelectorAll("#filters input").forEach(i=>i.addEventListener("change",renderProducts));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("quickModal")?.classList.remove("open");$("editDrawer")?.classList.remove("open");closeMobileNav()}});
+}
+init();
+attachListeners();
+</script>
+</body>
+</html>
