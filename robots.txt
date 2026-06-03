@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*?*
+
+Sitemap: https://www.nameerbag.com/sitemap.xml
