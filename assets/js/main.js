@@ -190,7 +190,7 @@
     detailMount.innerHTML = `<div class="breadcrumb container"><a href="${path('index.html')}">Home</a><span>/</span><a href="${path('pages/products.html')}">Products</a><span>/</span>${p.title}</div>
     <section class="section-sm"><div class="container detail-grid">
       <div><div class="gallery-main">${imgTag(p.gallery[0], p.title, 'detail-main-image')}</div><div class="gallery-thumbs">${p.gallery.map((g,i)=>`<img class="${i===0?'active':''}" src="${path(g)}" data-full="${path(g)}" alt="${p.title} ${i+1}" onerror="this.onerror=null;this.src='${path('assets/images/generated/hero-student.webp')}'">`).join('')}</div></div>
-      <div class="detail-main"><div class="badge">${p.category}</div><h1 class="editable">${p.title}</h1><div class="detail-meta">Model: ${p.model}</div><p class="editable">${p.intro}</p><div class="inline-badges">${p.badges.map(b=>`<span class="badge">${b}</span>`).join('')}</div><div class="quote-price">${data.company.priceText}</div><h3>Key Features</h3><ul>${p.features.map(f=>`<li>${f}</li>`).join('')}</ul><div class="quick-icons"><div class="mini">Custom Logo</div><div class="mini">Custom Color</div><div class="mini">OEM / ODM</div><div class="mini">Low MOQ</div></div><div class="trustIcons-detail"><img src="https://sc04.alicdn.com/kf/H630560a8b417435f992a694a97475f7ba.png" alt="BSCI" title="BSCI Certified Factory"><img src="https://sc04.alicdn.com/kf/H7e8e1e7e5e5d4e4e8e8e8e8e8e8e8e8e8.png" alt="GRS" title="GRS Recycled Standard"><img src="https://sc04.alicdn.com/kf/H8d3e69177a4146a78378378378378378G.png" alt="ISO9001" title="ISO9001 Quality Management"></div></div>
+      <div class="detail-main"><div class="badge">${p.category}</div><h1 class="editable">${p.title}</h1><div class="detail-meta">Model: ${p.model}</div><p class="editable">${p.intro}</p><div class="inline-badges">${p.badges.map(b=>`<span class="badge">${b}</span>`).join('')}</div><div class="quote-price">${data.company.priceText}</div><h3>Key Features</h3><ul>${p.features.map(f=>`<li>${f}</li>`).join('')}</ul><div class="quick-icons"><div class="mini">Custom Logo</div><div class="mini">Custom Color</div><div class="mini">OEM / ODM</div><div class="mini">Low MOQ</div></div></div>
       <aside class="quote-card"><h3>Quick Inquiry</h3><p class="muted">Send quantity, logo idea, target material and packaging requirements.</p><form class="form inquiry-form" data-product-title="${p.title}"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><input name="qty" placeholder="Quantity / MOQ target"><textarea name="message" placeholder="Tell us your logo, color, material and packing needs"></textarea><button class="btn btn-primary btn-block" type="submit">Send Inquiry</button><a class="btn btn-secondary btn-block" href="${data.company.whatsappLink}" target="_blank" rel="noopener">WhatsApp Now</a></form><div class="contact-mini"><div>📧 ${data.company.email}</div><div>💬 ${data.company.whatsapp}</div><div>🟢 ${data.company.wechat}</div></div></aside>
     </div></section>
     <section class="section-sm bg-soft"><div class="container"><div class="section-head"><div><span class="badge">Procurement Details</span><h2>Specifications & Custom Options</h2><p>Structured details help B2B customers compare quickly and send accurate inquiries.</p></div></div><div class="spec-grid"><div class="spec-card spec-wide"><table class="spec-table"><tbody>${p.specs.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</tbody></table></div><div class="spec-card"><h3>Custom Service</h3><ul><li>Logo method suggestion</li><li>Color and material matching</li><li>Sample and production support</li><li>Packaging option discussion</li></ul></div></div></div></section>
@@ -220,27 +220,17 @@
     }));
   }
 
-  
   function initEditMode(){
     let clicks=0,timer=null;
     const banner=document.getElementById('editBanner');
     const nodes=[document.getElementById('editTriggerArea'),document.querySelector('.site-header'),...document.querySelectorAll('.brand,.logo-mark')].filter(Boolean);
     if(!banner) return;
-    const toggle=()=>{
-      const pass = prompt('Enter Admin Password:');
-      if(pass !== 'junyi2026') return;
-      const enable=!document.body.classList.contains('editing');
-      document.body.classList.toggle('editing',enable);
-      document.querySelectorAll('.editable').forEach(el=>el.setAttribute('contenteditable',enable?'true':'false'));
-      banner.textContent=enable?'Edit mode enabled. Changes are LOCAL only. Contact AI assistant to save permanently.':'Edit mode disabled.';
-      banner.style.display='block';
-      setTimeout(()=>{if(!document.body.classList.contains('editing')) banner.style.display='none';},3000);
-    };
+    const toggle=()=>{const enable=!document.body.classList.contains('editing');document.body.classList.toggle('editing',enable);document.querySelectorAll('.editable').forEach(el=>el.setAttribute('contenteditable',enable?'true':'false'));banner.textContent=enable?'Edit mode enabled. You can modify highlighted text blocks directly.':'Edit mode disabled.';banner.style.display='block';setTimeout(()=>{if(!document.body.classList.contains('editing')) banner.style.display='none';},1800);};
     const count=()=>{clicks++;clearTimeout(timer);if(clicks>=5){toggle();clicks=0;return;}timer=setTimeout(()=>clicks=0,2400);};
     nodes.forEach(n=>{n.addEventListener('click',count);});
   }
 
-function renderHomeSections(){
+  function renderHomeSections(){
     const why=document.getElementById('whyChooseUs');
     if(why){why.innerHTML=`<div class="grid grid-4"><article class="card info-card"><div class="card-body"><div class="icon-bubble">🏭</div><h3 class="card-title">Real Factory Support</h3><p class="muted">Workshop photos and production content help buyers trust your business faster.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">🎯</div><h3 class="card-title">Clear Customization</h3><p class="muted">Logo, fabric, color, pattern and packaging options are presented clearly.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">📦</div><h3 class="card-title">Buyer-friendly MOQ</h3><p class="muted">Suitable for importers, wholesalers, retailers and promotional companies.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">✅</div><h3 class="card-title">Professional Follow-up</h3><p class="muted">Fast response and practical quotation support for long-term B2B cooperation.</p></div></article></div>`;}
     const factory=document.getElementById('homeFactoryBlock');

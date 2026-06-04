@@ -203,8 +203,3 @@ button,input,textarea,select{font:inherit}
   .hero-metrics{grid-template-columns:1fr}
   .product-card .card-body p.muted,.category-card .card-body p.muted{min-height:0}
 }
-
-/* Added for product detail trust icons */
-.trustIcons-detail{display:flex;gap:10px;margin-top:15px;border-top:1px solid #eee;padding-top:15px;}
-.trustIcons-detail img{height:30px;width:auto;opacity:0.9;transition:opacity 0.3s;}
-.trustIcons-detail img:hover{opacity:1;}
