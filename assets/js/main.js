@@ -239,12 +239,8 @@
     const count=()=>{clicks++;clearTimeout(timer);if(clicks>=5){toggle();clicks=0;return;}timer=setTimeout(()=>clicks=0,2400);};
     nodes.forEach(n=>{n.addEventListener('click',count);});
   }
-,1800);};
-    const count=()=>{clicks++;clearTimeout(timer);if(clicks>=5){toggle();clicks=0;return;}timer=setTimeout(()=>clicks=0,2400);};
-    nodes.forEach(n=>{n.addEventListener('click',count);});
-  }
 
-  function renderHomeSections(){
+function renderHomeSections(){
     const why=document.getElementById('whyChooseUs');
     if(why){why.innerHTML=`<div class="grid grid-4"><article class="card info-card"><div class="card-body"><div class="icon-bubble">🏭</div><h3 class="card-title">Real Factory Support</h3><p class="muted">Workshop photos and production content help buyers trust your business faster.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">🎯</div><h3 class="card-title">Clear Customization</h3><p class="muted">Logo, fabric, color, pattern and packaging options are presented clearly.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">📦</div><h3 class="card-title">Buyer-friendly MOQ</h3><p class="muted">Suitable for importers, wholesalers, retailers and promotional companies.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">✅</div><h3 class="card-title">Professional Follow-up</h3><p class="muted">Fast response and practical quotation support for long-term B2B cooperation.</p></div></article></div>`;}
     const factory=document.getElementById('homeFactoryBlock');
