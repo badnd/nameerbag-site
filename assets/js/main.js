@@ -88,7 +88,7 @@
         <div class="container footer-grid">
           <div>
             <div class="brand footer-brand">
-              <img src="https://sc02.alicdn.com/kf/A31321ae53acd4585858c0c27596e8ee6C.png" class="logo-img footer-logo" alt="${data.company.shortName} Logo">
+              <img src="${path('assets/images/logo.png')}" class="logo-img footer-logo" alt="${data.company.shortName} Logo">
               <div><strong>${data.company.shortName}</strong><small>${data.company.tagline}</small></div>
             </div>
             <p class="editable">${data.company.name} supplies custom bag solutions for global B2B buyers, including backpacks, waist bags, sling bags, mommy bags and gym bags.</p>
