@@ -50,7 +50,7 @@
       <header class="site-header">
         <div class="container nav-wrap">
           <a href="${path('index.html')}" class="brand" aria-label="Home">
-            <div class="logo-mark">JY</div>
+            <img src="https://sc02.alicdn.com/kf/A31321ae53acd4585858c0c27596e8ee6C.png" class="logo-img" alt="${data.company.shortName} Logo">
             <div>
               <strong>${data.company.shortName}</strong>
               <small>${data.company.name}</small>
@@ -88,7 +88,7 @@
         <div class="container footer-grid">
           <div>
             <div class="brand footer-brand">
-              <div class="logo-mark">JY</div>
+              <img src="https://sc02.alicdn.com/kf/A31321ae53acd4585858c0c27596e8ee6C.png" class="logo-img footer-logo" alt="${data.company.shortName} Logo">
               <div><strong>${data.company.shortName}</strong><small>${data.company.tagline}</small></div>
             </div>
             <p class="editable">${data.company.name} supplies custom bag solutions for global B2B buyers, including backpacks, waist bags, sling bags, mommy bags and gym bags.</p>
@@ -223,7 +223,7 @@
   function initEditMode(){
     let clicks=0,timer=null;
     const banner=document.getElementById('editBanner');
-    const nodes=[document.getElementById('editTriggerArea'),document.querySelector('.site-header'),...document.querySelectorAll('.brand,.logo-mark')].filter(Boolean);
+    const nodes=[document.getElementById('editTriggerArea'),document.querySelector('.site-header'),...document.querySelectorAll('.brand,.logo-img')].filter(Boolean);
     if(!banner) return;
     const toggle=()=>{const enable=!document.body.classList.contains('editing');document.body.classList.toggle('editing',enable);document.querySelectorAll('.editable').forEach(el=>el.setAttribute('contenteditable',enable?'true':'false'));banner.textContent=enable?'Edit mode enabled. You can modify highlighted text blocks directly.':'Edit mode disabled.';banner.style.display='block';setTimeout(()=>{if(!document.body.classList.contains('editing')) banner.style.display='none';},1800);};
     const count=()=>{clicks++;clearTimeout(timer);if(clicks>=5){toggle();clicks=0;return;}timer=setTimeout(()=>clicks=0,2400);};
