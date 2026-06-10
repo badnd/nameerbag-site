@@ -37,6 +37,9 @@ button,input,textarea,select{font:inherit}
 .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
 .brand{display:flex;align-items:center;gap:14px;min-width:0}
 .brand-logo{display:block;width:172px;height:48px;object-fit:contain;object-position:left center}
+.logo-mark{display:block;width:172px;height:48px;flex:0 0 172px;background:url('../images/brand/nameer-logo-horizontal.png?v=2') left center/contain no-repeat}
+.logo-mark img{display:none!important}
+.brand>.logo-mark+div{display:none}
 .footer-logo-panel{display:inline-flex;align-items:center;background:#fff;border-radius:14px;padding:10px 14px}
 .footer-logo{width:190px;height:49px}
 .footer-brand{align-items:flex-start;flex-direction:column;gap:10px}
@@ -172,6 +175,7 @@ button,input,textarea,select{font:inherit}
   .container{width:min(100% - 20px, 1000px)}
   .section{padding:48px 0}
   .brand-logo{width:142px;height:40px}
+  .logo-mark{width:142px;height:40px;flex-basis:142px}
   .hero-copy h2{font-size:1.9rem}
   .hero-media img{height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center center}
   .card-media{min-height:200px}

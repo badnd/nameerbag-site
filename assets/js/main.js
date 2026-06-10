@@ -50,7 +50,7 @@
       <header class="site-header">
         <div class="container nav-wrap">
           <a href="${path('index.html')}" class="brand" aria-label="Nameer home">
-            <img class="brand-logo" src="${path('assets/images/brand/nameer-logo-horizontal.png')}" alt="Nameer">
+            <img class="brand-logo" src="${path('assets/images/brand/nameer-logo-horizontal.png?v=2')}" alt="Nameer">
           </a>
           <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
           <ul class="nav-links" id="navLinks">
@@ -85,7 +85,7 @@
           <div>
             <div class="brand footer-brand">
               <span class="footer-logo-panel">
-                <img class="brand-logo footer-logo" src="${path('assets/images/brand/nameer-logo-horizontal.png')}" alt="Nameer">
+                <img class="brand-logo footer-logo" src="${path('assets/images/brand/nameer-logo-horizontal.png?v=2')}" alt="Nameer">
               </span>
               <small>${data.company.tagline}</small>
             </div>
