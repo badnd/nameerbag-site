@@ -36,9 +36,11 @@ button,input,textarea,select{font:inherit}
 .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(226,232,240,.8)}
 .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
 .brand{display:flex;align-items:center;gap:14px;min-width:0}
-.logo-mark{width:50px;height:50px;display:block}
-.logo-mark img{width:100%;height:100%;object-fit:contain;display:block}
-.footer-logo{filter:brightness(0) invert(1);opacity:.95}
+.brand-logo{display:block;width:172px;height:48px;object-fit:contain;object-position:left center}
+.footer-logo-panel{display:inline-flex;align-items:center;background:#fff;border-radius:14px;padding:10px 14px}
+.footer-logo{width:190px;height:49px}
+.footer-brand{align-items:flex-start;flex-direction:column;gap:10px}
+.footer-brand small{color:#bed0f5}
 .brand h1,.brand strong{margin:0;font-size:1.35rem;line-height:1.15}
 .brand small{display:block;color:var(--muted);font-size:.83rem}
 .nav-links{display:flex;align-items:center;gap:22px;list-style:none;margin:0;padding:0}
@@ -169,6 +171,7 @@ button,input,textarea,select{font:inherit}
   body{font-size:15px}
   .container{width:min(100% - 20px, 1000px)}
   .section{padding:48px 0}
+  .brand-logo{width:142px;height:40px}
   .hero-copy h2{font-size:1.9rem}
   .hero-media img{height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center center}
   .card-media{min-height:200px}

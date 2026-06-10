@@ -49,14 +49,8 @@
       </div>
       <header class="site-header">
         <div class="container nav-wrap">
-          <a href="${path('index.html')}" class="brand" aria-label="Home">
-            <div class="logo-mark">
-              <img src="${path('assets/images/logo.png')}" alt="${data.company.shortName} Logo">
-            </div>
-            <div>
-              <strong>${data.company.shortName}</strong>
-              <small>${data.company.name}</small>
-            </div>
+          <a href="${path('index.html')}" class="brand" aria-label="Nameer home">
+            <img class="brand-logo" src="${path('assets/images/brand/nameer-logo-horizontal.png')}" alt="Nameer">
           </a>
           <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">☰</button>
           <ul class="nav-links" id="navLinks">
@@ -90,10 +84,10 @@
         <div class="container footer-grid">
           <div>
             <div class="brand footer-brand">
-              <div class="logo-mark">
-                <img src="${path('assets/images/logo.png')}" class="footer-logo" alt="${data.company.shortName} Logo">
-              </div>
-              <div><strong>${data.company.shortName}</strong><small>${data.company.tagline}</small></div>
+              <span class="footer-logo-panel">
+                <img class="brand-logo footer-logo" src="${path('assets/images/brand/nameer-logo-horizontal.png')}" alt="Nameer">
+              </span>
+              <small>${data.company.tagline}</small>
             </div>
             <p class="editable">${data.company.name} supplies custom bag solutions for global B2B buyers, including backpacks, waist bags, sling bags, mommy bags and gym bags.</p>
           </div>
