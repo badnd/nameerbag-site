@@ -187,14 +187,93 @@
     if(!p){detailMount.innerHTML='<div class="container section-sm">Product not found.</div>';return;}
     detailMount.innerHTML = `<div class="breadcrumb container"><a href="${path('index.html')}">Home</a><span>/</span><a href="${path('pages/products.html')}">Products</a><span>/</span>${p.title}</div>
     <section class="section-sm"><div class="container detail-grid">
-      <div><div class="gallery-main">${imgTag(p.gallery[0], p.title, 'detail-main-image')}</div><div class="gallery-thumbs">${p.gallery.map((g,i)=>`<img class="${i===0?'active':''}" src="${path(g)}" data-full="${path(g)}" alt="${p.title} ${i+1}" onerror="this.onerror=null;this.src='${path('assets/images/generated/hero-student.webp')}'">`).join('')}</div></div>
+      <div><div class="gallery-main" tabindex="0" role="button" aria-label="Open large product image">${imgTag(p.gallery[0], p.title, 'detail-main-image')}<span class="gallery-zoom-hint">Click to enlarge</span></div><div class="gallery-thumbs">${p.gallery.map((g,i)=>`<img class="${i===0?'active':''}" src="${path(g)}" data-full="${path(g)}" data-index="${i}" alt="${p.title} ${i+1}" onerror="this.onerror=null;this.src='${path('assets/images/generated/hero-student.webp')}'">`).join('')}</div></div>
       <div class="detail-main"><div class="badge">${p.category}</div><h1 class="editable">${p.title}</h1><div class="detail-meta">Model: ${p.model}</div><p class="editable">${p.intro}</p><div class="inline-badges">${p.badges.map(b=>`<span class="badge">${b}</span>`).join('')}</div><div class="quote-price">${data.company.priceText}</div><h3>Key Features</h3><ul>${p.features.map(f=>`<li>${f}</li>`).join('')}</ul><div class="quick-icons"><div class="mini">Custom Logo</div><div class="mini">Custom Color</div><div class="mini">OEM / ODM</div><div class="mini">Low MOQ</div></div></div>
       <aside class="quote-card"><h3>Quick Inquiry</h3><p class="muted">Send quantity, logo idea, target material and packaging requirements.</p><form class="form inquiry-form" data-product-title="${p.title}"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><input name="qty" placeholder="Quantity / MOQ target"><textarea name="message" placeholder="Tell us your logo, color, material and packing needs"></textarea><button class="btn btn-primary btn-block" type="submit">Send Inquiry</button><a class="btn btn-secondary btn-block" href="${data.company.whatsappLink}" target="_blank" rel="noopener">WhatsApp Now</a></form><div class="contact-mini"><div>📧 ${data.company.email}</div><div>💬 ${data.company.whatsapp}</div><div>🟢 ${data.company.wechat}</div></div></aside>
     </div></section>
     <section class="section-sm bg-soft"><div class="container"><div class="section-head"><div><span class="badge">Procurement Details</span><h2>Specifications & Custom Options</h2><p>Structured details help B2B customers compare quickly and send accurate inquiries.</p></div></div><div class="spec-grid"><div class="spec-card spec-wide"><table class="spec-table"><tbody>${p.specs.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</tbody></table></div><div class="spec-card"><h3>Custom Service</h3><ul><li>Logo method suggestion</li><li>Color and material matching</li><li>Sample and production support</li><li>Packaging option discussion</li></ul></div></div></div></section>
     <section class="section-sm"><div class="container about-grid"><div><div class="section-head"><div><span class="badge">Scene Display</span><h2>Model Scene & Wearing Effect</h2><p>Scene images show product scale and help buyers understand market positioning.</p></div></div>${imgTag(p.lifestyle, p.title+' lifestyle', 'scene-image')}</div><div><div class="section-head"><div><span class="badge">More Items</span><h2>Available Variants</h2><p>Each category is expanded into multiple product choices for a richer catalog.</p></div></div><div class="grid grid-3">${p.variants.map(v=>`<article class="card product-card"><div class="card-media">${imgTag(v.image,v.name)}</div><div class="card-body"><h3 class="card-title">${v.name}</h3><p class="muted">SKU: ${v.sku}</p><div class="card-price">${data.company.priceText}</div></div><div class="card-actions"><a class="btn btn-primary" href="${path('pages/contact.html')}?product=${key}&variant=${encodeURIComponent(v.name)}">Request Quote</a></div></article>`).join('')}</div></div></div></section>`;
-    detailMount.querySelectorAll('.gallery-thumbs img').forEach(img=>img.addEventListener('click',()=>{detailMount.querySelectorAll('.gallery-thumbs img').forEach(i=>i.classList.remove('active'));img.classList.add('active');detailMount.querySelector('.detail-main-image').src=img.dataset.full;}));
+    initProductGallery(detailMount, p);
     attachImageFallback(detailMount);
+  }
+
+  function initProductGallery(detailMount, product){
+    const gallery = detailMount.querySelector('.gallery-main');
+    const mainImage = detailMount.querySelector('.detail-main-image');
+    const thumbs = [...detailMount.querySelectorAll('.gallery-thumbs img')];
+    if(!gallery || !mainImage || !thumbs.length) return;
+    let activeIndex = 0;
+
+    const selectImage = index=>{
+      activeIndex = (index + thumbs.length) % thumbs.length;
+      thumbs.forEach((thumb,i)=>thumb.classList.toggle('active',i===activeIndex));
+      mainImage.src = thumbs[activeIndex].dataset.full;
+    };
+
+    thumbs.forEach((thumb,index)=>thumb.addEventListener('click',()=>selectImage(index)));
+
+    gallery.addEventListener('mousemove',event=>{
+      if(!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+      const rect = gallery.getBoundingClientRect();
+      mainImage.style.transformOrigin = `${((event.clientX-rect.left)/rect.width)*100}% ${((event.clientY-rect.top)/rect.height)*100}%`;
+      gallery.classList.add('is-zooming');
+    });
+    gallery.addEventListener('mouseleave',()=>{
+      gallery.classList.remove('is-zooming');
+      mainImage.style.transformOrigin = 'center center';
+    });
+
+    const lightbox = document.createElement('div');
+    lightbox.className = 'image-lightbox';
+    lightbox.setAttribute('role','dialog');
+    lightbox.setAttribute('aria-modal','true');
+    lightbox.setAttribute('aria-label',`${product.title} image gallery`);
+    lightbox.innerHTML = `<button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+      <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">&#8249;</button>
+      <div class="lightbox-stage"><img alt="${product.title.replace(/"/g,'&quot;')}"><div class="lightbox-counter"></div></div>
+      <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">&#8250;</button>`;
+    document.body.appendChild(lightbox);
+
+    const lightboxImage = lightbox.querySelector('img');
+    const counter = lightbox.querySelector('.lightbox-counter');
+    const closeButton = lightbox.querySelector('.lightbox-close');
+    const updateLightbox = ()=>{
+      lightboxImage.src = thumbs[activeIndex].dataset.full;
+      counter.textContent = `${activeIndex+1} / ${thumbs.length}`;
+    };
+    const openLightbox = ()=>{
+      updateLightbox();
+      lightbox.classList.add('open');
+      document.body.classList.add('lightbox-open');
+      closeButton.focus();
+    };
+    const closeLightbox = ()=>{
+      lightbox.classList.remove('open');
+      document.body.classList.remove('lightbox-open');
+      gallery.focus();
+    };
+    const move = step=>{
+      selectImage(activeIndex+step);
+      updateLightbox();
+    };
+
+    gallery.addEventListener('click',openLightbox);
+    gallery.addEventListener('keydown',event=>{
+      if(event.key==='Enter' || event.key===' '){
+        event.preventDefault();
+        openLightbox();
+      }
+    });
+    closeButton.addEventListener('click',closeLightbox);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click',()=>move(-1));
+    lightbox.querySelector('.lightbox-next').addEventListener('click',()=>move(1));
+    lightbox.addEventListener('click',event=>{if(event.target===lightbox) closeLightbox();});
+    document.addEventListener('keydown',event=>{
+      if(!lightbox.classList.contains('open')) return;
+      if(event.key==='Escape') closeLightbox();
+      if(event.key==='ArrowLeft') move(-1);
+      if(event.key==='ArrowRight') move(1);
+    });
   }
 
   function renderAboutFactory(){
