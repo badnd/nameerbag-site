@@ -179,6 +179,31 @@
     attachImageFallback(mount);
   }
 
+  function variantPresentation(variant){
+    const name = variant.name.toLowerCase();
+    const options = [
+      ['black', 'Black', '#20242b', 'Color'],
+      ['white', 'White', '#f4f4f1', 'Color'],
+      ['ivory', 'Ivory', '#eee8d8', 'Color'],
+      ['pink', 'Pink', '#d9879a', 'Color'],
+      ['khaki', 'Khaki', '#a89472', 'Color'],
+      ['blue', 'Blue', '#355d8a', 'Color'],
+      ['floral', 'Floral Print', 'linear-gradient(135deg,#d78598 0 33%,#638166 33% 66%,#e7c99c 66%)', 'Print'],
+      ['color series', 'Multi-color Options', 'linear-gradient(135deg,#20242b 0 25%,#355d8a 25% 50%,#a89472 50% 75%,#d9879a 75%)', 'Colors'],
+      ['color display', 'Multi-color Options', 'linear-gradient(135deg,#20242b 0 25%,#355d8a 25% 50%,#a89472 50% 75%,#d9879a 75%)', 'Colors'],
+      ['classic', 'Classic Black', '#20242b', 'Color'],
+      ['promotion', 'Logo Display', '#0d5bd7', 'View'],
+      ['lifestyle', 'Lifestyle View', '#6d7786', 'View'],
+      ['scene', 'Lifestyle View', '#6d7786', 'View'],
+      ['model collage', 'Lifestyle View', '#6d7786', 'View'],
+      ['detail', 'Detail View', '#0d5bd7', 'View'],
+      ['parameter', 'Detail View', '#0d5bd7', 'View'],
+      ['poster', 'Product Display', '#0d5bd7', 'View']
+    ];
+    const match = options.find(option=>name.includes(option[0]));
+    return match ? {label:match[1],color:match[2],type:match[3]} : {label:'Product View',color:'#6d7786',type:'View'};
+  }
+
   function renderDetailPage(){
     const detailMount = document.getElementById('productDetailMount');
     if(!detailMount) return;
@@ -192,7 +217,7 @@
       <aside class="quote-card"><h3>Quick Inquiry</h3><p class="muted">Send quantity, logo idea, target material and packaging requirements.</p><form class="form inquiry-form" data-product-title="${p.title}"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><input name="qty" placeholder="Quantity / MOQ target"><textarea name="message" placeholder="Tell us your logo, color, material and packing needs"></textarea><button class="btn btn-primary btn-block" type="submit">Send Inquiry</button><a class="btn btn-secondary btn-block" href="${data.company.whatsappLink}" target="_blank" rel="noopener">WhatsApp Now</a></form><div class="contact-mini"><div>📧 ${data.company.email}</div><div>💬 ${data.company.whatsapp}</div><div>🟢 ${data.company.wechat}</div></div></aside>
     </div></section>
     <section class="section-sm bg-soft"><div class="container"><div class="section-head"><div><span class="badge">Procurement Details</span><h2>Specifications & Custom Options</h2><p>Structured details help B2B customers compare quickly and send accurate inquiries.</p></div></div><div class="spec-grid"><div class="spec-card spec-wide"><table class="spec-table"><tbody>${p.specs.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</tbody></table></div><div class="spec-card"><h3>Custom Service</h3><ul><li>Logo method suggestion</li><li>Color and material matching</li><li>Sample and production support</li><li>Packaging option discussion</li></ul></div></div></div></section>
-    <section class="section-sm"><div class="container about-grid"><div><div class="section-head"><div><span class="badge">Scene Display</span><h2>Model Scene & Wearing Effect</h2><p>Scene images show product scale and help buyers understand market positioning.</p></div></div>${imgTag(p.lifestyle, p.title+' lifestyle', 'scene-image')}</div><div><div class="section-head"><div><span class="badge">More Items</span><h2>Available Variants</h2><p>Each category is expanded into multiple product choices for a richer catalog.</p></div></div><div class="grid grid-3">${p.variants.map(v=>`<article class="card product-card"><div class="card-media">${imgTag(v.image,v.name)}</div><div class="card-body"><h3 class="card-title">${v.name}</h3><p class="muted">SKU: ${v.sku}</p><div class="card-price">${data.company.priceText}</div></div><div class="card-actions"><a class="btn btn-primary" href="${path('pages/contact.html')}?product=${key}&variant=${encodeURIComponent(v.name)}">Request Quote</a></div></article>`).join('')}</div></div></div></section>`;
+    <section class="section-sm"><div class="container about-grid"><div><div class="section-head"><div><span class="badge">Scene Display</span><h2>Model Scene & Wearing Effect</h2><p>Scene images show product scale and help buyers understand market positioning.</p></div></div>${imgTag(p.lifestyle, p.title+' lifestyle', 'scene-image')}</div><div><div class="section-head"><div><span class="badge">Same Product</span><h2>Colors & Product Views</h2><p>Compare available colors, prints and product views. Click any image to enlarge.</p></div></div><div class="grid grid-3 variant-grid">${p.variants.map((v,i)=>{const option=variantPresentation(v);return `<article class="card variant-card"><button class="variant-media" type="button" data-variant-index="${i}" aria-label="Enlarge ${v.name}">${imgTag(v.image,v.name)}<span class="variant-zoom-hint">Enlarge</span></button><div class="card-body"><div class="variant-option"><span class="variant-swatch" style="background:${option.color}"></span><span><small>${option.type}</small><strong>${option.label}</strong></span></div><h3 class="card-title">${v.name}</h3><p class="muted">SKU: ${v.sku}</p></div><div class="card-actions"><a class="btn btn-primary" href="${path('pages/contact.html')}?product=${key}&variant=${encodeURIComponent(v.name)}">Request Quote</a></div></article>`;}).join('')}</div></div></div></section>`;
     initProductGallery(detailMount, p);
     attachImageFallback(detailMount);
   }
@@ -201,8 +226,11 @@
     const gallery = detailMount.querySelector('.gallery-main');
     const mainImage = detailMount.querySelector('.detail-main-image');
     const thumbs = [...detailMount.querySelectorAll('.gallery-thumbs img')];
+    const variantButtons = [...detailMount.querySelectorAll('.variant-media')];
     if(!gallery || !mainImage || !thumbs.length) return;
     let activeIndex = 0;
+    const galleryImages = thumbs.map(thumb=>({src:thumb.dataset.full,alt:thumb.alt}));
+    const variantImages = product.variants.map(variant=>({src:path(variant.image),alt:variant.name}));
 
     const selectImage = index=>{
       activeIndex = (index + thumbs.length) % thumbs.length;
@@ -237,11 +265,18 @@
     const lightboxImage = lightbox.querySelector('img');
     const counter = lightbox.querySelector('.lightbox-counter');
     const closeButton = lightbox.querySelector('.lightbox-close');
+    let viewerImages = galleryImages;
+    let viewerIndex = 0;
+    let returnFocus = gallery;
     const updateLightbox = ()=>{
-      lightboxImage.src = thumbs[activeIndex].dataset.full;
-      counter.textContent = `${activeIndex+1} / ${thumbs.length}`;
+      lightboxImage.src = viewerImages[viewerIndex].src;
+      lightboxImage.alt = viewerImages[viewerIndex].alt;
+      counter.textContent = `${viewerIndex+1} / ${viewerImages.length}`;
     };
-    const openLightbox = ()=>{
+    const openLightbox = (images=galleryImages,index=activeIndex,trigger=gallery)=>{
+      viewerImages = images;
+      viewerIndex = index;
+      returnFocus = trigger;
       updateLightbox();
       lightbox.classList.add('open');
       document.body.classList.add('lightbox-open');
@@ -250,20 +285,22 @@
     const closeLightbox = ()=>{
       lightbox.classList.remove('open');
       document.body.classList.remove('lightbox-open');
-      gallery.focus();
+      returnFocus.focus();
     };
     const move = step=>{
-      selectImage(activeIndex+step);
+      viewerIndex = (viewerIndex + step + viewerImages.length) % viewerImages.length;
+      if(viewerImages===galleryImages) selectImage(viewerIndex);
       updateLightbox();
     };
 
-    gallery.addEventListener('click',openLightbox);
+    gallery.addEventListener('click',()=>openLightbox());
     gallery.addEventListener('keydown',event=>{
       if(event.key==='Enter' || event.key===' '){
         event.preventDefault();
         openLightbox();
       }
     });
+    variantButtons.forEach((button,index)=>button.addEventListener('click',()=>openLightbox(variantImages,index,button)));
     closeButton.addEventListener('click',closeLightbox);
     lightbox.querySelector('.lightbox-prev').addEventListener('click',()=>move(-1));
     lightbox.querySelector('.lightbox-next').addEventListener('click',()=>move(1));
