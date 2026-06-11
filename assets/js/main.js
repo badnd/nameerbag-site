@@ -10,6 +10,30 @@
     return `${base}/${p}`.replace(/\\/g,'/').replace(/\/{2,}/g,'/');
   }
 
+  function inquiryContext(){
+    const params = new URLSearchParams(location.search);
+    const productKey = body.dataset.product || params.get('product');
+    return {
+      product: productKey ? data.products[productKey] : null,
+      variant: params.get('variant') || ''
+    };
+  }
+
+  function whatsappUrl(product=null, variant=''){
+    const context = inquiryContext();
+    const selectedProduct = product || context.product;
+    const selectedVariant = variant || context.variant;
+    const baseUrl = data.company.whatsappLink.split('?')[0];
+    const message = selectedProduct
+      ? `Hi, I'm interested in your ${selectedProduct.title} (${selectedProduct.model})${selectedVariant ? ` - ${selectedVariant}` : ''}. Please send MOQ, customization options and quotation.`
+      : `Hi, I'm interested in your custom bag products. Please send your product catalog, MOQ, customization options and quotation.`;
+    return `${baseUrl}?text=${encodeURIComponent(message)}`;
+  }
+
+  function privacyNotice(){
+    return `<p class="form-privacy">By contacting us, you acknowledge our <a href="${path('pages/privacy-policy.html')}">Privacy Policy</a>.</p>`;
+  }
+
   function imgTag(src, alt='', cls=''){
     return `<img ${cls?`class="${cls}"`:''} src="${path(src)}" alt="${alt.replace(/"/g,'&quot;')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${path('assets/images/generated/hero-student.webp')}'">`;
   }
@@ -63,7 +87,7 @@
           </ul>
           <div class="nav-actions">
             <a class="btn btn-secondary" href="mailto:${data.company.email}">Email Us</a>
-            <a class="btn btn-primary" href="${data.company.whatsappLink}" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-primary" href="${whatsappUrl()}" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </header>`;
@@ -92,14 +116,14 @@
             <p class="editable">${data.company.name} supplies custom bag solutions for global B2B buyers, including backpacks, waist bags, sling bags, mommy bags and gym bags.</p>
           </div>
           <div><h4>Products</h4><ul>${data.categories.map(c=>`<li><a href="${path(c.link)}">${c.name}</a></li>`).join('')}</ul></div>
-          <div><h4>Buyer Service</h4><ul><li><a href="${path('pages/custom-service.html')}">OEM / ODM Service</a></li><li><a href="${path('pages/factory.html')}">Factory Strength</a></li><li><a href="${path('pages/products.html')}">Product Catalog</a></li><li><a href="${path('pages/contact.html')}">Send Inquiry</a></li></ul></div>
-          <div><h4>Contact</h4><ul><li>Email: <a href="mailto:${data.company.email}">${data.company.email}</a></li><li>WhatsApp: <a href="${data.company.whatsappLink}" target="_blank" rel="noopener">${data.company.whatsapp}</a></li><li>WeChat: ${data.company.wechat}</li><li>${data.company.priceText}</li></ul></div>
+          <div><h4>Buyer Service</h4><ul><li><a href="${path('pages/custom-service.html')}">OEM / ODM Service</a></li><li><a href="${path('pages/factory.html')}">Factory Strength</a></li><li><a href="${path('pages/products.html')}">Product Catalog</a></li><li><a href="${path('pages/contact.html')}">Send Inquiry</a></li><li><a href="${path('pages/privacy-policy.html')}">Privacy Policy</a></li></ul></div>
+          <div><h4>Contact</h4><ul><li>Email: <a href="mailto:${data.company.email}">${data.company.email}</a></li><li>WhatsApp: <a href="${whatsappUrl()}" target="_blank" rel="noopener">${data.company.whatsapp}</a></li><li>WeChat: ${data.company.wechat}</li><li>${data.company.priceText}</li></ul></div>
         </div>
         <div class="container footer-bottom" id="editTriggerArea"><span>© ${year} ${data.company.name}. All rights reserved.</span></div>
       </footer>
-      <a class="floating-wa" href="${data.company.whatsappLink}" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+      <a class="floating-wa" href="${whatsappUrl()}" target="_blank" rel="noopener" aria-label="WhatsApp inquiry">💬</a>
       <div class="floating-label">WhatsApp Inquiry</div>
-      <div class="mobile-contact-bar"><a class="btn btn-secondary" href="mailto:${data.company.email}">Email</a><a class="btn btn-primary" href="${data.company.whatsappLink}" target="_blank" rel="noopener">WhatsApp</a></div>
+      <div class="mobile-contact-bar"><a class="btn btn-secondary" href="mailto:${data.company.email}">Email</a><a class="btn btn-primary" href="${whatsappUrl()}" target="_blank" rel="noopener">WhatsApp</a></div>
       <div class="edit-mode-banner" id="editBanner">Edit mode enabled.</div>`;
   }
 
@@ -214,7 +238,7 @@
     <section class="section-sm"><div class="container detail-grid">
       <div><div class="gallery-main" tabindex="0" role="button" aria-label="Open large product image">${imgTag(p.gallery[0], p.title, 'detail-main-image')}<span class="gallery-zoom-hint">Click to enlarge</span></div><div class="gallery-thumbs">${p.gallery.map((g,i)=>`<img class="${i===0?'active':''}" src="${path(g)}" data-full="${path(g)}" data-index="${i}" alt="${p.title} ${i+1}" onerror="this.onerror=null;this.src='${path('assets/images/generated/hero-student.webp')}'">`).join('')}</div></div>
       <div class="detail-main"><div class="badge">${p.category}</div><h1 class="editable">${p.title}</h1><div class="detail-meta">Model: ${p.model}</div><p class="editable">${p.intro}</p><div class="inline-badges">${p.badges.map(b=>`<span class="badge">${b}</span>`).join('')}</div><div class="quote-price">${data.company.priceText}</div><h3>Key Features</h3><ul>${p.features.map(f=>`<li>${f}</li>`).join('')}</ul><div class="quick-icons"><div class="mini">Custom Logo</div><div class="mini">Custom Color</div><div class="mini">OEM / ODM</div><div class="mini">Low MOQ</div></div></div>
-      <aside class="quote-card"><h3>Quick Inquiry</h3><p class="muted">Send quantity, logo idea, target material and packaging requirements.</p><form class="form inquiry-form" data-product-title="${p.title}"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><input name="qty" placeholder="Quantity / MOQ target"><textarea name="message" placeholder="Tell us your logo, color, material and packing needs"></textarea><button class="btn btn-primary btn-block" type="submit">Send Inquiry</button><a class="btn btn-secondary btn-block" href="${data.company.whatsappLink}" target="_blank" rel="noopener">WhatsApp Now</a></form><div class="contact-mini"><div>📧 ${data.company.email}</div><div>💬 ${data.company.whatsapp}</div><div>🟢 ${data.company.wechat}</div></div></aside>
+      <aside class="quote-card"><h3>Quick Inquiry</h3><p class="muted">Send quantity, logo idea, target material and packaging requirements.</p><form class="form inquiry-form" data-product-title="${p.title}"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><input name="qty" placeholder="Quantity / MOQ target"><textarea name="message" placeholder="Tell us your logo, color, material and packing needs"></textarea><button class="btn btn-primary btn-block" type="submit">Send Inquiry</button><a class="btn btn-secondary btn-block" href="${whatsappUrl(p)}" target="_blank" rel="noopener">WhatsApp Now</a>${privacyNotice()}</form><div class="contact-mini"><div>📧 ${data.company.email}</div><div>💬 ${data.company.whatsapp}</div><div>🟢 ${data.company.wechat}</div></div></aside>
     </div></section>
     <section class="section-sm bg-soft"><div class="container"><div class="section-head"><div><span class="badge">Procurement Details</span><h2>Specifications & Custom Options</h2><p>Structured details help B2B customers compare quickly and send accurate inquiries.</p></div></div><div class="spec-grid"><div class="spec-card spec-wide"><table class="spec-table"><tbody>${p.specs.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</tbody></table></div><div class="spec-card"><h3>Custom Service</h3><ul><li>Logo method suggestion</li><li>Color and material matching</li><li>Sample and production support</li><li>Packaging option discussion</li></ul></div></div></div></section>
     <section class="section-sm"><div class="container about-grid"><div><div class="section-head"><div><span class="badge">Scene Display</span><h2>Model Scene & Wearing Effect</h2><p>Scene images show product scale and help buyers understand market positioning.</p></div></div>${imgTag(p.lifestyle, p.title+' lifestyle', 'scene-image')}</div><div><div class="section-head"><div><span class="badge">Same Product</span><h2>Colors & Product Views</h2><p>Compare available colors, prints and product views. Click any image to enlarge.</p></div></div><div class="grid grid-3 variant-grid">${p.variants.map((v,i)=>{const option=variantPresentation(v);return `<article class="card variant-card"><button class="variant-media" type="button" data-variant-index="${i}" aria-label="Enlarge ${v.name}">${imgTag(v.image,v.name)}<span class="variant-zoom-hint">Enlarge</span></button><div class="card-body"><div class="variant-option"><span class="variant-swatch" style="background:${option.color}"></span><span><small>${option.type}</small><strong>${option.label}</strong></span></div><h3 class="card-title">${v.name}</h3><p class="muted">SKU: ${v.sku}</p></div><div class="card-actions"><a class="btn btn-primary" href="${path('pages/contact.html')}?product=${key}&variant=${encodeURIComponent(v.name)}">Request Quote</a></div></article>`;}).join('')}</div></div></div></section>`;
@@ -321,7 +345,7 @@
     if(customMount){customMount.innerHTML = `<section class="section-sm"><div class="container about-grid"><div><span class="badge">Customization Service</span><h2 style="font-size:2.3rem;margin:16px 0">Custom logo, material, color and packaging options</h2><p class="muted">Your custom bag project can start from reference images, sketches or an existing product idea.</p><ul class="feature-list" style="margin-top:24px"><li class="feature-item"><div class="icon-bubble">🎨</div><div><strong>Custom Colors</strong><div class="muted">Pantone and brand color matching support.</div></div></li><li class="feature-item"><div class="icon-bubble">🏷️</div><div><strong>Custom Logos</strong><div class="muted">Embroidery, print, heat transfer, rubber patch and woven labels.</div></div></li><li class="feature-item"><div class="icon-bubble">🧵</div><div><strong>Custom Fabrics</strong><div class="muted">Polyester, nylon, canvas, PU and other options.</div></div></li><li class="feature-item"><div class="icon-bubble">📦</div><div><strong>Packaging</strong><div class="muted">Hangtags, polybags and basic packaging solutions.</div></div></li></ul></div><div class="media-panel">${imgTag('assets/images/context/logo-options.webp','logo options')}</div></div></section><section class="section-sm bg-soft"><div class="container process-grid"><div class="media-panel">${imgTag('assets/images/context/pantone.webp','pantone')}</div><div><div class="section-head"><div><h2>Color & Design Development</h2><p>We organize logo, fabric and pattern choices into practical production solutions.</p></div></div>${imgTag('assets/images/context/oem-odm-collage.webp','oem odm collage')}</div></div></section>`; attachImageFallback(customMount);}
 
     const contactMount = document.getElementById('contactPageMount');
-    if(contactMount){const q=new URLSearchParams(location.search);const pre=[q.get('product')||'',q.get('variant')||''].filter(Boolean).join(' - ');contactMount.innerHTML = `<section class="section-sm"><div class="container contact-grid"><div class="detail-main"><span class="badge">Contact & Inquiry</span><h1>Start your custom bag inquiry</h1><p class="muted">Send us product type, quantity, logo method and target market. We will help you move faster.</p><div class="contact-mini contact-big"><div>Company: ${data.company.name}</div><div>Email: <a href="mailto:${data.company.email}">${data.company.email}</a></div><div>WhatsApp: <a href="${data.company.whatsappLink}" target="_blank" rel="noopener">${data.company.whatsapp}</a></div><div>WeChat: ${data.company.wechat}</div></div><div style="margin-top:22px">${imgTag('assets/images/context/factory-building.webp','factory')}</div></div><div class="quote-card"><h3>Send Inquiry</h3><form class="form inquiry-form" data-product-title="${pre || 'General Inquiry'}"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><input name="company" placeholder="Company Name"><input name="product" placeholder="Interested Product" value="${pre}"><textarea name="message" placeholder="Quantity, logo method, material, color and packaging requirements"></textarea><button class="btn btn-primary btn-block" type="submit">Send by Email</button><a class="btn btn-secondary btn-block" href="${data.company.whatsappLink}" target="_blank" rel="noopener">Contact via WhatsApp</a></form></div></div></section>`; attachImageFallback(contactMount);}
+    if(contactMount){const q=new URLSearchParams(location.search);const pre=[q.get('product')||'',q.get('variant')||''].filter(Boolean).join(' - ');contactMount.innerHTML = `<section class="section-sm"><div class="container contact-grid"><div class="detail-main"><span class="badge">Contact & Inquiry</span><h1>Start your custom bag inquiry</h1><p class="muted">Send us product type, quantity, logo method and target market. We will help you move faster.</p><div class="contact-mini contact-big"><div>Company: ${data.company.name}</div><div>Email: <a href="mailto:${data.company.email}">${data.company.email}</a></div><div>WhatsApp: <a href="${whatsappUrl()}" target="_blank" rel="noopener">${data.company.whatsapp}</a></div><div>WeChat: ${data.company.wechat}</div></div><div style="margin-top:22px">${imgTag('assets/images/context/factory-building.webp','factory')}</div></div><div class="quote-card"><h3>Send Inquiry</h3><form class="form inquiry-form" data-product-title="${pre || 'General Inquiry'}"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required><input name="company" placeholder="Company Name"><input name="product" placeholder="Interested Product" value="${pre}"><textarea name="message" placeholder="Quantity, logo method, material, color and packaging requirements"></textarea><button class="btn btn-primary btn-block" type="submit">Send by Email</button><a class="btn btn-secondary btn-block" href="${whatsappUrl()}" target="_blank" rel="noopener">Contact via WhatsApp</a>${privacyNotice()}</form></div></div></section>`; attachImageFallback(contactMount);}
   }
 
   function bindInquiryForms(){
@@ -332,6 +356,12 @@
       const bodyText=[`Name: ${fd.get('name')||''}`,`Email: ${fd.get('email')||''}`,`Company: ${fd.get('company')||''}`,`Product: ${fd.get('product')||form.dataset.productTitle||''}`,`Quantity: ${fd.get('qty')||''}`,'',`Message: ${fd.get('message')||''}`].join('\n');
       window.location.href=`mailto:${data.company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
     }));
+  }
+
+  function enhanceWhatsAppLinks(){
+    document.querySelectorAll('a[href*="wa.me/"]').forEach(link=>{
+      if(!link.href.includes('text=')) link.href = whatsappUrl();
+    });
   }
 
   function initEditMode(){
@@ -351,5 +381,5 @@
     if(factory){factory.innerHTML=`<div class="process-grid"><div><div class="section-head"><div><span class="badge">Buyer Workflow</span><h2>Designed around procurement browsing habits</h2><p>Homepage first builds trust, then shows categories, customization capability, factory strength and clear inquiry paths.</p></div></div><div class="feature-list"><div class="feature-item"><div class="icon-bubble">1</div><div><strong>Choose Product Type</strong><div class="muted">Backpacks, mommy bags, waist bags, chest bags, shoulder bags, crossbody bags, running chest bags and gym bags.</div></div></div><div class="feature-item"><div class="icon-bubble">2</div><div><strong>Confirm Custom Details</strong><div class="muted">Logo, color, pattern, fabric, hardware, packaging and multi-style product display.</div></div></div><div class="feature-item"><div class="icon-bubble">3</div><div><strong>Sample & Production</strong><div class="muted">Sample development, page confirmation and bulk production follow-up.</div></div></div><div class="feature-item"><div class="icon-bubble">4</div><div><strong>Shipment & Repeat Orders</strong><div class="muted">Stable communication for future orders.</div></div></div></div></div><div class="media-panel">${imgTag('assets/images/context/factory-workshop.webp','factory workshop')}</div></div>`;attachImageFallback(factory);}
   }
 
-  renderHeader();renderFooter();renderHero();renderCategories();renderFeaturedProducts();renderTestimonials();renderFAQ();renderAllProducts();renderDetailPage();renderAboutFactory();renderHomeSections();bindInquiryForms();attachImageFallback(document);initEditMode();
+  renderHeader();renderFooter();renderHero();renderCategories();renderFeaturedProducts();renderTestimonials();renderFAQ();renderAllProducts();renderDetailPage();renderAboutFactory();renderHomeSections();bindInquiryForms();enhanceWhatsAppLinks();attachImageFallback(document);initEditMode();
 })();
