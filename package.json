@@ -1,8 +1,0 @@
-{
-  "name": "nameerbag-seo-fixed-site",
-  "version": "2026.06.11",
-  "type": "module",
-  "scripts": {
-    "check": "node --check api/catalog-lead.js"
-  }
-}
