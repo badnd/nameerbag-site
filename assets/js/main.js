@@ -97,6 +97,10 @@
       toggle.addEventListener('click', ()=>navLinks.classList.toggle('open'));
       navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>navLinks.classList.remove('open')));
     }
+    const siteHeader = headerTarget.querySelector('.site-header');
+    const updateHeaderShadow = ()=>siteHeader.classList.toggle('is-scrolled', window.scrollY > 8);
+    updateHeaderShadow();
+    window.addEventListener('scroll', updateHeaderShadow, {passive:true});
   }
 
   function renderFooter(){

@@ -30,10 +30,12 @@ button,input,textarea,select{font:inherit}
 .btn-secondary:hover{border-color:var(--primary);color:var(--primary)}
 .btn-block{width:100%}
 .topbar{background:var(--primary-dark);color:#fff;font-size:.92rem}
+#site-header{display:contents}
 .topbar .container{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:10px 0}
 .topbar-items,.topbar-actions{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 .topbar span{opacity:.96}
-.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(226,232,240,.8)}
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(226,232,240,.8);transition:box-shadow .2s ease}
+.site-header.is-scrolled{box-shadow:0 8px 24px rgba(18,38,63,.12)}
 .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
 .brand{display:flex;align-items:center;gap:14px;min-width:0}
 .brand-logo{display:block;width:172px;height:48px;object-fit:contain;object-position:left center}
