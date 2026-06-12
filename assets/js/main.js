@@ -353,13 +353,59 @@
   }
 
   function bindInquiryForms(){
-    document.querySelectorAll('.inquiry-form').forEach(form=>form.addEventListener('submit',e=>{
+    document.querySelectorAll('.inquiry-form').forEach(form=>{
+      form.insertAdjacentHTML('afterbegin','<input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">');
+      form.addEventListener('submit',async e=>{
       e.preventDefault();
       const fd=new FormData(form);
       const subject=`[Website Inquiry] ${form.dataset.productTitle || fd.get('product') || 'Custom Bag Project'}`;
-      const bodyText=[`Name: ${fd.get('name')||''}`,`Email: ${fd.get('email')||''}`,`Company: ${fd.get('company')||''}`,`Product: ${fd.get('product')||form.dataset.productTitle||''}`,`Quantity: ${fd.get('qty')||''}`,'',`Message: ${fd.get('message')||''}`].join('\n');
-      window.location.href=`mailto:${data.company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
-    }));
+      const button=form.querySelector('button[type="submit"]');
+      let status=form.querySelector('.form-status');
+      if(!status){
+        status=document.createElement('p');
+        status.className='form-status';
+        status.setAttribute('role','status');
+        status.setAttribute('aria-live','polite');
+        button.insertAdjacentElement('afterend',status);
+      }
+      if(fd.get('_honey')) return;
+      const payload={
+        name:fd.get('name')||'',
+        email:fd.get('email')||'',
+        company:fd.get('company')||'',
+        product:fd.get('product')||form.dataset.productTitle||'',
+        quantity:fd.get('qty')||'',
+        message:fd.get('message')||'',
+        _subject:subject,
+        _template:'table',
+        _captcha:'false',
+        _honey:''
+      };
+      const originalText=button.textContent;
+      button.disabled=true;
+      button.textContent='Sending...';
+      status.className='form-status';
+      status.textContent='Sending your inquiry...';
+      try{
+        const response=await fetch(`https://formsubmit.co/ajax/${data.company.email}`,{
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify(payload)
+        });
+        const result=await response.json().catch(()=>({}));
+        if(!response.ok || result.success===false) throw new Error('Submission failed');
+        form.reset();
+        status.className='form-status success';
+        status.textContent='Thank you. Your inquiry has been sent successfully.';
+      }catch(error){
+        status.className='form-status error';
+        status.textContent='The form could not be sent. Please use WhatsApp or email us directly.';
+      }finally{
+        button.disabled=false;
+        button.textContent=originalText;
+      }
+      });
+    });
   }
 
   function enhanceWhatsAppLinks(){
