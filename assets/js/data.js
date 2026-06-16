@@ -14,7 +14,7 @@ window.siteData = {
                            "title":  "Custom Bags \u0026 Cases Manufacturer for Growing Brands",
                            "subtitle":  "Low MOQ | OEM/ODM | Factory Direct",
                            "text":  "Backpacks, waist bags, mommy bags, chest bags, gym bags and more custom bag categories are organized for importers, wholesalers and brand buyers.",
-                           "image":  "assets/images/trust/factory-process.jpg",
+                           "image":  "assets/images/trust/factory-process.jpg?v=2",
                            "cta":  "Browse Products",
                            "link":  "pages/products.html"
                        },
