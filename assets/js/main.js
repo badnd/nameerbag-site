@@ -369,18 +369,17 @@
         button.insertAdjacentElement('afterend',status);
       }
       if(fd.get('_honey')) return;
-      const payload={
-        name:fd.get('name')||'',
-        email:fd.get('email')||'',
-        company:fd.get('company')||'',
-        product:fd.get('product')||form.dataset.productTitle||'',
-        quantity:fd.get('qty')||'',
-        message:fd.get('message')||'',
-        _subject:subject,
-        _template:'table',
-        _captcha:'false',
-        _honey:''
-      };
+      const payload=new FormData();
+      payload.set('name',fd.get('name')||'');
+      payload.set('email',fd.get('email')||'');
+      payload.set('company',fd.get('company')||'');
+      payload.set('product',fd.get('product')||form.dataset.productTitle||'');
+      payload.set('quantity',fd.get('qty')||'');
+      payload.set('message',fd.get('message')||'');
+      payload.set('_subject',subject);
+      payload.set('_template','table');
+      payload.set('_captcha','false');
+      payload.set('_honey','');
       const originalText=button.textContent;
       button.disabled=true;
       button.textContent='Sending...';
@@ -389,11 +388,11 @@
       try{
         const response=await fetch(`https://formsubmit.co/ajax/${data.company.email}`,{
           method:'POST',
-          headers:{'Content-Type':'application/json','Accept':'application/json'},
-          body:JSON.stringify(payload)
+          headers:{'Accept':'application/json'},
+          body:payload
         });
         const result=await response.json().catch(()=>({}));
-        if(!response.ok || result.success===false) throw new Error('Submission failed');
+        if(!response.ok || result.success !== 'true') throw new Error(result.message || 'Submission failed');
         form.reset();
         status.className='form-status success';
         status.textContent='Thank you. Your inquiry has been sent successfully.';
