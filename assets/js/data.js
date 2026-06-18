@@ -46,9 +46,37 @@ window.siteData = {
     {
       "slug": "urban-essential-backpack",
       "name": "Urban Essential Backpacks",
-      "image": "assets/images/products/urban-essential-backpack/urban-essential-backpack-lifestyle.jpg",
+      "image": "assets/images/products/urban-essential-backpack/yqjy0014-lifestyle.jpg",
       "link": "pages/product-urban-essential-backpack.html",
-      "desc": "Lightweight casual backpacks with smart storage, laptop compartment, breathable back panel and custom logo options."
+      "desc": "Lightweight casual backpacks with smart storage, laptop compartment, bottle pocket and custom logo options."
+    },
+    {
+      "slug": "yqjy2286-business-laptop-backpack",
+      "name": "Business Laptop Backpacks",
+      "image": "assets/images/products/yqjy2286-business-laptop-backpack/gallery-2.jpg",
+      "link": "pages/product-yqjy2286-business-laptop-backpack.html",
+      "desc": "Business laptop backpacks with padded compartment, luggage strap, large capacity and private label support."
+    },
+    {
+      "slug": "yqjy616-business-travel-backpack",
+      "name": "17-inch Business Travel Backpacks",
+      "image": "assets/images/products/yqjy616-business-travel-backpack/gallery-2.jpg",
+      "link": "pages/product-yqjy616-business-travel-backpack.html",
+      "desc": "Professional travel backpacks for 17-inch laptops with luggage strap, side pocket and OEM/ODM customization."
+    },
+    {
+      "slug": "yqjy2989-travel-ready-business-backpack",
+      "name": "Travel-ready Business Backpacks",
+      "image": "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-2.jpg",
+      "link": "pages/product-yqjy2989-travel-ready-business-backpack.html",
+      "desc": "Business and leisure backpacks with luggage pass-through, organizer pockets and custom branding options."
+    },
+    {
+      "slug": "yqjy2977-compact-business-backpack",
+      "name": "Compact Business Backpacks",
+      "image": "assets/images/products/yqjy2977-compact-business-backpack/gallery-2.jpg",
+      "link": "pages/product-yqjy2977-compact-business-backpack.html",
+      "desc": "Compact laptop backpacks with clean business styling, side pockets, luggage sleeve and low MOQ support."
     },
     {
       "slug": "women-backpack",
@@ -185,24 +213,23 @@ window.siteData = {
     "urban-essential-backpack": {
       "category": "Backpacks",
       "title": "Urban Essential Backpack / Casual Backpack",
-      "model": "JY-UEB-26016",
-      "hero": "assets/images/products/urban-essential-backpack/urban-essential-backpack-lifestyle.jpg",
+      "model": "YQJY0014",
+      "hero": "assets/images/products/urban-essential-backpack/yqjy0014-brand-poster.jpg",
       "gallery": [
-        "assets/images/products/urban-essential-backpack/urban-essential-backpack-lifestyle.jpg",
-        "assets/images/products/urban-essential-backpack/urban-essential-backpack-detail.jpg",
-        "assets/images/products/urban-essential-backpack/urban-essential-backpack-specs.jpg",
-        "assets/images/products/urban-essential-backpack/urban-essential-backpack-custom-logo.jpg",
-        "assets/images/products/urban-essential-backpack/urban-essential-backpack-branding.jpg"
+        "assets/images/products/urban-essential-backpack/yqjy0014-brand-poster.jpg",
+        "assets/images/products/urban-essential-backpack/yqjy0014-lifestyle.jpg",
+        "assets/images/products/urban-essential-backpack/yqjy0014-specs.jpg",
+        "assets/images/products/urban-essential-backpack/yqjy0014-overview.jpg"
       ],
-      "lifestyle": "assets/images/products/urban-essential-backpack/urban-essential-backpack-lifestyle.jpg",
-      "mobilePreview": "assets/images/products/urban-essential-backpack/urban-essential-backpack-detail.jpg",
+      "lifestyle": "assets/images/products/urban-essential-backpack/yqjy0014-lifestyle.jpg",
+      "mobilePreview": "assets/images/products/urban-essential-backpack/yqjy0014-specs.jpg",
       "badges": [
         "Lightweight",
         "Custom Logo",
         "Low MOQ",
         "OEM / ODM"
       ],
-      "intro": "Lightweight everyday backpack with smart storage, padded laptop compartment, side bottle pocket and breathable back panel. Suitable for work, school, travel, campus and branded promotion projects.",
+      "intro": "Lightweight everyday backpack with smart storage, front zip pocket, side bottle pocket, padded laptop compartment and breathable carry support. Suitable for school, work, travel, campus programs and custom brand promotion projects.",
       "specs": [
         [
           "Material",
@@ -218,11 +245,11 @@ window.siteData = {
         ],
         [
           "Capacity",
-          "Fits tablet, light laptop and daily essentials"
+          "Fits tablet, daily essentials and light laptop"
         ],
         [
           "Logo",
-          "Silk printing / Embroidery / Patch / Woven label"
+          "Screen print / Embroidery / Patch / Woven label"
         ],
         [
           "Color",
@@ -243,27 +270,378 @@ window.siteData = {
       ],
       "features": [
         "Lightweight 0.44 kg structure for everyday carry",
-        "Front quick-access pocket for phone, wallet and small essentials",
-        "Padded laptop compartment and internal multi-layer organization",
-        "Side bottle pocket for commuting, school and travel use",
-        "Breathable honeycomb back panel and adjustable shoulder straps",
-        "Custom logo positions for print, embroidery, patch or woven label"
+        "Front zip pocket and internal organization for quick storage",
+        "Padded laptop compartment for campus, work and travel use",
+        "Side bottle pocket and spacious main compartment for daily essentials",
+        "Breathable back panel and shoulder straps for all-day comfort",
+        "Custom logo positions support print, embroidery, patch and private label projects"
       ],
       "variants": [
         {
-          "name": "Urban Essential Lifestyle Display",
-          "image": "assets/images/products/urban-essential-backpack/urban-essential-backpack-lifestyle.jpg",
-          "sku": "JY-UEB-26016-A"
+          "name": "Black Product Information Display",
+          "image": "assets/images/products/urban-essential-backpack/yqjy0014-brand-poster.jpg",
+          "sku": "YQJY0014-A"
         },
         {
-          "name": "Smart Storage Detail Display",
-          "image": "assets/images/products/urban-essential-backpack/urban-essential-backpack-detail.jpg",
-          "sku": "JY-UEB-26016-B"
+          "name": "Lifestyle Wearing Display",
+          "image": "assets/images/products/urban-essential-backpack/yqjy0014-lifestyle.jpg",
+          "sku": "YQJY0014-B"
         },
         {
-          "name": "Custom Logo Brand Display",
-          "image": "assets/images/products/urban-essential-backpack/urban-essential-backpack-custom-logo.jpg",
-          "sku": "JY-UEB-26016-C"
+          "name": "Black and Red Color Options",
+          "image": "assets/images/products/urban-essential-backpack/yqjy0014-overview.jpg",
+          "sku": "YQJY0014-C"
+        }
+      ]
+    },
+    "yqjy2286-business-laptop-backpack": {
+      "category": "Backpacks",
+      "title": "Business Laptop Backpack / Custom Travel Backpack",
+      "model": "YQJY2286",
+      "hero": "assets/images/products/yqjy2286-business-laptop-backpack/gallery-1.jpg",
+      "gallery": [
+        "assets/images/products/yqjy2286-business-laptop-backpack/gallery-1.jpg",
+        "assets/images/products/yqjy2286-business-laptop-backpack/gallery-2.jpg",
+        "assets/images/products/yqjy2286-business-laptop-backpack/gallery-3.jpg",
+        "assets/images/products/yqjy2286-business-laptop-backpack/gallery-4.jpg",
+        "assets/images/products/yqjy2286-business-laptop-backpack/gallery-5.jpg"
+      ],
+      "lifestyle": "assets/images/products/yqjy2286-business-laptop-backpack/gallery-2.jpg",
+      "mobilePreview": "assets/images/products/yqjy2286-business-laptop-backpack/gallery-3.jpg",
+      "badges": [
+        "Laptop Backpack",
+        "Business Travel",
+        "Custom Logo",
+        "OEM / ODM"
+      ],
+      "intro": "Professional laptop backpack for business travel and daily commute. The design combines a padded laptop compartment, large multi-pocket capacity, luggage strap, side mesh pocket and durable Oxford fabric for B2B custom projects.",
+      "specs": [
+        [
+          "Material",
+          "Oxford fabric / Custom fabric available"
+        ],
+        [
+          "Lining",
+          "Polyester"
+        ],
+        [
+          "Size",
+          "32 x 52 x 18 cm / Custom size available"
+        ],
+        [
+          "Weight",
+          "Approx. 0.83 kg"
+        ],
+        [
+          "Color",
+          "Navy Blue / Gray / Black / Custom color available"
+        ],
+        [
+          "Use Scenario",
+          "Business / Travel / Everyday"
+        ],
+        [
+          "Logo",
+          "Screen print / Embroidery / Patch / Private label"
+        ],
+        [
+          "MOQ",
+          "300 / 500 / 1000 pcs by style and material"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork and material details are confirmed"
+        ],
+        [
+          "Lead Time",
+          "15-30 days after sample approval, subject to actual order schedule"
+        ]
+      ],
+      "features": [
+        "Independent padded laptop compartment for secure device protection",
+        "Large capacity multi-pocket organization for business essentials",
+        "Luggage strap for easier carry-on travel",
+        "Side mesh pocket for bottle or umbrella storage",
+        "Breathable back panel, padded top handle and adjustable shoulder straps",
+        "Water-resistant Oxford fabric and smooth dual zippers for daily use"
+      ],
+      "variants": [
+        {
+          "name": "Navy Blue Product Display",
+          "image": "assets/images/products/yqjy2286-business-laptop-backpack/gallery-1.jpg",
+          "sku": "YQJY2286-A"
+        },
+        {
+          "name": "Business Travel Lifestyle View",
+          "image": "assets/images/products/yqjy2286-business-laptop-backpack/gallery-2.jpg",
+          "sku": "YQJY2286-B"
+        },
+        {
+          "name": "Navy Blue Gray Black Color Options",
+          "image": "assets/images/products/yqjy2286-business-laptop-backpack/gallery-4.jpg",
+          "sku": "YQJY2286-C"
+        }
+      ]
+    },
+    "yqjy616-business-travel-backpack": {
+      "category": "Backpacks",
+      "title": "Business Travel Backpack / 17-inch Laptop Backpack",
+      "model": "YQJY616",
+      "hero": "assets/images/products/yqjy616-business-travel-backpack/gallery-1.jpg",
+      "gallery": [
+        "assets/images/products/yqjy616-business-travel-backpack/gallery-1.jpg",
+        "assets/images/products/yqjy616-business-travel-backpack/gallery-2.jpg",
+        "assets/images/products/yqjy616-business-travel-backpack/gallery-3.jpg",
+        "assets/images/products/yqjy616-business-travel-backpack/gallery-4.jpg",
+        "assets/images/products/yqjy616-business-travel-backpack/gallery-5.jpg"
+      ],
+      "lifestyle": "assets/images/products/yqjy616-business-travel-backpack/gallery-2.jpg",
+      "mobilePreview": "assets/images/products/yqjy616-business-travel-backpack/gallery-4.jpg",
+      "badges": [
+        "17-inch Laptop",
+        "Business Travel",
+        "Luggage Strap",
+        "OEM / ODM"
+      ],
+      "intro": "Business travel backpack designed for professionals on the move. It supports up to 17-inch laptops with large capacity storage, luggage strap, side bottle pocket and comfortable padded carry structure.",
+      "specs": [
+        [
+          "Material",
+          "Oxford fabric / Custom fabric available"
+        ],
+        [
+          "Lining",
+          "Polyester"
+        ],
+        [
+          "Size",
+          "46 x 32 x 18 cm / Custom size available"
+        ],
+        [
+          "Weight",
+          "Approx. 0.69 kg"
+        ],
+        [
+          "Capacity",
+          "Fits up to 17-inch laptop"
+        ],
+        [
+          "Color",
+          "Black / Navy Blue / Gray / Custom color available"
+        ],
+        [
+          "Logo",
+          "Custom logo / Custom color / Custom packaging available"
+        ],
+        [
+          "MOQ",
+          "300 / 500 / 1000 pcs by style and material"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork and material details are confirmed"
+        ],
+        [
+          "Lead Time",
+          "15-30 days after sample approval, subject to actual order schedule"
+        ]
+      ],
+      "features": [
+        "Spacious main compartment fits up to a 17-inch laptop",
+        "Front zipper pocket and rear anti-theft pocket for organized storage",
+        "Side bottle pocket keeps water or umbrella within reach",
+        "Luggage strap slides over trolley handle for business trips",
+        "Breathable padded back and shoulder straps improve carrying comfort",
+        "OEM / ODM support for logo, color, packaging and private label orders"
+      ],
+      "variants": [
+        {
+          "name": "Navy Business Product Display",
+          "image": "assets/images/products/yqjy616-business-travel-backpack/gallery-1.jpg",
+          "sku": "YQJY616-A"
+        },
+        {
+          "name": "Business Commute Lifestyle View",
+          "image": "assets/images/products/yqjy616-business-travel-backpack/gallery-2.jpg",
+          "sku": "YQJY616-B"
+        },
+        {
+          "name": "Black Navy Gray Color Options",
+          "image": "assets/images/products/yqjy616-business-travel-backpack/gallery-4.jpg",
+          "sku": "YQJY616-C"
+        }
+      ]
+    },
+    "yqjy2989-travel-ready-business-backpack": {
+      "category": "Backpacks",
+      "title": "Travel-ready Business Backpack / Business & Leisure Backpack",
+      "model": "YQJY2989",
+      "hero": "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-1.jpg",
+      "gallery": [
+        "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-1.jpg",
+        "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-2.jpg",
+        "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-3.jpg",
+        "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-4.jpg",
+        "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-5.jpg"
+      ],
+      "lifestyle": "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-2.jpg",
+      "mobilePreview": "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-5.jpg",
+      "badges": [
+        "Travel-ready",
+        "Business Backpack",
+        "Custom Branding",
+        "Private Label"
+      ],
+      "intro": "Travel-ready business backpack for commuting, airport travel and daily work. It features multi-compartment storage, luggage pass-through, organizer pockets and custom logo support for corporate and wholesale programs.",
+      "specs": [
+        [
+          "Material",
+          "Polyester / Oxford-style woven fabric / Custom fabric available"
+        ],
+        [
+          "Size",
+          "46 x 32 x 20 cm / Custom size available"
+        ],
+        [
+          "Weight",
+          "Approx. 0.62 kg"
+        ],
+        [
+          "Structure",
+          "1 main compartment, 2 front compartments, 1 front zipper pocket, 2 side pockets, 1 internal divider / laptop sleeve"
+        ],
+        [
+          "Color",
+          "Black / Gray / Blue / Custom color available"
+        ],
+        [
+          "Logo",
+          "Print / Patch / Private label / Custom branding"
+        ],
+        [
+          "MOQ",
+          "300 / 500 / 1000 pcs by style and material"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork and material details are confirmed"
+        ],
+        [
+          "Lead Time",
+          "15-30 days after sample approval, subject to actual order schedule"
+        ]
+      ],
+      "features": [
+        "Luggage pass-through design for hands-free airport travel",
+        "Multi-compartment storage keeps documents, laptop and accessories organized",
+        "Front organizer pocket for phone, cards and pens",
+        "Side mesh pocket for bottle or umbrella",
+        "Smooth two-way zippers, reinforced stitching and breathable back panel",
+        "Suitable for corporate gifts, promotions, business travel and private label programs"
+      ],
+      "variants": [
+        {
+          "name": "Black Gray Blue Color Options",
+          "image": "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-1.jpg",
+          "sku": "YQJY2989-A"
+        },
+        {
+          "name": "Airport Travel Lifestyle View",
+          "image": "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-2.jpg",
+          "sku": "YQJY2989-B"
+        },
+        {
+          "name": "Detail Craftsmanship Display",
+          "image": "assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-3.jpg",
+          "sku": "YQJY2989-C"
+        }
+      ]
+    },
+    "yqjy2977-compact-business-backpack": {
+      "category": "Backpacks",
+      "title": "Compact Business Backpack / Custom Laptop Backpack",
+      "model": "YQJY2977",
+      "hero": "assets/images/products/yqjy2977-compact-business-backpack/gallery-1.jpg",
+      "gallery": [
+        "assets/images/products/yqjy2977-compact-business-backpack/gallery-1.jpg",
+        "assets/images/products/yqjy2977-compact-business-backpack/gallery-2.jpg",
+        "assets/images/products/yqjy2977-compact-business-backpack/gallery-3.jpg",
+        "assets/images/products/yqjy2977-compact-business-backpack/gallery-4.jpg"
+      ],
+      "lifestyle": "assets/images/products/yqjy2977-compact-business-backpack/gallery-2.jpg",
+      "mobilePreview": "assets/images/products/yqjy2977-compact-business-backpack/gallery-4.jpg",
+      "badges": [
+        "Compact Business",
+        "15.6-inch Laptop",
+        "Low MOQ",
+        "OEM / ODM"
+      ],
+      "intro": "Compact business backpack with clean professional styling, padded 15.6-inch laptop storage, front organization, side mesh pockets and luggage sleeve. A practical choice for private label and custom logo programs.",
+      "specs": [
+        [
+          "Material",
+          "Oxford fabric / Custom fabric available"
+        ],
+        [
+          "Lining",
+          "Polyester"
+        ],
+        [
+          "Size",
+          "30 x 19 x 41 cm / Custom size available"
+        ],
+        [
+          "Weight",
+          "Approx. 0.60 kg"
+        ],
+        [
+          "Capacity",
+          "Fits 15.6-inch laptop"
+        ],
+        [
+          "Color",
+          "Blue / Black / Gray / Custom color available"
+        ],
+        [
+          "Logo",
+          "Print / Patch / Metal badge / Private label"
+        ],
+        [
+          "MOQ",
+          "300 / 500 / 1000 pcs by style and material"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork and material details are confirmed"
+        ],
+        [
+          "Lead Time",
+          "15-30 days after sample approval, subject to actual order schedule"
+        ]
+      ],
+      "features": [
+        "Compact professional silhouette for daily business commute",
+        "Padded laptop compartment fits up to 15.6-inch laptop",
+        "Front zippered organization pockets for essentials",
+        "Side mesh pockets for bottles and daily items",
+        "Luggage sleeve for easier travel and business trips",
+        "Custom logo options include print, patch and metal badge solutions"
+      ],
+      "variants": [
+        {
+          "name": "Blue Product Display",
+          "image": "assets/images/products/yqjy2977-compact-business-backpack/gallery-1.jpg",
+          "sku": "YQJY2977-A"
+        },
+        {
+          "name": "Business Lifestyle View",
+          "image": "assets/images/products/yqjy2977-compact-business-backpack/gallery-2.jpg",
+          "sku": "YQJY2977-B"
+        },
+        {
+          "name": "Blue Black Gray Color Options",
+          "image": "assets/images/products/yqjy2977-compact-business-backpack/gallery-4.jpg",
+          "sku": "YQJY2977-C"
         }
       ]
     },
