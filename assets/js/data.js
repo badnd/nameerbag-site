@@ -35,6 +35,14 @@ window.siteData = {
       "link": "pages/factory.html"
     }
   ],
+  "homeFeaturedProducts": [
+    "yqjy2286-business-laptop-backpack",
+    "urban-essential-backpack",
+    "waist-bag",
+    "chest-bag",
+    "mommy-bag",
+    "gym-bag"
+  ],
   "categories": [
     {
       "slug": "student-backpack",

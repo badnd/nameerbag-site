@@ -161,9 +161,11 @@
     paint();
   }
 
-  function productCard(p, slug, simple=false){
+  function productCard(p, slug, simple=false, options={}){
+    const imageSrc = simple || options.useHeroImage ? p.hero : p.variants[0].image;
+    const logoZone = options.showLogoZone ? '<span class="logo-location-pill">Custom Logo Zone</span>' : '';
     return `<article class="card product-card">
-      <a class="card-media" href="${path('pages/product-'+slug+'.html')}">${imgTag(simple ? p.hero : p.variants[0].image, p.title)}</a>
+      <a class="card-media" href="${path('pages/product-'+slug+'.html')}">${imgTag(imageSrc, p.title)}${logoZone}</a>
       <div class="card-body"><div class="chip-list">${p.badges.slice(0,3).map(b=>`<span class="badge">${b}</span>`).join('')}</div><h3 class="card-title">${p.title}</h3><p class="muted">${p.intro}</p><div class="card-price">${data.company.priceText}</div></div>
       <div class="card-actions"><a class="btn btn-primary" href="${path('pages/product-'+slug+'.html')}">View Details</a><a class="btn btn-secondary" href="${path('pages/contact.html')}?product=${slug}">Get Quote</a></div>
     </article>`;
@@ -179,7 +181,11 @@
   function renderFeaturedProducts(){
     const mount = document.getElementById('featuredProducts');
     if(!mount) return;
-    mount.innerHTML = Object.entries(data.products).slice(0,6).map(([slug,p])=>productCard(p,slug)).join('');
+    const featured = (data.homeFeaturedProducts || [])
+      .filter(slug=>data.products[slug])
+      .map(slug=>[slug,data.products[slug]]);
+    const items = featured.length ? featured : Object.entries(data.products).slice(0,6);
+    mount.innerHTML = items.map(([slug,p])=>productCard(p,slug,true,{showLogoZone:true})).join('');
     attachImageFallback(mount);
   }
 
