@@ -33,6 +33,10 @@ export function HeroCarousel({ slides }) {
     setActive((nextIndex + validSlides.length) % validSlides.length);
   };
 
+  const primaryHref = normalizeSlideHref(current.link);
+  const secondaryHref = primaryHref === '/custom-service' ? '/products' : '/custom-service';
+  const secondaryLabel = primaryHref === '/custom-service' ? 'Browse Products' : 'View Custom Service';
+
   return (
     <section className="hero">
       <div className="container hero-grid">
@@ -46,8 +50,8 @@ export function HeroCarousel({ slides }) {
             <div><strong>Factory</strong><span>Direct Support</span></div>
           </div>
           <div className="hero-cta">
-            <Link className="btn btn-primary" href={normalizeSlideHref(current.link)}>{current.cta}</Link>
-            <Link className="btn btn-secondary" href="/products">Browse Products</Link>
+            <Link className="btn btn-primary" href={primaryHref}>{current.cta}</Link>
+            <Link className="btn btn-secondary" href={secondaryHref}>{secondaryLabel}</Link>
           </div>
         </div>
         <div className="hero-media">
