@@ -34,6 +34,20 @@
     return `<p class="form-privacy">By contacting us, you acknowledge our <a href="${path('pages/privacy-policy.html')}">Privacy Policy</a>.</p>`;
   }
 
+  function initAnalytics(){
+    const measurementId = data.analytics && data.analytics.ga4;
+    if(!measurementId || window.__nameerAnalyticsLoaded) return;
+    window.__nameerAnalyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+    document.head.appendChild(script);
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId);
+  }
+
   function imgTag(src, alt='', cls=''){
     return `<img ${cls?`class="${cls}"`:''} src="${path(src)}" alt="${alt.replace(/"/g,'&quot;')}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${path('assets/images/generated/hero-student.webp')}'">`;
   }
@@ -380,7 +394,16 @@
       payload.set('company',fd.get('company')||'');
       payload.set('product',fd.get('product')||form.dataset.productTitle||'');
       payload.set('quantity',fd.get('qty')||'');
-      payload.set('message',fd.get('message')||'');
+      payload.set('material',fd.get('material')||'');
+      payload.set('logo',fd.get('logo')||'');
+      payload.set('dimensions',fd.get('dimensions')||'');
+      const details = [
+        fd.get('message') ? `Message: ${fd.get('message')}` : '',
+        fd.get('material') ? `Material / Finish: ${fd.get('material')}` : '',
+        fd.get('logo') ? `Logo / Branding: ${fd.get('logo')}` : '',
+        fd.get('dimensions') ? `Size / Dimensions: ${fd.get('dimensions')}` : ''
+      ].filter(Boolean).join('\n');
+      payload.set('message',details || '');
       payload.set('_subject',subject);
       payload.set('_template','table');
       payload.set('_captcha','false');
@@ -433,6 +456,61 @@
     if(why){why.innerHTML=`<div class="grid grid-4"><article class="card info-card"><div class="card-body"><div class="icon-bubble">01</div><h3 class="card-title">Wide Bag Categories</h3><p class="muted">Backpacks, waist bags, mommy bags, chest bags, gym bags and more functional bags can be developed.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">02</div><h3 class="card-title">Low MOQ Options</h3><p class="muted">MOQ can be discussed around 300 / 500 / 1000 pcs depending on style, material and logo details.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">03</div><h3 class="card-title">Fast Sampling</h3><p class="muted">Sample development usually takes 7-15 days after artwork and material details are confirmed.</p></div></article><article class="card info-card"><div class="card-body"><div class="icon-bubble">04</div><h3 class="card-title">Reliable Production</h3><p class="muted">Bulk production usually takes 15-30 days after sample approval, subject to actual order schedule.</p></div></article></div><div class="trust-showcase"><div class="media-panel">${imgTag('assets/images/trust/why-choose-us.jpg','why choose Nameerbag')}</div><div class="media-panel">${imgTag('assets/images/trust/buyer-reviews.jpg','buyer reviews for custom bags')}</div></div>`;attachImageFallback(why);}
     const factory=document.getElementById('homeFactoryBlock');
     if(factory){factory.innerHTML=`<div class="process-grid"><div><div class="section-head"><div><span class="badge">Buyer Workflow</span><h2>Simple custom bag order process</h2><p>Built for importers, wholesalers and brands that need clear communication before sampling and bulk production.</p></div></div><div class="feature-list"><div class="feature-item"><div class="icon-bubble">1</div><div><strong>Send Requirements</strong><div class="muted">Product type, quantity, logo, material, color, packaging and target market.</div></div></div><div class="feature-item"><div class="icon-bubble">2</div><div><strong>Confirm Details</strong><div class="muted">We review practical production options and help align the custom direction.</div></div></div><div class="feature-item"><div class="icon-bubble">3</div><div><strong>Sample & Approve</strong><div class="muted">Typical sample time is 7-15 days after key details are confirmed.</div></div></div><div class="feature-item"><div class="icon-bubble">4</div><div><strong>Bulk Production</strong><div class="muted">Production usually takes 15-30 days after sample approval, based on actual scheduling.</div></div></div></div></div><div class="media-panel trust-media">${imgTag('assets/images/trust/factory-process.jpg?v=2','custom bag manufacturing workflow')}</div></div>`;attachImageFallback(factory);}
+    const inquiry=document.getElementById('homeInquiryBlock');
+    if(inquiry){inquiry.innerHTML=`<div class="home-inquiry">
+      <div class="home-inquiry-copy">
+        <span class="badge">Factory Quote</span>
+        <h2>Send a custom bag request in one minute</h2>
+        <p>Tell us the bag type, quantity, logo method and size target. We will reply with practical MOQ, sample and production suggestions within 24 hours.</p>
+        <div class="home-inquiry-points">
+          <span>Free requirement review</span>
+          <span>Logo and material suggestions</span>
+          <span>Sample before bulk order</span>
+        </div>
+      </div>
+      <div class="quote-card home-quote-card">
+        <h3>Get a Factory Quote</h3>
+        <form class="form inquiry-form" data-product-title="Homepage Factory Quote">
+          <div class="form-two"><input name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Business Email" required></div>
+          <input name="company" placeholder="Company Name">
+          <div class="form-two">
+            <select name="product" required>
+              <option value="">Interested Product</option>
+              ${data.categories.map(c=>`<option value="${c.name}">${c.name}</option>`).join('')}
+              <option value="Multiple Types / Other">Multiple Types / Other</option>
+            </select>
+            <select name="qty" required>
+              <option value="">Estimated Quantity</option>
+              <option value="100-300 pcs">100-300 pcs</option>
+              <option value="300-500 pcs">300-500 pcs</option>
+              <option value="500-1000 pcs">500-1000 pcs</option>
+              <option value="1000+ pcs">1000+ pcs</option>
+            </select>
+          </div>
+          <div class="form-two">
+            <select name="material">
+              <option value="">Material / Fabric</option>
+              <option value="Oxford / Polyester">Oxford / Polyester</option>
+              <option value="Nylon / Waterproof Fabric">Nylon / Waterproof Fabric</option>
+              <option value="Canvas / Cotton">Canvas / Cotton</option>
+              <option value="Need suggestion">Need suggestion</option>
+            </select>
+            <select name="logo">
+              <option value="">Logo Method</option>
+              <option value="Screen print">Screen print</option>
+              <option value="Embroidery">Embroidery</option>
+              <option value="Rubber / Woven Patch">Rubber / Woven Patch</option>
+              <option value="Private label">Private label</option>
+            </select>
+          </div>
+          <input name="dimensions" placeholder="Target Size / Reference Style">
+          <textarea name="message" placeholder="Tell us color, packing, delivery market or any special requirements"></textarea>
+          <button class="btn btn-primary btn-block" type="submit">Send My Request</button>
+          <a class="btn btn-secondary btn-block" href="${whatsappUrl()}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          ${privacyNotice()}
+        </form>
+      </div>
+    </div>`;}
   }
-  renderHeader();renderFooter();renderHero();renderCategories();renderFeaturedProducts();renderTestimonials();renderFAQ();renderAllProducts();renderDetailPage();renderAboutFactory();renderHomeSections();bindInquiryForms();enhanceWhatsAppLinks();attachImageFallback(document);initEditMode();
+  initAnalytics();renderHeader();renderFooter();renderHero();renderCategories();renderFeaturedProducts();renderTestimonials();renderFAQ();renderAllProducts();renderDetailPage();renderAboutFactory();renderHomeSections();bindInquiryForms();enhanceWhatsAppLinks();attachImageFallback(document);initEditMode();
 })();

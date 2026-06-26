@@ -9,6 +9,9 @@ window.siteData = {
     "wechat": "15102249548",
     "priceText": "Contact us for best price"
   },
+  "analytics": {
+    "ga4": "G-ZJK2RKTKJ3"
+  },
   "heroSlides": [
     {
       "title": "Custom Bags & Cases Manufacturer for Growing Brands",

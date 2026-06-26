@@ -117,6 +117,17 @@ button,input,textarea,select{font:inherit}
 .acc-body{padding:0 20px 18px;color:var(--muted);display:none}
 .acc-item.active .acc-body{display:block}
 .cta-banner{background:linear-gradient(135deg,var(--primary) 0,#2f88ff 100%);color:#fff;border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;box-shadow:var(--shadow)}
+.home-inquiry{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch;background:linear-gradient(135deg,#0f1830 0,#0d5bd7 100%);border-radius:30px;padding:34px;box-shadow:0 24px 60px rgba(13,91,215,.18);overflow:hidden;position:relative}
+.home-inquiry::before{content:'';position:absolute;inset:auto -80px -120px auto;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.12)}
+.home-inquiry-copy{color:#fff;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center}
+.home-inquiry-copy .badge{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22);width:max-content}
+.home-inquiry-copy h2{font-size:2.35rem;line-height:1.08;margin:18px 0 14px;max-width:520px}
+.home-inquiry-copy p{color:#dce8ff;max-width:560px;margin:0}
+.home-inquiry-points{display:grid;gap:12px;margin-top:24px}
+.home-inquiry-points span{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff}
+.home-inquiry-points span::before{content:'✓';display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#25d366;color:#fff;font-size:.85rem;flex:0 0 auto}
+.home-quote-card{position:relative;z-index:1;background:rgba(255,255,255,.98)}
+.home-quote-card h3{font-size:1.35rem}
 .breadcrumb{font-size:.92rem;color:var(--muted);padding:18px 0}
 .breadcrumb a{color:var(--muted)}
 .breadcrumb span{margin:0 6px}
@@ -171,10 +182,12 @@ body.lightbox-open{overflow:hidden}
 .quote-card h3{margin-top:0}
 .quote-price{font-size:1.55rem;font-weight:800;color:var(--primary);line-height:1.3;margin:10px 0 16px}
 .form{display:grid;gap:12px}
-.form input,.form textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--border);outline:none}
+.form input,.form textarea,.form select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--border);outline:none}
+.form select{background:#fff;color:var(--text)}
 .form .form-honey{display:none!important}
-.form input:focus,.form textarea:focus{border-color:var(--primary)}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--primary)}
 .form textarea{min-height:110px;resize:vertical}
+.form-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .form button:disabled{cursor:wait;opacity:.7}
 .form-status{margin:0;text-align:center;font-size:.9rem;color:var(--muted)}
 .form-status.success{color:#137333}
@@ -217,7 +230,7 @@ body.lightbox-open{overflow:hidden}
   .category-card .card-media img,.product-card .card-media img,.gallery-main img,.variant-media img,.variant-zoom-hint{transition:none}
 }
 @media (max-width:1100px){
-  .hero-grid,.process-grid,.about-grid,.faq-grid,.detail-grid,.listing-grid,.footer-grid{grid-template-columns:1fr}
+  .hero-grid,.process-grid,.about-grid,.faq-grid,.detail-grid,.listing-grid,.footer-grid,.home-inquiry{grid-template-columns:1fr}
   .stats,.testimonial-grid,.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
   .trust-showcase,.workflow-row,.inquiry-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .grid-3,.spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -251,7 +264,9 @@ body.lightbox-open{overflow:hidden}
   .hero-arrow{width:38px;height:38px;font-size:26px}
   .section-head{display:block}
   .section-head h2{font-size:1.6rem}
-  .quick-icons,.testimonial-grid,.stats,.grid-3,.grid-4,.gallery-thumbs,.spec-grid,.footer-grid{grid-template-columns:1fr}
+  .quick-icons,.testimonial-grid,.stats,.grid-3,.grid-4,.gallery-thumbs,.spec-grid,.footer-grid,.form-two{grid-template-columns:1fr}
+  .home-inquiry{padding:22px;border-radius:24px}
+  .home-inquiry-copy h2{font-size:1.8rem}
   .trust-showcase,.workflow-row,.inquiry-facts{grid-template-columns:1fr}
   .static-intro h1{font-size:1.85rem}
   .gallery-main img{height:auto;aspect-ratio:1/1;object-fit:contain;object-position:center center}
