@@ -4,10 +4,10 @@ import { blogPosts } from '@/data/blog-posts';
 import { ProductCard } from '@/components/ProductCard';
 import { HomeInquiry } from '@/components/HomeInquiry';
 import { JsonLd } from '@/components/JsonLd';
+import { HeroCarousel } from '@/components/HeroCarousel';
 import { assetPath } from '@/lib/paths';
 
 export default function HomePage() {
-  const slide = siteData.heroSlides[0];
   const featured = siteData.homeFeaturedProducts.map((slug) => [slug, siteData.products[slug]]).filter(([, product]) => product);
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -22,29 +22,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <span className="badge">{slide.subtitle}</span>
-            <h2>{slide.title}</h2>
-            <p>{slide.text}</p>
-            <div className="hero-metrics">
-              <div><strong>OEM/ODM</strong><span>Custom Service</span></div>
-              <div><strong>Low MOQ</strong><span>Flexible Orders</span></div>
-              <div><strong>Factory</strong><span>Direct Support</span></div>
-            </div>
-            <div className="hero-cta">
-              <Link className="btn btn-primary" href="/products">Browse Products</Link>
-              <Link className="btn btn-secondary" href="/custom-service">View Custom Service</Link>
-            </div>
-          </div>
-          <div className="hero-media">
-            <div className="frame hero-carousel-frame">
-              <img src={assetPath(slide.image)} alt={slide.title} />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel slides={siteData.heroSlides} />
 
       <section className="section">
         <div className="container">
