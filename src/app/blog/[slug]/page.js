@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Nameer Blog`,
+    title: `${post.title} | Blog`,
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: `/blog/${post.slug}` },
@@ -22,6 +22,12 @@ export async function generateMetadata({ params }) {
       description: post.description,
       url: `${siteUrl}/blog/${post.slug}`,
       images: [{ url: `${siteUrl}${post.hero}`, width: 1200, height: 630 }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: [`${siteUrl}${post.hero}`]
     }
   };
 }

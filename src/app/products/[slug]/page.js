@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   if (!product) return {};
 
   return {
-    title: `${product.title} | ${product.model} | Nameer`,
+    title: `${product.title} | ${product.model}`,
     description: `${product.intro} OEM/ODM custom bag manufacturer with low MOQ, logo options and factory quotation support.`,
     alternates: { canonical: productPath(slug) },
     openGraph: {
@@ -24,6 +24,12 @@ export async function generateMetadata({ params }) {
       description: product.intro,
       url: `${siteUrl}${productPath(slug)}`,
       images: [{ url: `${siteUrl}${assetPath(product.gallery[0] || product.hero)}`, width: 1200, height: 630 }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: product.title,
+      description: product.intro,
+      images: [`${siteUrl}${assetPath(product.gallery[0] || product.hero)}`]
     }
   };
 }

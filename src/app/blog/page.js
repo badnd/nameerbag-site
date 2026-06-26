@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { blogPosts } from '@/data/blog-posts';
 
 export const metadata = {
-  title: 'Custom Bag Buying Guides | Nameer Blog',
+  title: 'Custom Bag Buying Guides',
   description: 'Custom bag sourcing guides for importers and wholesale buyers, including MOQ, logo methods, backpack features and OEM/ODM planning.',
   alternates: { canonical: '/blog' }
 };

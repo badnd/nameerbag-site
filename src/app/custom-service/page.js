@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { HomeInquiry } from '@/components/HomeInquiry';
 
 export const metadata = {
-  title: 'OEM/ODM Custom Bag Service | Nameer',
+  title: 'OEM/ODM Custom Bag Service',
   description: 'Custom bag OEM/ODM service for logo, fabric, color, packaging and private label projects with flexible MOQ support.',
   alternates: { canonical: '/custom-service' }
 };

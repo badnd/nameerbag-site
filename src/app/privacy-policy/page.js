@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Privacy Policy | Nameer',
+  title: 'Privacy Policy',
   description: 'Privacy Policy for Nameer custom bag website inquiry forms and buyer contact information.',
   alternates: { canonical: '/privacy-policy' }
 };

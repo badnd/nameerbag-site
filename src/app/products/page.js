@@ -4,7 +4,7 @@ import { ProductCard } from '@/components/ProductCard';
 import { assetPath } from '@/lib/paths';
 
 export const metadata = {
-  title: 'Custom Bag Product Catalog | Nameer',
+  title: 'Custom Bag Product Catalog',
   description: 'Browse custom backpacks, waist bags, chest bags, mommy bags, shoulder bags and gym bags for OEM/ODM, low MOQ and private label projects.',
   alternates: { canonical: '/products' }
 };
