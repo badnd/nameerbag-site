@@ -1,0 +1,52 @@
+import './globals.css';
+import Script from 'next/script';
+import { SiteHeader } from '@/components/SiteHeader';
+import { SiteFooter } from '@/components/SiteFooter';
+import { siteData } from '@/data/site-data';
+import { JsonLd } from '@/components/JsonLd';
+import { organizationSchema } from '@/lib/paths';
+
+export const metadata = {
+  metadataBase: new URL('https://www.nameerbag.com'),
+  title: {
+    default: 'Custom Bag Manufacturer | OEM ODM Backpack & Bag Supplier',
+    template: '%s | Nameer'
+  },
+  description: 'Custom bags and cases manufacturer for B2B buyers. OEM/ODM backpacks, waist bags, mommy bags, chest bags and gym bags with low MOQ, 7-15 day samples and contact for best price.',
+  openGraph: {
+    type: 'website',
+    siteName: 'Nameer',
+    images: ['/assets/images/trust/factory-process.jpg?v=2']
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/assets/images/trust/factory-process.jpg?v=2']
+  },
+  icons: {
+    icon: '/assets/images/brand/nameer-icon-32.png?v=2',
+    apple: '/assets/images/brand/nameer-icon-180.png?v=2'
+  },
+  verification: {
+    google: 'LNngjZCe-ntyTk4u11vkXimEeA4P8yu30dl3PkACSUQ'
+  }
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${siteData.analytics.ga4}`} strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${siteData.analytics.ga4}');
+        `}</Script>
+        <JsonLd data={organizationSchema(siteData)} />
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
+      </body>
+    </html>
+  );
+}
