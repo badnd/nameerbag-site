@@ -1,5 +1,6 @@
 export const siteUrl = 'https://www.nameerbag.com';
-export const assetBaseUrl = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || '').replace(/\/+$/, '');
+const defaultAssetBaseUrl = 'https://images.nameerbag.com';
+export const assetBaseUrl = (process.env.NEXT_PUBLIC_ASSET_BASE_URL ?? defaultAssetBaseUrl).replace(/\/+$/, '');
 
 export function assetPath(src) {
   if (!src) return '/assets/images/generated/hero-student.webp';
