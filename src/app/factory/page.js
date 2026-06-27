@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { assetPath } from '@/lib/paths';
 
 export const metadata = {
   title: 'Factory Strength | Custom Bag OEM/ODM',
@@ -23,8 +24,8 @@ export default function FactoryPage() {
             <div className="hero-cta"><Link className="btn btn-primary" href="/contact">Discuss Your Order</Link></div>
           </div>
           <div className="media-stack">
-            <img src="/assets/images/trust/factory-process.jpg?v=2" alt="custom bag factory process" />
-            <img src="/assets/images/trust/factory-exterior.jpg" alt="custom bag factory exterior" />
+            <img src={assetPath('/assets/images/trust/factory-process.jpg?v=2')} alt="custom bag factory process" />
+            <img src={assetPath('/assets/images/trust/factory-exterior.jpg')} alt="custom bag factory exterior" />
           </div>
         </div>
       </section>

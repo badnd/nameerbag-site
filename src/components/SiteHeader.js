@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
-import { whatsappUrl } from '@/lib/paths';
+import { assetPath, whatsappUrl } from '@/lib/paths';
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -44,7 +44,7 @@ export function SiteHeader() {
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="container nav-wrap">
           <Link href="/" className="brand" aria-label="Nameer home">
-            <img className="brand-logo" src="/assets/images/brand/nameer-logo-horizontal.png?v=2" alt="Nameer" />
+            <img className="brand-logo" src={assetPath('/assets/images/brand/nameer-logo-horizontal.png?v=2')} alt="Nameer" />
           </Link>
           <button className="mobile-toggle" type="button" onClick={() => setOpen((value) => !value)} aria-label="Toggle navigation">Menu</button>
           <ul className={`nav-links ${open ? 'open' : ''}`}>

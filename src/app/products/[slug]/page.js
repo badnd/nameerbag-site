@@ -4,7 +4,7 @@ import { siteData } from '@/data/site-data';
 import { JsonLd } from '@/components/JsonLd';
 import { ProductGallery } from '@/components/ProductGallery';
 import { InquiryForm } from '@/components/InquiryForm';
-import { assetPath, productPath, productSchema, siteUrl, whatsappUrl } from '@/lib/paths';
+import { assetPath, assetUrl, productPath, productSchema, siteUrl, whatsappUrl } from '@/lib/paths';
 
 export function generateStaticParams() {
   return Object.keys(siteData.products).map((slug) => ({ slug }));
@@ -23,13 +23,13 @@ export async function generateMetadata({ params }) {
       title: product.title,
       description: product.intro,
       url: `${siteUrl}${productPath(slug)}`,
-      images: [{ url: `${siteUrl}${assetPath(product.gallery[0] || product.hero)}`, width: 1200, height: 630 }]
+      images: [{ url: assetUrl(product.gallery[0] || product.hero), width: 1200, height: 630 }]
     },
     twitter: {
       card: 'summary_large_image',
       title: product.title,
       description: product.intro,
-      images: [`${siteUrl}${assetPath(product.gallery[0] || product.hero)}`]
+      images: [assetUrl(product.gallery[0] || product.hero)]
     }
   };
 }

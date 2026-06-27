@@ -4,7 +4,7 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { siteData } from '@/data/site-data';
 import { JsonLd } from '@/components/JsonLd';
-import { organizationSchema } from '@/lib/paths';
+import { assetPath, organizationSchema } from '@/lib/paths';
 
 export const metadata = {
   metadataBase: new URL('https://www.nameerbag.com'),
@@ -16,15 +16,15 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Nameer',
-    images: ['/assets/images/trust/factory-process.jpg?v=2']
+    images: [assetPath('/assets/images/trust/factory-process.jpg?v=2')]
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/assets/images/trust/factory-process.jpg?v=2']
+    images: [assetPath('/assets/images/trust/factory-process.jpg?v=2')]
   },
   icons: {
-    icon: '/assets/images/brand/nameer-icon-32.png?v=2',
-    apple: '/assets/images/brand/nameer-icon-180.png?v=2'
+    icon: assetPath('/assets/images/brand/nameer-icon-32.png?v=2'),
+    apple: assetPath('/assets/images/brand/nameer-icon-180.png?v=2')
   },
   verification: {
     google: 'LNngjZCe-ntyTk4u11vkXimEeA4P8yu30dl3PkACSUQ'

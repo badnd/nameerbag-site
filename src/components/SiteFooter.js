@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
-import { whatsappUrl } from '@/lib/paths';
+import { assetPath, whatsappUrl } from '@/lib/paths';
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div>
             <div className="brand footer-brand">
               <span className="footer-logo-panel">
-                <img className="brand-logo footer-logo" src="/assets/images/brand/nameer-logo-horizontal.png?v=2" alt="Nameer" />
+                <img className="brand-logo footer-logo" src={assetPath('/assets/images/brand/nameer-logo-horizontal.png?v=2')} alt="Nameer" />
               </span>
               <small>{siteData.company.tagline}</small>
             </div>

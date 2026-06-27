@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
+import { assetPath } from '@/lib/paths';
 
 export const metadata = {
   title: 'About Nameer | Custom Bag Manufacturer',
@@ -24,7 +25,7 @@ export default function AboutPage() {
             </div>
             <div className="hero-cta"><Link className="btn btn-primary" href="/contact">Contact Sales</Link><Link className="btn btn-secondary" href="/products">View Products</Link></div>
           </div>
-          <div className="media-panel"><img src="/assets/images/trust/factory-exterior.jpg" alt="Tianjin Junyi factory exterior" /></div>
+          <div className="media-panel"><img src={assetPath('/assets/images/trust/factory-exterior.jpg')} alt="Tianjin Junyi factory exterior" /></div>
         </div>
       </section>
       <section className="section">

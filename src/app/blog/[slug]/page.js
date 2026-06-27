@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog-posts';
 import { JsonLd } from '@/components/JsonLd';
-import { siteUrl } from '@/lib/paths';
+import { assetPath, assetUrl, siteUrl } from '@/lib/paths';
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -21,13 +21,13 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.description,
       url: `${siteUrl}/blog/${post.slug}`,
-      images: [{ url: `${siteUrl}${post.hero}`, width: 1200, height: 630 }]
+      images: [{ url: assetUrl(post.hero), width: 1200, height: 630 }]
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: [`${siteUrl}${post.hero}`]
+      images: [assetUrl(post.hero)]
     }
   };
 }
@@ -42,11 +42,11 @@ export default async function BlogPostPage({ params }) {
     '@type': 'Article',
     headline: post.title,
     description: post.description,
-    image: `${siteUrl}${post.hero}`,
+    image: assetUrl(post.hero),
     datePublished: post.date,
     dateModified: post.date,
     author: { '@type': 'Organization', name: 'Nameer' },
-    publisher: { '@type': 'Organization', name: 'Nameer', logo: { '@type': 'ImageObject', url: `${siteUrl}/assets/images/brand/nameer-logo-horizontal.png?v=2` } },
+    publisher: { '@type': 'Organization', name: 'Nameer', logo: { '@type': 'ImageObject', url: assetUrl('/assets/images/brand/nameer-logo-horizontal.png?v=2') } },
     mainEntityOfPage: `${siteUrl}/blog/${post.slug}`
   };
 
@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }) {
           <h1>{post.title}</h1>
           <p className="article-lead">{post.description}</p>
           <div className="blog-meta article-meta"><span>{post.category}</span><span>{post.date}</span></div>
-          <img className="article-hero" src={post.hero} alt={post.title} />
+          <img className="article-hero" src={assetPath(post.hero)} alt={post.title} />
           <div className="article-content">
             {post.sections.map((section) => (
               <section key={section.heading}>

@@ -1,9 +1,19 @@
 export const siteUrl = 'https://www.nameerbag.com';
+export const assetBaseUrl = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || '').replace(/\/+$/, '');
 
 export function assetPath(src) {
   if (!src) return '/assets/images/generated/hero-student.webp';
-  if (src.startsWith('http') || src.startsWith('/')) return src;
-  return `/${src.replace(/^\.?\//, '')}`;
+  if (src.startsWith('http')) return src;
+
+  const normalized = `/${src.replace(/^\.?\//, '')}`;
+  if (assetBaseUrl && normalized.startsWith('/assets/')) return `${assetBaseUrl}${normalized}`;
+  return normalized;
+}
+
+export function assetUrl(src) {
+  const path = assetPath(src);
+  if (path.startsWith('http')) return path;
+  return `${siteUrl}${path}`;
 }
 
 export function productPath(slug) {
@@ -27,7 +37,7 @@ export function productSchema(data, slug, product) {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.title,
-    image: product.gallery.map((image) => `${siteUrl}${assetPath(image)}`),
+    image: product.gallery.map((image) => assetUrl(image)),
     description: product.intro,
     brand: { '@type': 'Brand', name: 'Nameer' },
     sku: product.model,
@@ -55,7 +65,7 @@ export function organizationSchema(data) {
     name: data.company.name,
     email: data.company.email,
     url: `${siteUrl}/`,
-    logo: `${siteUrl}/assets/images/brand/nameer-logo-horizontal.png?v=2`,
+    logo: assetUrl('/assets/images/brand/nameer-logo-horizontal.png?v=2'),
     contactPoint: [
       {
         '@type': 'ContactPoint',
