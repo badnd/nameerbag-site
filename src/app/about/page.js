@@ -40,6 +40,27 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <section className="section bg-soft">
+        <div className="container">
+          <div className="section-head">
+            <div>
+              <span className="badge">Certifications & Honors</span>
+              <h2>Certified manufacturing background</h2>
+              <p>Tianjin Junyi Premium Trading Co., Ltd. - the company behind Nameer - holds ISO 9001 certification and has received multiple industry honors at international trade exhibitions.</p>
+            </div>
+          </div>
+          <div className="trust-showcase">
+            <figure className="media-panel trust-figure">
+              <img src={assetPath('/assets/images/trust/trust-certifications-iso-bsci-1600.jpg')} alt="ISO 9001, BSCI, SGS and RoHS certification materials for Nameer bag manufacturing" />
+              <figcaption>Quality management and compliance references for custom bag orders.</figcaption>
+            </figure>
+            <figure className="media-panel trust-figure">
+              <img src={assetPath('/assets/images/trust/trust-honor-wall-trophies-1200.jpg')} alt="Honor wall and trade exhibition trophies for Nameer bag manufacturing" />
+              <figcaption>Trade exhibition honors and factory recognition from our manufacturing team.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

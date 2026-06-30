@@ -105,6 +105,28 @@ export default async function ProductPage({ params }) {
         </div>
       </section>
 
+      {slug === 'waist-bag' ? (
+        <section className="section bg-soft">
+          <div className="container product-story-grid">
+            <div>
+              <span className="badge">Customer Case Studies</span>
+              <h2>Custom waist bag programs for government and retail buyers</h2>
+              <p className="muted">These case photos show logo placement, two-color construction and practical front-panel branding for custom waist bag orders.</p>
+            </div>
+            <div className="trust-showcase">
+              <figure className="media-panel trust-figure">
+                <img src={assetPath('/assets/images/cases/case-government-waistbag-900.jpg')} alt="Custom government waist bag with printed logo and two-tone color design" />
+                <figcaption>Custom waist bag developed for a government-style project with visible front logo placement.</figcaption>
+              </figure>
+              <figure className="media-panel trust-figure">
+                <img src={assetPath('/assets/images/cases/case-xiaos-waistbag-twocolor-900.jpg')} alt="Custom two-color waist bag with front logo print for retail brand project" />
+                <figcaption>Two-color waist bag project showing practical logo position and color-block construction.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="section bg-soft">
         <div className="container">
           <div className="section-head">

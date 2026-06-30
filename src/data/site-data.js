@@ -17,7 +17,8 @@ export const siteData = {
       "title": "Custom Bags & Cases Manufacturer for Growing Brands",
       "subtitle": "Low MOQ | OEM/ODM | Factory Direct",
       "text": "Backpacks, waist bags, mommy bags, chest bags, gym bags and more custom bag categories are organized for importers, wholesalers and brand buyers.",
-      "image": "assets/images/trust/factory-process.jpg?v=2",
+      "image": "assets/images/factory/factory-strap-stitching-1600.jpg",
+      "video": "assets/videos/factory/factory-sewing-closeup-13s.mp4",
       "cta": "Browse Products",
       "link": "pages/products.html"
     },

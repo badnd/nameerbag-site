@@ -17,6 +17,7 @@ export default function CustomServicePage() {
               <span className="badge">Customization</span>
               <h1>OEM/ODM custom bag service</h1>
               <p>Choose logo method, fabric, color, size, packaging and private label details for your target market.</p>
+              <p className="mockup-note">Free design mockup within 24 hours - send your logo and we'll show you how it looks on the bag before sampling.</p>
             </div>
             <Link className="btn btn-primary" href="/contact">Start a Project</Link>
           </div>

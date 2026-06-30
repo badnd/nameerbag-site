@@ -59,6 +59,7 @@ export default function HomePage() {
               <article className="card info-card" key={title}><div className="card-body"><div className="icon-bubble">{num}</div><h3 className="card-title">{title}</h3><p className="muted">{text}</p></div></article>
             ))}
           </div>
+          <p className="price-guidance">Reference MOQ price ranges: waist bags from about USD 2.00-5.50, basic backpacks from about USD 4.80-11.80, and mommy, gym or travel bags from about USD 5.50-15.80 depending on material, logo method, structure and order quantity.</p>
           <div className="trust-showcase">
             <div className="media-panel"><img src={assetPath('/assets/images/trust/why-choose-us.jpg')} alt="why choose Nameerbag" /></div>
             <div className="media-panel"><img src={assetPath('/assets/images/trust/buyer-reviews.jpg')} alt="buyer reviews for custom bags" /></div>
