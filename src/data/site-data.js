@@ -19,6 +19,7 @@ export const siteData = {
       "text": "Backpacks, waist bags, mommy bags, chest bags, gym bags and more custom bag categories are organized for importers, wholesalers and brand buyers.",
       "image": "assets/images/factory/factory-strap-stitching-1600.jpg",
       "video": "assets/videos/factory/factory-sewing-closeup-13s.mp4",
+      "duration": 4000,
       "cta": "Browse Products",
       "link": "pages/products.html"
     },
@@ -26,7 +27,8 @@ export const siteData = {
       "title": "Flexible Bag Development from 1 SKU to More Styles",
       "subtitle": "Logo | Fabric | Color | Pattern | Packaging",
       "text": "Start from a reference sample, sketch or product idea. We help turn custom bag requirements into practical sampling and production details.",
-      "image": "assets/images/trust/bag-categories.jpg",
+      "image": "assets/images/factory/factory-strap-stitching-1600.jpg",
+      "duration": 4000,
       "cta": "View Custom Service",
       "link": "pages/custom-service.html"
     },
@@ -34,9 +36,20 @@ export const siteData = {
       "title": "Clear Sampling, Production and Shipping Workflow",
       "subtitle": "7-15 Day Samples | 15-30 Day Production",
       "text": "Typical MOQ options are 300 / 500 / 1000 pcs depending on product, material and logo method. Final lead time is based on the actual order schedule.",
-      "image": "assets/images/trust/factory-exterior.jpg",
+      "image": "assets/images/factory/factory-strap-stitching-1600.jpg",
+      "video": "assets/videos/factory/factory-overview-multistation-21s.mp4",
+      "duration": 4000,
       "cta": "Explore Factory",
       "link": "pages/factory.html"
+    },
+    {
+      "title": "Trusted Factory Partner with Export Experience",
+      "subtitle": "Quality Systems | Showroom | Brand Support",
+      "text": "Factory qualifications, showroom displays and long-term export routines give buyers a clearer foundation before sampling and bulk orders.",
+      "image": "assets/images/trust/trust-honor-wall-trophies-1200.jpg",
+      "duration": 4000,
+      "cta": "Contact Sales",
+      "link": "pages/contact.html"
     }
   ],
   "homeFeaturedProducts": [
