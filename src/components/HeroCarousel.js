@@ -17,15 +17,25 @@ function normalizeSlideHref(href) {
 export function HeroCarousel({ slides }) {
   const validSlides = useMemo(() => slides.filter(Boolean), [slides]);
   const [active, setActive] = useState(0);
-  const current = validSlides[active] || validSlides[0];
+  const [copyActive, setCopyActive] = useState(0);
+  const current = validSlides[copyActive] || validSlides[active] || validSlides[0];
 
   useEffect(() => {
     if (validSlides.length < 2) return undefined;
-    const timer = window.setInterval(() => {
+    const activeSlide = validSlides[active] || validSlides[0];
+    const timer = window.setTimeout(() => {
       setActive((index) => (index + 1) % validSlides.length);
-    }, current?.duration || 4000);
-    return () => window.clearInterval(timer);
-  }, [current?.duration, validSlides.length]);
+    }, activeSlide?.duration || 4000);
+    return () => window.clearTimeout(timer);
+  }, [active, validSlides]);
+
+  useEffect(() => {
+    if (active === copyActive) return undefined;
+    const timer = window.setTimeout(() => {
+      setCopyActive(active);
+    }, 1200);
+    return () => window.clearTimeout(timer);
+  }, [active, copyActive]);
 
   if (!current) return null;
 
@@ -59,7 +69,7 @@ export function HeroCarousel({ slides }) {
                 muted
                 loop
                 playsInline
-                preload={isActive ? 'auto' : 'metadata'}
+                preload="metadata"
                 poster={assetPath(slide.image)}
               />
             </Fragment>
