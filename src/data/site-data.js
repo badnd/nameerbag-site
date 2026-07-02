@@ -1270,6 +1270,238 @@ export const siteData = {
           "sku": "JY-GB-25503-C"
         }
       ]
+    },
+    "crossbody-waist-bag-ytljy944": {
+      "category": "Waist & Sling Bags",
+      "title": "Compact Crossbody Waist Bag - Custom OEM/ODM Sling Bag (Model YTLJY944)",
+      "metaTitle": "Custom Crossbody Waist Bag OEM/ODM | Model YTLJY944",
+      "metaDescription": "Water-resistant ripstop crossbody waist bag, 26x16x4cm, 130g. OEM/ODM with custom logo, MOQ from 50 units, samples in 7-15 days. Request a quote.",
+      "schemaDescription": "Water-resistant ripstop crossbody waist bag, 26x16x4cm, 130g. OEM/ODM with custom logo, MOQ from 50 units, samples in 7-15 days. Request a quote.",
+      "model": "YTLJY944",
+      "hero": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-1.webp",
+      "gallery": [
+        "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-1.webp",
+        "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-2.webp",
+        "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-3.webp",
+        "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-4.webp",
+        "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-5.webp",
+        "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-6.webp"
+      ],
+      "galleryAlt": [
+        "Black ripstop crossbody waist bag with orange zippers - front view",
+        "Black ripstop crossbody waist bag with orange zippers - full product overview",
+        "Black ripstop crossbody waist bag - interior structure and storage layout",
+        "Black ripstop crossbody waist bag - wearing view for travel and daily use",
+        "Black ripstop crossbody waist bag - fabric zipper strap and pocket details",
+        "Black ripstop crossbody waist bag - premium quality construction details"
+      ],
+      "lifestyle": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-4.webp",
+      "mobilePreview": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-3.webp",
+      "badges": [
+        "OEM/ODM",
+        "Low MOQ",
+        "Water-resistant",
+        "Custom Logo"
+      ],
+      "intro": "Small body, large capacity. This compact crossbody waist bag is built for everyday carry and travel - light enough to forget you're wearing it, organized enough to hold everything that matters. The water-resistant ripstop grid fabric with contrast zipper pulls gives it a clean, technical look that works across streetwear, outdoor, and promotional product lines.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY944"
+        ],
+        [
+          "Size",
+          "26 x 16 x 4 cm"
+        ],
+        [
+          "Weight",
+          "0.13 kg"
+        ],
+        [
+          "Shell",
+          "Nylon + laminated Oxford with ripstop grid texture"
+        ],
+        [
+          "Lining",
+          "Polyester"
+        ],
+        [
+          "Colors",
+          "Black / Black + Orange"
+        ],
+        [
+          "Structure",
+          "Front zipper pocket / inner zipper pocket / main compartment"
+        ],
+        [
+          "Strap",
+          "Adjustable shoulder strap"
+        ],
+        [
+          "MOQ",
+          "From 50 units, low MOQ welcome"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after logo, colorway and material details are confirmed"
+        ]
+      ],
+      "features": [
+        "Water-resistant ripstop grid fabric with tear and abrasion resistance",
+        "Smart storage layout for phone, power bank, cosmetics, earbuds and daily essentials",
+        "Smooth double zippers with reinforced stitching at stress points",
+        "Durable high-density strap webbing with adjustable buckle",
+        "Custom logo options include rubber patch, silk print, woven label and private label",
+        "Ideal for brand promotion, corporate gifts, team use and travel retail"
+      ],
+      "variants": [
+        {
+          "name": "Front View with Black and Orange Zippers",
+          "image": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-1.webp",
+          "sku": "YTLJY944-A"
+        },
+        {
+          "name": "Full Product Overview",
+          "image": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-2.webp",
+          "sku": "YTLJY944-B"
+        },
+        {
+          "name": "Interior Storage Layout",
+          "image": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-3.webp",
+          "sku": "YTLJY944-C"
+        },
+        {
+          "name": "Wearing View for Travel and Daily Use",
+          "image": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-4.webp",
+          "sku": "YTLJY944-D"
+        },
+        {
+          "name": "Fabric Zipper Strap and Pocket Details",
+          "image": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-5.webp",
+          "sku": "YTLJY944-E"
+        },
+        {
+          "name": "Premium Quality Detail Display",
+          "image": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-6.webp",
+          "sku": "YTLJY944-F"
+        }
+      ]
+    },
+    "compact-crossbody-bag-ytljy5634": {
+      "category": "Mini Crossbody Bags",
+      "title": "Compact Everyday Crossbody Bag - Custom OEM/ODM Mini Shoulder Bag (Model YTLJY5634)",
+      "metaTitle": "Compact Crossbody Bag OEM/ODM | Model YTLJY5634",
+      "metaDescription": "Lightweight waterproof crossbody bag, 13x6x18cm, 80g, 4 colors. OEM/ODM private label, MOQ flexible, samples in 7-15 days. Request a custom quote.",
+      "schemaDescription": "Lightweight waterproof crossbody bag, 13x6x18cm, 80g, 4 colors. OEM/ODM private label, MOQ flexible, samples in 7-15 days. Request a custom quote.",
+      "model": "YTLJY5634",
+      "hero": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-1.webp",
+      "gallery": [
+        "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-1.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-2.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-3.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-4.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-5.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-6.webp"
+      ],
+      "galleryAlt": [
+        "Compact everyday crossbody bag in orange waterproof nylon - front view",
+        "Compact everyday crossbody bag - dimensions and product specifications",
+        "Compact everyday crossbody bag - color options black white lime green orange",
+        "Compact everyday crossbody bag - waterproof fabric and daily carry details",
+        "Compact everyday crossbody bag - front bungee cord and zipper pocket details",
+        "Compact everyday crossbody bag - side back bottom and open views"
+      ],
+      "lifestyle": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-1.webp",
+      "mobilePreview": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-6.webp",
+      "badges": [
+        "OEM/ODM",
+        "Waterproof",
+        "Private Label",
+        "Low MOQ"
+      ],
+      "intro": "Lightweight, waterproof, organized - ready for everyday. This compact crossbody bag is designed for modern commuters and urban lifestyles, with a distinctive front bungee cord that adds both function and street-ready style. At just 0.08 kg, it carries a phone, wallet, keys, and power bank without ever weighing you down.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY5634"
+        ],
+        [
+          "Size",
+          "13 x 6 x 18 cm"
+        ],
+        [
+          "Weight",
+          "0.08 kg"
+        ],
+        [
+          "Material",
+          "Nylon, waterproof"
+        ],
+        [
+          "Colors",
+          "Black / White / Lime Green / Orange"
+        ],
+        [
+          "Structure",
+          "Main compartment, front zip pocket, front bungee cord, adjustable strap"
+        ],
+        [
+          "Customization",
+          "Custom logo, patch, print, embroidery, color and packaging support"
+        ],
+        [
+          "MOQ",
+          "Flexible order quantity, low MOQ welcome"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ],
+        [
+          "Use",
+          "Travel / daily commute / outdoor activities / events"
+        ]
+      ],
+      "features": [
+        "Waterproof nylon fabric is durable, easy to clean and protects against light rain",
+        "Front bungee cord system supports quick access or extra storage on the go",
+        "Front zip pocket and main compartment keep small essentials organized",
+        "Smooth zippers, durable hardware and adjustable strap for comfortable daily wear",
+        "Private label solutions with custom colors, logo and packaging",
+        "Flexible order quantity for brand launches, events and promotional programs"
+      ],
+      "variants": [
+        {
+          "name": "Orange Waterproof Nylon Front View",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-1.webp",
+          "sku": "YTLJY5634-A"
+        },
+        {
+          "name": "Dimensions and Specifications",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-2.webp",
+          "sku": "YTLJY5634-B"
+        },
+        {
+          "name": "Four Color Options",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-3.webp",
+          "sku": "YTLJY5634-C"
+        },
+        {
+          "name": "Waterproof Fabric Daily Carry Details",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-4.webp",
+          "sku": "YTLJY5634-D"
+        },
+        {
+          "name": "Bungee Cord and Front Pocket Details",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-5.webp",
+          "sku": "YTLJY5634-E"
+        },
+        {
+          "name": "Side Back Bottom and Open Views",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-6.webp",
+          "sku": "YTLJY5634-F"
+        }
+      ]
     }
   },
   "testimonials": [

@@ -16,19 +16,19 @@ export async function generateMetadata({ params }) {
   if (!product) return {};
 
   return {
-    title: `${product.title} | ${product.model}`,
-    description: `${product.intro} OEM/ODM custom bag manufacturer with low MOQ, logo options and factory quotation support.`,
+    title: product.metaTitle ?? `${product.title} | ${product.model}`,
+    description: product.metaDescription ?? `${product.intro} OEM/ODM custom bag manufacturer with low MOQ, logo options and factory quotation support.`,
     alternates: { canonical: productPath(slug) },
     openGraph: {
-      title: product.title,
-      description: product.intro,
+      title: product.metaTitle ?? product.title,
+      description: product.metaDescription ?? product.intro,
       url: `${siteUrl}${productPath(slug)}`,
       images: [{ url: assetUrl(product.gallery[0] || product.hero), width: 1200, height: 630 }]
     },
     twitter: {
       card: 'summary_large_image',
-      title: product.title,
-      description: product.intro,
+      title: product.metaTitle ?? product.title,
+      description: product.metaDescription ?? product.intro,
       images: [assetUrl(product.gallery[0] || product.hero)]
     }
   };

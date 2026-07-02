@@ -39,8 +39,8 @@ export function productSchema(data, slug, product) {
     '@type': 'Product',
     name: product.title,
     image: product.gallery.map((image) => assetUrl(image)),
-    description: product.intro,
-    brand: { '@type': 'Brand', name: 'Nameer' },
+    description: product.schemaDescription ?? product.metaDescription ?? product.intro,
+    brand: { '@type': 'Brand', name: 'Nameer Bag' },
     sku: product.model,
     manufacturer: { '@type': 'Organization', name: data.company.name },
     offers: {
