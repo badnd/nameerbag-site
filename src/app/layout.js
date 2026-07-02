@@ -27,7 +27,10 @@ export const metadata = {
     apple: assetPath('/assets/images/brand/nameer-icon-180.png?v=2')
   },
   verification: {
-    google: 'LNngjZCe-ntyTk4u11vkXimEeA4P8yu30dl3PkACSUQ'
+    google: 'LNngjZCe-ntyTk4u11vkXimEeA4P8yu30dl3PkACSUQ',
+    other: {
+      'msvalidate.01': 'AD12B57AA450C181C4A8D6F90403CA06'
+    }
   }
 };
 
