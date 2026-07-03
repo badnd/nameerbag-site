@@ -209,7 +209,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -291,7 +291,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -380,7 +380,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -469,7 +469,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -554,7 +554,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -642,7 +642,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -714,7 +714,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -788,7 +788,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -862,7 +862,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -936,7 +936,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1010,7 +1010,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1084,7 +1084,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1158,7 +1158,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1232,7 +1232,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1275,8 +1275,8 @@ export const siteData = {
       "category": "Waist & Sling Bags",
       "title": "Compact Crossbody Waist Bag - Custom OEM/ODM Sling Bag (Model YTLJY944)",
       "metaTitle": "Custom Crossbody Waist Bag OEM/ODM | Model YTLJY944",
-      "metaDescription": "Water-resistant ripstop crossbody waist bag, 26x16x4cm, 130g. OEM/ODM with custom logo, MOQ from 50 units, samples in 7-15 days. Request a quote.",
-      "schemaDescription": "Water-resistant ripstop crossbody waist bag, 26x16x4cm, 130g. OEM/ODM with custom logo, MOQ from 50 units, samples in 7-15 days. Request a quote.",
+      "metaDescription": "Water-resistant ripstop crossbody waist bag, 26x16x4cm, 130g. OEM/ODM with custom logo, Flexible MOQ tiers from 50 pcs, samples in 7-15 days. Request a quote.",
+      "schemaDescription": "Water-resistant ripstop crossbody waist bag, 26x16x4cm, 130g. OEM/ODM with custom logo, Flexible MOQ tiers from 50 pcs, samples in 7-15 days. Request a quote.",
       "model": "YTLJY944",
       "hero": "assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-1.webp",
       "gallery": [
@@ -1339,7 +1339,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "From 50 units, low MOQ welcome"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1391,8 +1391,8 @@ export const siteData = {
       "category": "Mini Crossbody Bags",
       "title": "Compact Everyday Crossbody Bag - Custom OEM/ODM Mini Shoulder Bag (Model YTLJY5634)",
       "metaTitle": "Compact Crossbody Bag OEM/ODM | Model YTLJY5634",
-      "metaDescription": "Lightweight waterproof crossbody bag, 13x6x18cm, 80g, 4 colors. OEM/ODM private label, MOQ flexible, samples in 7-15 days. Request a custom quote.",
-      "schemaDescription": "Lightweight waterproof crossbody bag, 13x6x18cm, 80g, 4 colors. OEM/ODM private label, MOQ flexible, samples in 7-15 days. Request a custom quote.",
+      "metaDescription": "Lightweight waterproof crossbody bag, 13x6x18cm, 80g, 4 colors. OEM/ODM private label, flexible MOQ tiers from 50 pcs, samples in 7-15 days. Request a custom quote.",
+      "schemaDescription": "Lightweight waterproof crossbody bag, 13x6x18cm, 80g, 4 colors. OEM/ODM private label, flexible MOQ tiers from 50 pcs, samples in 7-15 days. Request a custom quote.",
       "model": "YTLJY5634",
       "hero": "assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-1.webp",
       "gallery": [
@@ -1451,7 +1451,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "Flexible order quantity, low MOQ welcome"
+          "Flexible MOQ tiers from 50 pcs, depending on style and customization"
         ],
         [
           "Sample Time",
@@ -1517,7 +1517,7 @@ export const siteData = {
     ],
     [
       "What is your MOQ?",
-      "Typical MOQ options are 300 / 500 / 1000 pcs depending on product type, material, logo method and order details. Please contact us for the best plan."
+      "MOQ tiers start from 50 pcs. Typical tiers are 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on product type, material, logo method and order details."
     ],
     [
       "How long does sampling take?",

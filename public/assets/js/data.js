@@ -32,7 +32,7 @@ window.siteData = {
     {
       "title": "Clear Sampling, Production and Shipping Workflow",
       "subtitle": "7-15 Day Samples | 15-30 Day Production",
-      "text": "Typical MOQ options are 300 / 500 / 1000 pcs depending on product, material and logo method. Final lead time is based on the actual order schedule.",
+      "text": "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method. Final lead time is based on the actual order schedule.",
       "image": "assets/images/trust/factory-exterior.jpg",
       "cta": "Explore Factory",
       "link": "pages/factory.html"
@@ -186,7 +186,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -268,7 +268,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -357,7 +357,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -446,7 +446,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -531,7 +531,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -619,7 +619,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -691,7 +691,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -765,7 +765,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -839,7 +839,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -913,7 +913,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -987,7 +987,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1061,7 +1061,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1135,7 +1135,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1209,7 +1209,7 @@ window.siteData = {
         ],
         [
           "MOQ",
-          "300 / 500 / 1000 pcs by style and material"
+          "MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method"
         ],
         [
           "Sample Time",
@@ -1262,7 +1262,7 @@ window.siteData = {
     ],
     [
       "What is your MOQ?",
-      "Typical MOQ options are 300 / 500 / 1000 pcs depending on product type, material, logo method and order details. Please contact us for the best plan."
+      "MOQ tiers start from 50 pcs. Typical tiers are 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on product type, material, logo method and order details."
     ],
     [
       "How long does sampling take?",

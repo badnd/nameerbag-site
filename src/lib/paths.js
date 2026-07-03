@@ -28,8 +28,8 @@ export function productLegacyPath(slug) {
 export function whatsappUrl(data, product, variant = '') {
   const base = data.company.whatsappLink.split('?')[0];
   const message = product
-    ? `Hi, I'm interested in your ${product.title} (${product.model})${variant ? ` - ${variant}` : ''}. Please send MOQ, customization options and quotation.`
-    : 'Hi, I am interested in your custom bag products. Please send your product catalog, MOQ, customization options and quotation.';
+    ? `Hi, I'm interested in the ${product.title} (${product.model})${variant ? ` - ${variant}` : ''}. Please send MOQ tiers, sample cost and lead time. - Anna Wei, Sales`
+    : 'Hi, I am interested in your custom bag products. Please send your product catalog, MOQ tiers, sample cost and lead time. - Anna Wei, Sales';
   return `${base}?text=${encodeURIComponent(message)}`;
 }
 
@@ -49,7 +49,7 @@ export function productSchema(data, slug, product) {
       url: `${siteUrl}${productPath(slug)}`,
       priceCurrency: 'USD',
       price: '0.00',
-      description: 'Custom quotation upon request. MOQ 50-500 units depending on product.',
+      description: 'Custom quotation upon request. Flexible MOQ tiers from 50 pcs depending on style and customization.',
       seller: { '@type': 'Organization', name: data.company.name }
     },
     additionalProperty: product.specs.map(([name, value]) => ({

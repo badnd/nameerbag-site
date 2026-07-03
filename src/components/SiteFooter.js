@@ -17,6 +17,7 @@ export function SiteFooter() {
               <small>{siteData.company.tagline}</small>
             </div>
             <p>{siteData.company.name} supplies custom bag solutions for global B2B buyers, including backpacks, waist bags, sling bags, mommy bags and gym bags.</p>
+            <p className="muted">Own factory in Baigou, Hebei / Export office in Tianjin</p>
           </div>
           <div>
             <h4>Products</h4>

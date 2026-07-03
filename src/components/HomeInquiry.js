@@ -15,6 +15,13 @@ export function HomeInquiry() {
         </div>
       </div>
       <div className="quote-card home-quote-card">
+        <div className="feature-item">
+          <div className="icon-bubble">A</div>
+          <div>
+            <strong>Hi, I'm Anna Wei</strong>
+            <div className="muted">Your bag sourcing consultant. Send your requirements below and I'll personally reply within 24 hours with MOQ, sample and pricing suggestions.</div>
+          </div>
+        </div>
         <h3>Get a Factory Quote</h3>
         <InquiryForm productTitle="Homepage Factory Quote" productOptions={siteData.categories.map((category) => category.name)} />
       </div>

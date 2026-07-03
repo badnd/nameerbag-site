@@ -18,10 +18,10 @@ export default function AboutPage() {
             <h1>{siteData.company.name}</h1>
             <p className="muted">{siteData.company.tagline}. We support importers, wholesalers, promotional buyers and private label brands with practical custom bag development.</p>
             <div className="stats">
-              <div><strong>OEM/ODM</strong><span>Custom service</span></div>
-              <div><strong>Low MOQ</strong><span>Flexible trial orders</span></div>
-              <div><strong>24h</strong><span>Fast reply</span></div>
-              <div><strong>Global</strong><span>B2B buyers</span></div>
+              <div><strong>15+</strong><span>Years in bag manufacturing</span></div>
+              <div><strong>3,000</strong><span>sqm sewing workshop</span></div>
+              <div><strong>50</strong><span>Team members</span></div>
+              <div><strong>200,000+</strong><span>Units produced annually</span></div>
             </div>
             <div className="hero-cta"><Link className="btn btn-primary" href="/contact">Contact Sales</Link><Link className="btn btn-secondary" href="/products">View Products</Link></div>
           </div>
@@ -30,7 +30,7 @@ export default function AboutPage() {
       </section>
       <section className="section">
         <div className="container">
-          <div className="section-head"><div><span className="badge">Our Focus</span><h2>Built for B2B custom bag projects</h2></div></div>
+          <div className="section-head"><div><span className="badge">Our Focus</span><h2>Built for B2B custom bag projects</h2><p>We operate as an integrated manufacturer and exporter: our own sewing factory in Baigou, Hebei handles production, while our Tianjin-based export team manages international communication, documentation and logistics.</p></div></div>
           <div className="grid grid-3">
             {[
               ['Product Development', 'Turn reference images, sketches and buyer requirements into sample-ready bag plans.'],
@@ -44,19 +44,19 @@ export default function AboutPage() {
         <div className="container">
           <div className="section-head">
             <div>
-              <span className="badge">Certifications & Honors</span>
-              <h2>Certified manufacturing background</h2>
-              <p>Tianjin Junyi Premium Trading Co., Ltd. - the company behind Nameer - holds ISO 9001 certification and has received multiple industry honors at international trade exhibitions.</p>
+              <span className="badge">Export Markets</span>
+              <h2>Factory production with Tianjin export support</h2>
+              <p>Our bags ship to clients across North America (USA, Canada, Mexico), Europe (UK, Russia), Asia (Japan, Singapore, Malaysia, Bangladesh), Latin America (Peru) and Africa (Djibouti), among other markets.</p>
             </div>
           </div>
           <div className="trust-showcase">
             <figure className="media-panel trust-figure">
-              <img src={assetPath('/assets/images/trust/trust-certifications-iso-bsci-1600.jpg')} alt="ISO 9001, BSCI, SGS and RoHS certification materials for Nameer bag manufacturing" />
-              <figcaption>Quality management and compliance references for custom bag orders.</figcaption>
+              <img src={assetPath('/assets/images/trust/factory-exterior.jpg')} alt="Nameer sewing factory exterior in Baigou Hebei" />
+              <figcaption>Own sewing factory in Baigou, Hebei for custom bag sampling and production.</figcaption>
             </figure>
             <figure className="media-panel trust-figure">
-              <img src={assetPath('/assets/images/trust/trust-honor-wall-trophies-1200.jpg')} alt="Honor wall and trade exhibition trophies for Nameer bag manufacturing" />
-              <figcaption>Trade exhibition honors and factory recognition from our manufacturing team.</figcaption>
+              <img src={assetPath('/assets/images/trust/factory-process.jpg?v=2')} alt="Nameer custom bag production workflow" />
+              <figcaption>Tianjin export team supports international communication, documents and logistics.</figcaption>
             </figure>
           </div>
         </div>

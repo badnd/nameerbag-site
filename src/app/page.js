@@ -26,6 +26,23 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container">
+          <div className="stats">
+            {[
+              ['15+', 'Years in Bag Manufacturing'],
+              ['3,000', 'sqm Sewing Workshop'],
+              ['50', 'Team Members (35 production + 15 sales & support)'],
+              ['200,000+', 'Units Produced Annually'],
+              ['10+', 'Export Markets Worldwide'],
+              ['50 pcs', 'MOQ Entry Tier']
+            ].map(([num, label]) => (
+              <div key={label}><strong>{num}</strong><span>{label}</span></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <div className="section-head">
             <div>
               <span className="badge">What We Offer</span>
@@ -52,7 +69,7 @@ export default function HomePage() {
           <div className="grid grid-4">
             {[
               ['01', 'Wide Bag Categories', 'Backpacks, waist bags, mommy bags, chest bags, gym bags and more functional bags can be developed.'],
-              ['02', 'Low MOQ Options', 'MOQ can be discussed around 300 / 500 / 1000 pcs depending on style, material and logo details.'],
+              ['02', 'Low MOQ Options', 'MOQ tiers from 50 pcs - typical tiers at 50 / 100 / 300 / 500 / 1,000 / 3,000+ units depending on style, material and logo method.'],
               ['03', 'Fast Sampling', 'Sample development usually takes 7-15 days after artwork and material details are confirmed.'],
               ['04', 'Reliable Production', 'Bulk production usually takes 15-30 days after sample approval, subject to actual order schedule.']
             ].map(([num, title, text]) => (
@@ -60,9 +77,15 @@ export default function HomePage() {
             ))}
           </div>
           <p className="price-guidance">Reference MOQ price ranges: waist bags from about USD 2.00-5.50, basic backpacks from about USD 4.80-11.80, and mommy, gym or travel bags from about USD 5.50-15.80 depending on material, logo method, structure and order quantity.</p>
+          <div className="cta-banner article-cta">
+            <div>
+              <h2>Integrated Factory & Export Team</h2>
+              <p>We operate as an integrated manufacturer and exporter: our own sewing factory in Baigou, Hebei - one of China's largest bag manufacturing hubs - handles production, while our Tianjin-based export team manages international communication, documentation and logistics. You get factory pricing with professional export service, under one roof.</p>
+            </div>
+          </div>
           <div className="trust-showcase">
             <div className="media-panel"><img src={assetPath('/assets/images/trust/why-choose-us.jpg')} alt="why choose Nameerbag" /></div>
-            <div className="media-panel"><img src={assetPath('/assets/images/trust/buyer-reviews.jpg')} alt="buyer reviews for custom bags" /></div>
+            <div className="media-panel"><img src={assetPath('/assets/images/trust/factory-exterior.jpg')} alt="Nameer sewing factory in Baigou Hebei" /></div>
           </div>
         </div>
       </section>
@@ -85,6 +108,7 @@ export default function HomePage() {
                 {['Send Requirements', 'Confirm Details', 'Sample & Approve', 'Bulk Production'].map((title, index) => (
                   <div className="feature-item" key={title}><div className="icon-bubble">{index + 1}</div><div><strong>{title}</strong><div className="muted">{['Product type, quantity, logo, material, color, packaging and target market.', 'We review practical production options and help align the custom direction.', 'Typical sample time is 7-15 days after key details are confirmed.', 'Production usually takes 15-30 days after sample approval, based on actual scheduling.'][index]}</div></div></div>
                 ))}
+                <div className="feature-item"><div className="icon-bubble">S</div><div><strong>Sample fee refund policy</strong><div className="muted">Sample cost varies with design complexity. For bulk orders of 1,000+ pcs the sample fee is refunded; for 500-1,000 pcs refund is negotiable. Details confirmed during quotation.</div></div></div>
               </div>
             </div>
             <div className="media-panel trust-media"><img src={assetPath('/assets/images/trust/factory-process.jpg?v=2')} alt="custom bag manufacturing workflow" /></div>

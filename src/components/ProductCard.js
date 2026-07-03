@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { assetPath, productPath } from '@/lib/paths';
+import { assetPath, productPath, whatsappUrl } from '@/lib/paths';
 import { siteData } from '@/data/site-data';
 
 export function ProductCard({ slug, product, showLogoZone = false }) {
@@ -21,7 +21,7 @@ export function ProductCard({ slug, product, showLogoZone = false }) {
       </div>
       <div className="card-actions">
         <Link className="btn btn-primary" href={productPath(slug)}>View Details</Link>
-        <Link className="btn btn-secondary" href={`/contact?product=${encodeURIComponent(slug)}`}>Get Quote</Link>
+        <a className="btn btn-secondary" href={whatsappUrl(siteData, product)} target="_blank" rel="noopener">Get Quote</a>
       </div>
     </article>
   );
