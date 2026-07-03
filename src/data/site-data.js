@@ -1387,6 +1387,230 @@ export const siteData = {
         }
       ]
     },
+    "custom-waist-bag-ytljy6824": {
+      "category": "Waist & Sling Bags",
+      "title": "Custom Waist Bag - Lightweight Nylon OEM/ODM Waist Pack (Model YTLJY6824)",
+      "metaTitle": "Custom Waist Bag OEM/ODM | Model YTLJY6824",
+      "metaDescription": "Lightweight nylon custom waist bag, 32x17x9cm, 0.12kg. OEM/ODM logo, color and private label support with flexible MOQ tiers from 50 pcs. Request a quote.",
+      "schemaDescription": "Lightweight nylon custom waist bag, 32x17x9cm, 0.12kg. OEM/ODM logo, color and private label support with flexible MOQ tiers from 50 pcs. Request a quote.",
+      "model": "YTLJY6824",
+      "hero": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-1.webp",
+      "gallery": [
+        "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-1.webp",
+        "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-2.webp",
+        "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-3.webp",
+        "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-4.webp",
+        "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-5.webp",
+        "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-6.webp"
+      ],
+      "galleryAlt": [
+        "Custom turquoise waist bag with smart storage layout and logo patch",
+        "Custom waist bag YTLJY6824 lifestyle wearing scene",
+        "Custom waist bag YTLJY6824 product specifications and color options",
+        "Custom waist bag YTLJY6824 travel lifestyle display",
+        "Custom waist bag YTLJY6824 detail poster with logo and strap options",
+        "Custom waist bag YTLJY6824 branding and feature overview"
+      ],
+      "lifestyle": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-2.webp",
+      "mobilePreview": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-3.webp",
+      "badges": [
+        "OEM/ODM",
+        "Custom Logo",
+        "Lightweight Nylon",
+        "Low MOQ"
+      ],
+      "intro": "A lightweight custom waist bag for travel, events, promotions and retail collections. The YTLJY6824 design uses durable nylon fabric, a practical front zipper structure and an adjustable strap that can be worn as a waist bag or crossbody sling bag.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY6824"
+        ],
+        [
+          "Size",
+          "32 x 17 x 9 cm"
+        ],
+        [
+          "Weight",
+          "0.12 kg"
+        ],
+        [
+          "Material",
+          "Nylon fabric"
+        ],
+        [
+          "Colors",
+          "Black / Beige / Orange / Turquoise"
+        ],
+        [
+          "Usage",
+          "Waist bag / sling bag / travel pouch"
+        ],
+        [
+          "Customization",
+          "Logo patch, print, color matching, private label and packaging support"
+        ],
+        [
+          "MOQ",
+          "Flexible MOQ tiers from 50 pcs, depending on style and customization"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ]
+      ],
+      "features": [
+        "Lightweight nylon fabric with durable everyday performance",
+        "Front zipper pocket and main compartment for phone, wallet and travel essentials",
+        "Adjustable webbing strap supports waist or crossbody wearing",
+        "Four color references for brand launches and seasonal programs",
+        "Custom logo options include patch, print, woven label and private label",
+        "Suitable for promotional gifts, travel retail, streetwear and event merchandise"
+      ],
+      "variants": [
+        {
+          "name": "Smart Storage Layout Poster",
+          "image": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-1.webp",
+          "sku": "YTLJY6824-A"
+        },
+        {
+          "name": "Urban Everyday Carry Scene",
+          "image": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-2.webp",
+          "sku": "YTLJY6824-B"
+        },
+        {
+          "name": "Specifications and Color Options",
+          "image": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-3.webp",
+          "sku": "YTLJY6824-C"
+        },
+        {
+          "name": "Built for Travel Lifestyle",
+          "image": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-4.webp",
+          "sku": "YTLJY6824-D"
+        },
+        {
+          "name": "Built for Style Detail Poster",
+          "image": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-5.webp",
+          "sku": "YTLJY6824-E"
+        },
+        {
+          "name": "Branding Feature Overview",
+          "image": "assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-6.webp",
+          "sku": "YTLJY6824-F"
+        }
+      ]
+    },
+    "custom-sling-bag-ytljy6835": {
+      "category": "Chest & Sling Bags",
+      "title": "Custom Sling Bag - Compact Nylon Crossbody Bag (Model YTLJY6835)",
+      "metaTitle": "Custom Sling Bag OEM/ODM | Model YTLJY6835",
+      "metaDescription": "Compact nylon custom sling bag, 13x3x20cm, 0.11kg. OEM/ODM logo, private label and color options with flexible MOQ tiers from 50 pcs. Request a quote.",
+      "schemaDescription": "Compact nylon custom sling bag, 13x3x20cm, 0.11kg. OEM/ODM logo, private label and color options with flexible MOQ tiers from 50 pcs. Request a quote.",
+      "model": "YTLJY6835",
+      "hero": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-1.webp",
+      "gallery": [
+        "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-1.webp",
+        "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-2.webp",
+        "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-3.webp",
+        "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-4.webp",
+        "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-5.webp",
+        "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-6.webp"
+      ],
+      "galleryAlt": [
+        "Custom black sling bag YTLJY6835 with zipper and strap details",
+        "Custom sling bag YTLJY6835 lifestyle wearing scenes",
+        "Custom sling bag YTLJY6835 logo and color customization options",
+        "Custom sling bag YTLJY6835 product information and specifications",
+        "Custom sling bag YTLJY6835 everyday function poster",
+        "Custom sling bag YTLJY6835 smart storage and compact profile"
+      ],
+      "lifestyle": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-2.webp",
+      "mobilePreview": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-4.webp",
+      "badges": [
+        "OEM/ODM",
+        "Private Label",
+        "Compact Carry",
+        "Low MOQ"
+      ],
+      "intro": "A compact custom sling bag for modern urban carry, promotional programs and private label collections. The YTLJY6835 combines a slim vertical profile, nylon fabric, practical zipper pockets and strong logo placement for retail or brand projects.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY6835"
+        ],
+        [
+          "Size",
+          "13 x 3 x 20 cm"
+        ],
+        [
+          "Weight",
+          "0.11 kg"
+        ],
+        [
+          "Material",
+          "Nylon"
+        ],
+        [
+          "Style",
+          "Crossbody sling bag"
+        ],
+        [
+          "Structure",
+          "Main compartment, front zipper pocket, adjustable strap and compact profile"
+        ],
+        [
+          "Customization",
+          "Logo printing, heat transfer, rubber patch, woven label and custom zipper pulls"
+        ],
+        [
+          "MOQ",
+          "Flexible MOQ tiers from 50 pcs, depending on style and customization"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ]
+      ],
+      "features": [
+        "Compact vertical shape for phone, wallet, keys and small daily items",
+        "Durable nylon surface with clean black styling and orange puller accents",
+        "Adjustable strap for crossbody or chest wearing",
+        "Visible logo panel supports patch, print and private label branding",
+        "Multiple detail posters support faster quotation discussion",
+        "Suitable for gifts, travel accessories, retail, events and brand merchandise"
+      ],
+      "variants": [
+        {
+          "name": "Details and Logo Placement",
+          "image": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-1.webp",
+          "sku": "YTLJY6835-A"
+        },
+        {
+          "name": "Designed for Life on the Move",
+          "image": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-2.webp",
+          "sku": "YTLJY6835-B"
+        },
+        {
+          "name": "Build Your Brand Custom Options",
+          "image": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-3.webp",
+          "sku": "YTLJY6835-C"
+        },
+        {
+          "name": "Product Information and Customization",
+          "image": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-4.webp",
+          "sku": "YTLJY6835-D"
+        },
+        {
+          "name": "Compact Function Made for Everyday",
+          "image": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-5.webp",
+          "sku": "YTLJY6835-E"
+        },
+        {
+          "name": "Smart Storage Compact Solution",
+          "image": "assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-6.webp",
+          "sku": "YTLJY6835-F"
+        }
+      ]
+    },
     "compact-crossbody-bag-ytljy5634": {
       "category": "Mini Crossbody Bags",
       "title": "Compact Everyday Crossbody Bag - Custom OEM/ODM Mini Shoulder Bag (Model YTLJY5634)",
