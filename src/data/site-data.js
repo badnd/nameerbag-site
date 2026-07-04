@@ -1387,6 +1387,454 @@ export const siteData = {
         }
       ]
     },
+    "reflective-mini-crossbody-bag-ytljy8083": {
+      "category": "Mini Crossbody Bags",
+      "title": "Reflective Mini Crossbody Drawstring Bag - Custom OEM/ODM (Model YTLJY8083)",
+      "metaTitle": "Reflective Mini Crossbody Bag OEM/ODM | YTLJY8083",
+      "metaDescription": "Iridescent reflective drawstring crossbody pouch, 16x18x5cm, 0.09kg. Custom logo patch, OEM/ODM, private label. Request a quote.",
+      "schemaDescription": "Iridescent reflective drawstring crossbody pouch, 16x18x5cm, 0.09kg. Custom logo patch, OEM/ODM, private label. Request a quote.",
+      "model": "YTLJY8083",
+      "hero": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-1.webp",
+      "gallery": [
+        "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-1.webp",
+        "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-2.webp",
+        "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-3.webp",
+        "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-4.webp",
+        "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-5.webp",
+        "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-6.webp"
+      ],
+      "galleryAlt": [
+        "Iridescent reflective mini crossbody bag - front product display",
+        "Iridescent reflective mini crossbody bag - lifestyle back wearing view",
+        "Reflective mini crossbody drawstring bag - model scene and color options",
+        "Reflective nylon drawstring pouch - capacity and specification details",
+        "Reflective mini crossbody bag - feature details and logo patch area",
+        "Reflective mini crossbody drawstring bag - color options overview"
+      ],
+      "lifestyle": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-2.webp",
+      "mobilePreview": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-4.webp",
+      "badges": [
+        "Reflective Nylon",
+        "Drawstring",
+        "OEM/ODM",
+        "Private Label"
+      ],
+      "intro": "Built for sport-bold street style, this mini drawstring crossbody bag features a striking reflective nylon finish that shifts color under changing light - a standout accessory for streetwear, skate, and nightlife-adjacent brand lines. Despite its compact size, the drawstring-top design opens wide for easy access to daily essentials.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY8083"
+        ],
+        [
+          "Size",
+          "16 x 18 x 5 cm"
+        ],
+        [
+          "Weight",
+          "0.09 kg"
+        ],
+        [
+          "Material",
+          "Reflective nylon"
+        ],
+        [
+          "Closure",
+          "Drawstring"
+        ],
+        [
+          "Colors",
+          "Iridescent Reflective (Black Cords) / Iridescent Reflective (Neon Green Cords) / Dark Reflective Navy (Black Cords) / Dark Reflective Navy (Neon Green Cords)"
+        ],
+        [
+          "Customization",
+          "Logo patch, strap, drawcord color and packaging support"
+        ],
+        [
+          "MOQ",
+          "500 pcs per design shown on product material; final MOQ confirmed during quotation"
+        ],
+        [
+          "Lead Time",
+          "25-30 days shown on product material; final schedule confirmed during quotation"
+        ]
+      ],
+      "features": [
+        "Reflective nylon fabric with iridescent, light-shifting finish",
+        "Smooth drawstring closure with durable cord lock",
+        "Adjustable, detachable shoulder strap",
+        "Custom logo patch zone on the front panel",
+        "Compact but spacious enough for phone, power bank, keys, cosmetics and earphones",
+        "Suitable for streetwear, skate, event, festival and nightlife-adjacent brand programs"
+      ],
+      "variants": [
+        {
+          "name": "Front Product Display",
+          "image": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-1.webp",
+          "sku": "YTLJY8083-A"
+        },
+        {
+          "name": "Lifestyle Back Wearing View",
+          "image": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-2.webp",
+          "sku": "YTLJY8083-B"
+        },
+        {
+          "name": "Model Scene and Color Options",
+          "image": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-3.webp",
+          "sku": "YTLJY8083-C"
+        },
+        {
+          "name": "Capacity and Specifications",
+          "image": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-4.webp",
+          "sku": "YTLJY8083-D"
+        },
+        {
+          "name": "Feature Details",
+          "image": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-5.webp",
+          "sku": "YTLJY8083-E"
+        },
+        {
+          "name": "Color Options Overview",
+          "image": "assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-6.webp",
+          "sku": "YTLJY8083-F"
+        }
+      ]
+    },
+    "urban-waist-bag-ytljy6858": {
+      "category": "Waist & Sling Bags",
+      "title": "Urban Outdoor Waist Bag / Crossbody Pouch - Custom OEM/ODM (Model YTLJY6858)",
+      "metaTitle": "Urban Waist Bag OEM/ODM Custom Logo | YTLJY6858",
+      "metaDescription": "Lightweight nylon waist bag, 21x10x1.5cm, 0.09kg, 4 colors. Multi-pocket design, OEM/ODM, low MOQ. Request a custom quote.",
+      "schemaDescription": "Lightweight nylon waist bag, 21x10x1.5cm, 0.09kg, 4 colors. Multi-pocket design, OEM/ODM, low MOQ. Request a custom quote.",
+      "model": "YTLJY6858",
+      "hero": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-1.webp",
+      "gallery": [
+        "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-1.webp",
+        "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-2.webp",
+        "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-3.webp",
+        "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-4.webp",
+        "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-5.webp",
+        "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-6.webp"
+      ],
+      "galleryAlt": [
+        "Black nylon urban waist bag - front product detail",
+        "Black nylon urban waist bag - model crossbody lifestyle view",
+        "Nylon waist bag - lifestyle and specification overview",
+        "Urban waist bag - smart storage detail layout",
+        "Black nylon waist bag - lightweight daily carry detail",
+        "Nylon urban waist bag - black grey green purple color options"
+      ],
+      "lifestyle": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-2.webp",
+      "mobilePreview": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-4.webp",
+      "badges": [
+        "OEM/ODM",
+        "Multi-pocket",
+        "Water-resistant",
+        "Low MOQ"
+      ],
+      "intro": "Engineered for movement and designed for everyday life, this slim waist bag keeps essentials secure, organized, and within easy reach. The multi-pocket layout - front zipper pocket, inner slip pocket, and spacious main compartment - makes it equally suited for commuting, travel, or outdoor use, and it wears comfortably crossbody or around the waist.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY6858"
+        ],
+        [
+          "Size",
+          "21 x 10 x 1.5 cm"
+        ],
+        [
+          "Weight",
+          "0.09 kg"
+        ],
+        [
+          "Material",
+          "Nylon shell / polyester lining"
+        ],
+        [
+          "Structure",
+          "Front zipper pocket + inner slip pocket + main compartment"
+        ],
+        [
+          "Colors",
+          "Black / Grey / Green / Purple"
+        ],
+        [
+          "Customization",
+          "Custom logo, custom color, private label and custom packaging support"
+        ],
+        [
+          "MOQ",
+          "MOQ tiers from 50 pcs (50/100/300/500/1,000/3,000+ depending on style, material and logo method)"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ]
+      ],
+      "features": [
+        "Lightweight nylon shell with polyester lining",
+        "Three-part storage: front zipper pocket, inner slip pocket and main compartment",
+        "Adjustable strap for crossbody or waist wearing",
+        "Water-resistant fabric, smooth zipper and durable buckle",
+        "Slim, breathable profile for all-day wear",
+        "Private label support for travel, outdoor, retail and promotional programs"
+      ],
+      "variants": [
+        {
+          "name": "Front Product Detail",
+          "image": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-1.webp",
+          "sku": "YTLJY6858-A"
+        },
+        {
+          "name": "Urban Outdoor Lifestyle",
+          "image": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-2.webp",
+          "sku": "YTLJY6858-B"
+        },
+        {
+          "name": "Lifestyle and Specification Overview",
+          "image": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-3.webp",
+          "sku": "YTLJY6858-C"
+        },
+        {
+          "name": "Smart Storage Design",
+          "image": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-4.webp",
+          "sku": "YTLJY6858-D"
+        },
+        {
+          "name": "Lightweight Daily Carry",
+          "image": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-5.webp",
+          "sku": "YTLJY6858-E"
+        },
+        {
+          "name": "Color Options",
+          "image": "assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-6.webp",
+          "sku": "YTLJY6858-F"
+        }
+      ]
+    },
+    "compact-crossbody-sling-bag-ytljy6825": {
+      "category": "Mini Crossbody Bags",
+      "title": "Compact Crossbody Sling Bag - Custom OEM/ODM Everyday Bag (Model YTLJY6825)",
+      "metaTitle": "Compact Crossbody Sling Bag OEM/ODM | YTLJY6825",
+      "metaDescription": "Lightweight nylon crossbody sling bag, 13x3x21cm, 0.10kg, 4 colors. 5 logo customization methods, OEM/ODM. Request a quote.",
+      "schemaDescription": "Lightweight nylon crossbody sling bag, 13x3x21cm, 0.10kg, 4 colors. 5 logo customization methods, OEM/ODM. Request a quote.",
+      "model": "YTLJY6825",
+      "hero": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-1.webp",
+      "gallery": [
+        "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-1.webp",
+        "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-2.webp",
+        "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-3.webp",
+        "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-4.webp",
+        "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-5.webp",
+        "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-6.webp"
+      ],
+      "galleryAlt": [
+        "Turquoise compact crossbody sling bag - front view and color options",
+        "Turquoise compact crossbody sling bag - smart storage detail",
+        "Compact crossbody sling bag - daily model wearing view",
+        "Compact crossbody sling bag - premium detail and zipper view",
+        "Compact crossbody sling bag - custom logo solutions poster",
+        "Compact crossbody sling bag - private label display options"
+      ],
+      "lifestyle": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-3.webp",
+      "mobilePreview": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-2.webp",
+      "badges": [
+        "OEM/ODM",
+        "Water-resistant",
+        "Five Logo Methods",
+        "Low MOQ"
+      ],
+      "intro": "Clean, compact, and endlessly practical - this vertical crossbody sling bag is sized perfectly for phone, cards, keys and small daily essentials, without the bulk of a larger bag. The water-resistant nylon construction and organized interior make it a versatile everyday-carry option that works equally well styled on men's or women's collections.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY6825"
+        ],
+        [
+          "Size",
+          "13 x 3 x 21 cm"
+        ],
+        [
+          "Weight",
+          "0.10 kg"
+        ],
+        [
+          "Material",
+          "Nylon"
+        ],
+        [
+          "Structure",
+          "Main compartment + front zipper pocket"
+        ],
+        [
+          "Colors",
+          "Black / White / Brown / Turquoise"
+        ],
+        [
+          "Customization",
+          "Front print, woven label, rubber patch, zipper pull tag and small sewn label"
+        ],
+        [
+          "MOQ",
+          "MOQ tiers from 50 pcs (50/100/300/500/1,000/3,000+ depending on style, material and logo method)"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ]
+      ],
+      "features": [
+        "Lightweight, water-resistant nylon construction",
+        "Front zipper pocket for quick-access items",
+        "Organized main compartment with interior pockets",
+        "Adjustable strap for all-day comfort",
+        "Unisex design suited to a broad range of brand collections",
+        "Five logo customization methods with private label support"
+      ],
+      "variants": [
+        {
+          "name": "Front View and Color Options",
+          "image": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-1.webp",
+          "sku": "YTLJY6825-A"
+        },
+        {
+          "name": "Smart Storage Detail",
+          "image": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-2.webp",
+          "sku": "YTLJY6825-B"
+        },
+        {
+          "name": "Compact Daily Sling Lifestyle",
+          "image": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-3.webp",
+          "sku": "YTLJY6825-C"
+        },
+        {
+          "name": "Premium Details",
+          "image": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-4.webp",
+          "sku": "YTLJY6825-D"
+        },
+        {
+          "name": "Custom Logo Solutions",
+          "image": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-5.webp",
+          "sku": "YTLJY6825-E"
+        },
+        {
+          "name": "Private Label Display Options",
+          "image": "assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-6.webp",
+          "sku": "YTLJY6825-F"
+        }
+      ]
+    },
+    "minimalist-flap-crossbody-bag-ytljy6830": {
+      "category": "Shoulder Bags",
+      "title": "Minimalist Flap Crossbody Bag - Custom OEM/ODM (Model YTLJY6830)",
+      "metaTitle": "Minimalist Flap Crossbody Bag OEM/ODM | YTLJY6830",
+      "metaDescription": "Ripstop nylon flap crossbody bag, 24x5x15cm, 0.10kg, 3 colors. Water-resistant, OEM/ODM private label. Request a custom quote.",
+      "schemaDescription": "Ripstop nylon flap crossbody bag, 24x5x15cm, 0.10kg, 3 colors. Water-resistant, OEM/ODM private label. Request a custom quote.",
+      "model": "YTLJY6830",
+      "hero": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-1.webp",
+      "gallery": [
+        "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-1.webp",
+        "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-2.webp",
+        "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-3.webp",
+        "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-4.webp",
+        "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-5.webp",
+        "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-6.webp"
+      ],
+      "galleryAlt": [
+        "Black ripstop flap crossbody bag - front shoulder bag view",
+        "Black ripstop flap crossbody bag - everyday lifestyle scene",
+        "Olive green flap crossbody bag - compact storage detail",
+        "Minimalist flap crossbody bag - product information and color options",
+        "Minimalist flap crossbody bag - key feature details",
+        "Minimalist flap crossbody bag - material and structure overview"
+      ],
+      "lifestyle": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-2.webp",
+      "mobilePreview": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-3.webp",
+      "badges": [
+        "Ripstop Nylon",
+        "Water-resistant",
+        "Private Label",
+        "OEM/ODM"
+      ],
+      "intro": "Clean design, practical function. Made from durable ripstop nylon with a secure flap-front closure, this minimalist crossbody bag is built for everyday carry - versatile enough for desk essentials, travel, or daily errands, and understated enough to suit lifestyle and streetwear brand lines alike.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY6830"
+        ],
+        [
+          "Size",
+          "24 x 5 x 15 cm"
+        ],
+        [
+          "Weight",
+          "0.10 kg"
+        ],
+        [
+          "Material",
+          "Ripstop nylon"
+        ],
+        [
+          "Structure",
+          "Main compartment + back zipper pocket"
+        ],
+        [
+          "Colors",
+          "Black / Light Gray / Olive Green"
+        ],
+        [
+          "Customization",
+          "Woven label, patch logo, custom packaging, interior label and woven side label"
+        ],
+        [
+          "MOQ",
+          "MOQ tiers from 50 pcs (50/100/300/500/1,000/3,000+ depending on style, material and logo method)"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ]
+      ],
+      "features": [
+        "Durable ripstop nylon with water-resistant coating",
+        "Secure flap-front closure with snap fastening",
+        "Back zipper pocket for cards, cash or small items",
+        "Spacious main compartment fits phone, wallet, keys and power bank",
+        "Adjustable shoulder strap with unisex styling",
+        "Full private label support for lifestyle and streetwear brand lines"
+      ],
+      "variants": [
+        {
+          "name": "Front Shoulder Bag View",
+          "image": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-1.webp",
+          "sku": "YTLJY6830-A"
+        },
+        {
+          "name": "Everyday Lifestyle Scene",
+          "image": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-2.webp",
+          "sku": "YTLJY6830-B"
+        },
+        {
+          "name": "Smart Storage in Compact Size",
+          "image": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-3.webp",
+          "sku": "YTLJY6830-C"
+        },
+        {
+          "name": "Product Information and Color Options",
+          "image": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-4.webp",
+          "sku": "YTLJY6830-D"
+        },
+        {
+          "name": "Key Feature Details",
+          "image": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-5.webp",
+          "sku": "YTLJY6830-E"
+        },
+        {
+          "name": "Material and Structure Overview",
+          "image": "assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-6.webp",
+          "sku": "YTLJY6830-F"
+        }
+      ]
+    },
     "custom-waist-bag-ytljy6824": {
       "category": "Waist & Sling Bags",
       "title": "Custom Waist Bag - Lightweight Nylon OEM/ODM Waist Pack (Model YTLJY6824)",
