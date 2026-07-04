@@ -1451,7 +1451,7 @@ export const siteData = {
         ],
         [
           "MOQ",
-          "500 pcs per design shown on product material; final MOQ confirmed during quotation"
+          "MOQ tiers from 50 pcs (50/100/300/500/1,000/3,000+ depending on style, material and logo method)"
         ],
         [
           "Lead Time",
