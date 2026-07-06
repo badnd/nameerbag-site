@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { HomeInquiry } from '@/components/HomeInquiry';
+import { i18nAlternates } from '@/lib/i18n';
 
 export const metadata = {
   title: 'OEM/ODM Custom Bag Service',
   description: 'Custom bag OEM/ODM service for logo, fabric, color, packaging and private label projects with flexible MOQ support.',
-  alternates: { canonical: '/custom-service' }
+  alternates: i18nAlternates('/custom-service')
 };
 
 export default function CustomServicePage() {

@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
 import { assetPath } from '@/lib/paths';
+import { i18nAlternates } from '@/lib/i18n';
 
 export const metadata = {
   title: 'About Nameer | Custom Bag Manufacturer',
   description: 'Learn about Nameer and Tianjin Junyi Premium Trading Co., Ltd., a custom bag supplier for OEM/ODM, low MOQ and private label projects.',
-  alternates: { canonical: '/about' }
+  alternates: i18nAlternates('/about')
 };
 
 export default function AboutPage() {

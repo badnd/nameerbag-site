@@ -1,5 +1,6 @@
 import './globals.css';
 import Script from 'next/script';
+import { headers } from 'next/headers';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { siteData } from '@/data/site-data';
@@ -35,9 +36,13 @@ export const metadata = {
   }
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const requestHeaders = await headers();
+  const pathname = requestHeaders.get('x-pathname') || '';
+  const lang = pathname.startsWith('/ru') ? 'ru' : 'en';
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body>
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${siteData.analytics.ga4}`} strategy="afterInteractive" />
         <Script id="ga4" strategy="afterInteractive">{`

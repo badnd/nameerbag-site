@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
 import { assetPath, whatsappUrl } from '@/lib/paths';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -53,6 +54,7 @@ export function SiteHeader() {
             ))}
           </ul>
           <div className="nav-actions">
+            <LanguageSwitcher />
             <a className="btn btn-secondary" href={`mailto:${siteData.company.email}`}>Email Us</a>
             <a className="btn btn-primary" href={whatsappUrl(siteData)} target="_blank" rel="noopener">WhatsApp</a>
           </div>

@@ -6,6 +6,11 @@ import { HomeInquiry } from '@/components/HomeInquiry';
 import { JsonLd } from '@/components/JsonLd';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { assetPath } from '@/lib/paths';
+import { i18nAlternates } from '@/lib/i18n';
+
+export const metadata = {
+  alternates: i18nAlternates('/')
+};
 
 export default function HomePage() {
   const featured = siteData.homeFeaturedProducts.map((slug) => [slug, siteData.products[slug]]).filter(([, product]) => product);

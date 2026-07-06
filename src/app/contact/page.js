@@ -1,11 +1,12 @@
 import { siteData } from '@/data/site-data';
 import { InquiryForm } from '@/components/InquiryForm';
 import { whatsappUrl } from '@/lib/paths';
+import { i18nAlternates } from '@/lib/i18n';
 
 export const metadata = {
   title: 'Contact Nameer | Custom Bag Factory Quote',
   description: 'Contact Nameer for custom backpack, waist bag, chest bag, mommy bag and gym bag OEM/ODM quotation within 24 hours.',
-  alternates: { canonical: '/contact' }
+  alternates: i18nAlternates('/contact')
 };
 
 export default function ContactPage() {

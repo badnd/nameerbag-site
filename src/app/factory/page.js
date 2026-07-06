@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { assetPath } from '@/lib/paths';
+import { i18nAlternates } from '@/lib/i18n';
 
 export const metadata = {
   title: 'Factory Strength | Custom Bag OEM/ODM',
   description: 'Factory workflow for custom bag sampling, logo confirmation, bulk production and quality control for B2B orders.',
-  alternates: { canonical: '/factory' }
+  alternates: i18nAlternates('/factory')
 };
 
 export default function FactoryPage() {
