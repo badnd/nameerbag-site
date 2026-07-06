@@ -29,7 +29,8 @@ export const metadata = {
   verification: {
     google: 'LNngjZCe-ntyTk4u11vkXimEeA4P8yu30dl3PkACSUQ',
     other: {
-      'msvalidate.01': 'AD12B57AA450C181C4A8D6F90403CA06'
+      'msvalidate.01': 'AD12B57AA450C181C4A8D6F90403CA06',
+      'yandex-verification': '243dab0457fabae2'
     }
   }
 };
