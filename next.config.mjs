@@ -33,7 +33,9 @@ const nextConfig = {
       { source: '/customization', destination: '/custom-service', permanent: true },
       { source: '/customization.html', destination: '/custom-service', permanent: true },
       { source: '/pages/privacy-policy.html', destination: '/privacy-policy', permanent: true },
-      { source: '/privacy-policy.html', destination: '/privacy-policy', permanent: true }
+      { source: '/privacy-policy.html', destination: '/privacy-policy', permanent: true },
+      { source: '/blog/oem-vs-odm-bag-manufacturing', destination: '/blog/oem-vs-odm-bags-difference', permanent: true },
+      { source: '/blog/custom-backpack-manufacturer-china', destination: 'https://www.custombackpackfactory.com/blog/custom-backpack-manufacturer-china', permanent: true }
     ];
 
     return [
