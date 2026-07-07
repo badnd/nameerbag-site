@@ -247,6 +247,7 @@ body.lightbox-open{overflow:hidden}
 .footer-grid{display:grid;grid-template-columns:1.1fr .8fr .8fr 1fr;gap:26px;padding:56px 0 26px}
 .footer a{color:#dce6ff}
 .footer h4{margin:0 0 14px}
+.footer-subhead{margin-top:22px!important}
 .footer p,.footer li{color:#bed0f5}
 .footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:14px 0 26px;color:#adc1eb;font-size:.92rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
