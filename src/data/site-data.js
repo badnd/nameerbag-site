@@ -2174,6 +2174,242 @@ export const siteData = {
           "sku": "YTLJY5634-F"
         }
       ]
+    },
+    "compact-crossbody-bag-ytljy956": {
+      "category": "Mini Crossbody Bags",
+      "title": "Compact Crossbody Bag - Custom OEM/ODM Everyday Sling (Model YTLJY956)",
+      "metaTitle": "Compact Crossbody Bag OEM/ODM | Model YTLJY956",
+      "metaDescription": "Water-resistant ripstop crossbody bag, 21x16x5cm, 0.10kg, 3 colors. Multiple pockets, custom logo, OEM/ODM. Request a quote.",
+      "schemaDescription": "Water-resistant ripstop crossbody bag, 21x16x5cm, 0.10kg, 3 colors. Multiple pockets, custom logo, OEM/ODM. Request a quote.",
+      "model": "YTLJY956",
+      "hero": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-1.webp",
+      "gallery": [
+        "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-1.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-2.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-3.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-4.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-5.webp",
+        "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-6.webp"
+      ],
+      "galleryAlt": [
+        "Black compact crossbody bag - front product overview",
+        "Black compact crossbody bag - front view and pocket details",
+        "Black light gray olive green compact crossbody bag - color options",
+        "Black compact crossbody bag - size capacity and specifications",
+        "Black compact crossbody bag - travel lifestyle back wearing view",
+        "Black compact crossbody bag - urban everyday carry lifestyle view"
+      ],
+      "lifestyle": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-5.webp",
+      "mobilePreview": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-4.webp",
+      "badges": [
+        "OEM/ODM",
+        "Ripstop Fabric",
+        "Multi-pocket",
+        "Low MOQ"
+      ],
+      "intro": "Lightweight, durable, versatile - built for everyday movement. This horizontal crossbody bag pairs a water-resistant ripstop grid fabric with a clean multi-pocket layout, making it an easy everyday-carry piece for urban, travel and commuter brand lines. Spacious enough for phone, power bank, sunglasses and cosmetics, yet compact enough to forget you are wearing it.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY956"
+        ],
+        [
+          "Size",
+          "21 x 16 x 5 cm"
+        ],
+        [
+          "Weight",
+          "approx. 0.10 kg"
+        ],
+        [
+          "Material",
+          "Nylon + Mesh"
+        ],
+        [
+          "Lining",
+          "Polyester"
+        ],
+        [
+          "Colors",
+          "Black / Light Gray / Olive Green"
+        ],
+        [
+          "Structure",
+          "Front pocket, back pocket, inner zipper pocket and main compartment"
+        ],
+        [
+          "Customization",
+          "Rubber patch, woven label, screen print, embroidery and private label support"
+        ],
+        [
+          "MOQ",
+          "MOQ tiers from 50 pcs (50/100/300/500/1,000/3,000+ depending on style, material and logo method)"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ]
+      ],
+      "features": [
+        "Water-resistant ripstop fabric resists tearing and abrasion for daily use",
+        "Multi-pocket organization supports phone, power bank, sunglasses and cosmetics",
+        "Smooth dual zipper pulls support quick access to the main compartment",
+        "Adjustable detachable shoulder strap supports flexible wearing",
+        "Durable metal hook hardware improves long-term reliability",
+        "Front logo zone supports patch, woven label, screen print and embroidery"
+      ],
+      "variants": [
+        {
+          "name": "Front Product Overview",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-1.webp",
+          "sku": "YTLJY956-A"
+        },
+        {
+          "name": "Front Pockets and Feature Details",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-2.webp",
+          "sku": "YTLJY956-B"
+        },
+        {
+          "name": "Available Color Options",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-3.webp",
+          "sku": "YTLJY956-C"
+        },
+        {
+          "name": "Size Capacity and Specifications",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-4.webp",
+          "sku": "YTLJY956-D"
+        },
+        {
+          "name": "Hands-free Travel Wearing View",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-5.webp",
+          "sku": "YTLJY956-E"
+        },
+        {
+          "name": "Urban Everyday Carry Lifestyle",
+          "image": "assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-6.webp",
+          "sku": "YTLJY956-F"
+        }
+      ]
+    },
+    "vertical-flap-crossbody-bag-ytljy6840": {
+      "category": "Mini Crossbody Bags",
+      "title": "Vertical Flap Crossbody Bag - Custom OEM/ODM Phone Bag (Model YTLJY6840)",
+      "metaTitle": "Vertical Flap Crossbody Bag OEM/ODM | Model YTLJY6840",
+      "metaDescription": "Ripstop nylon vertical crossbody bag, 15x18x3cm, 0.08kg, 3 colors. Magnetic snap flap, custom logo, OEM/ODM private label. Request a quote.",
+      "schemaDescription": "Ripstop nylon vertical crossbody bag, 15x18x3cm, 0.08kg, 3 colors. Magnetic snap flap, custom logo, OEM/ODM private label. Request a quote.",
+      "model": "YTLJY6840",
+      "hero": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-1.webp",
+      "gallery": [
+        "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-1.webp",
+        "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-2.webp",
+        "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-3.webp",
+        "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-4.webp",
+        "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-5.webp",
+        "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-6.webp"
+      ],
+      "galleryAlt": [
+        "Black vertical flap crossbody bag - size diagram and front view",
+        "Black vertical flap crossbody bag - compact size and storage layout",
+        "Black grey green vertical flap crossbody bag - color and branding options",
+        "Black vertical flap crossbody bag - storage pockets and detail views",
+        "Black vertical flap crossbody bag - everyday organization scene",
+        "Black vertical flap crossbody bag - urban daily carry lifestyle view"
+      ],
+      "lifestyle": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-5.webp",
+      "mobilePreview": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-2.webp",
+      "badges": [
+        "OEM/ODM",
+        "Magnetic Flap",
+        "Phone Bag",
+        "Low MOQ"
+      ],
+      "intro": "One bag for outdoor and daily commute. This vertical flap crossbody is designed around phone-first everyday carry - a magnetic snap flap over a zippered opening keeps essentials secure, while multiple interior compartments keep phone, wallet, sunglasses and cosmetics organized and within reach. At just 0.08kg in ripstop-style nylon, it is an easy add-on to urban, outdoor and travel-focused product lines.",
+      "specs": [
+        [
+          "Model",
+          "YTLJY6840"
+        ],
+        [
+          "Size",
+          "15 x 18 x 3 cm"
+        ],
+        [
+          "Weight",
+          "0.08 kg"
+        ],
+        [
+          "Material",
+          "Ripstop-style Nylon"
+        ],
+        [
+          "Lining",
+          "Polyester"
+        ],
+        [
+          "Colors",
+          "Black / Grey / Green"
+        ],
+        [
+          "Closure",
+          "Magnetic snap flap + zipper"
+        ],
+        [
+          "Structure",
+          "Main compartment, inner divider pocket and back pocket"
+        ],
+        [
+          "Customization",
+          "Front print, PU or fabric patch, woven label, rubber badge and private label support"
+        ],
+        [
+          "MOQ",
+          "MOQ tiers from 50 pcs (50/100/300/500/1,000/3,000+ depending on style, material and logo method)"
+        ],
+        [
+          "Sample Time",
+          "7-15 days after artwork, color and branding requirements are confirmed"
+        ]
+      ],
+      "features": [
+        "Ripstop-style nylon fabric is water-resistant against light rain and splashes",
+        "Magnetic snap flap over zipper gives dual-layer security for daily essentials",
+        "Smart interior layout keeps phone, wallet, sunglasses and cosmetics organized",
+        "Back zipper pocket adds quick-access storage for small valuables",
+        "Adjustable long shoulder strap supports customized fit",
+        "Flap logo zone supports print, patch, woven label and rubber badge options"
+      ],
+      "variants": [
+        {
+          "name": "Compact Size and Front View",
+          "image": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-1.webp",
+          "sku": "YTLJY6840-A"
+        },
+        {
+          "name": "Storage Layout and Specifications",
+          "image": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-2.webp",
+          "sku": "YTLJY6840-B"
+        },
+        {
+          "name": "Color Options and Custom Branding",
+          "image": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-3.webp",
+          "sku": "YTLJY6840-C"
+        },
+        {
+          "name": "Pocket Details and Smart Storage",
+          "image": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-4.webp",
+          "sku": "YTLJY6840-D"
+        },
+        {
+          "name": "Everyday Organization Scene",
+          "image": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-5.webp",
+          "sku": "YTLJY6840-E"
+        },
+        {
+          "name": "Urban Daily Carry Lifestyle",
+          "image": "assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-6.webp",
+          "sku": "YTLJY6840-F"
+        }
+      ]
     }
   },
   "testimonials": [

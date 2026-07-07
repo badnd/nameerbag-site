@@ -44,7 +44,7 @@ export const landingPages = [
     badge: 'Crossbody Bag Manufacturing',
     serviceType: 'Custom crossbody bag manufacturing',
     hero: 'Crossbody bags dominate everyday-carry trends across US, European and Russian markets. We develop and manufacture mini phone bags, flap crossbodies, drawstring slings and structured shoulder styles under your brand.',
-    relatedProducts: ['mini-crossbody', 'compact-crossbody-sling-bag-ytljy6825', 'minimalist-flap-crossbody-bag-ytljy6830', 'compact-crossbody-bag-ytljy5634', 'reflective-mini-crossbody-bag-ytljy8083'],
+    relatedProducts: ['compact-crossbody-bag-ytljy956', 'vertical-flap-crossbody-bag-ytljy6840', 'compact-crossbody-sling-bag-ytljy6825', 'minimalist-flap-crossbody-bag-ytljy6830', 'compact-crossbody-bag-ytljy5634', 'reflective-mini-crossbody-bag-ytljy8083'],
     relatedLinks: [['Custom Waist Bags', '/custom-waist-bags'], ['Custom Cosmetic Bags', '/custom-cosmetic-bags'], ['Manufacturer Guide', '/blog/how-to-choose-reliable-bag-manufacturer-china']],
     sections: [
       {
