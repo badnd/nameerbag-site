@@ -1,5 +1,6 @@
 import { siteData } from '@/data/site-data';
 import { blogPosts } from '@/data/blog-posts';
+import { landingPages } from '@/data/landing-pages';
 import { productPath, siteUrl } from '@/lib/paths';
 
 const redirectedBlogSlugs = new Set([
@@ -15,6 +16,7 @@ export default function sitemap() {
   return [
     ...staticRoutes.map((route) => ({ url: `${siteUrl}${route === '/' ? '' : route}`, lastModified: now })),
     ...ruRoutes.map((route) => ({ url: `${siteUrl}${route}`, lastModified: now })),
+    ...landingPages.map((page) => ({ url: `${siteUrl}/${page.slug}`, lastModified: now })),
     ...Object.keys(siteData.products).map((slug) => ({ url: `${siteUrl}${productPath(slug)}`, lastModified: now })),
     ...canonicalBlogPosts.map((post) => ({ url: `${siteUrl}/blog/${post.slug}`, lastModified: post.date }))
   ];
