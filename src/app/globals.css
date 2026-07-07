@@ -105,6 +105,8 @@ button,input,textarea,select{font:inherit}
 .trust-showcase{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
 .trust-showcase img{aspect-ratio:16/9;object-fit:cover;background:#fff}
 .price-guidance,.mockup-note{margin:20px 0 0;padding:16px 18px;border:1px solid var(--border);border-radius:16px;background:#fff;color:var(--text);font-weight:800;box-shadow:var(--shadow)}
+.price-guidance strong,.price-guidance span{display:block}
+.price-guidance span{margin-top:6px;font-weight:500;color:var(--muted);line-height:1.65}
 .video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .video-card{background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
 .video-card video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#111}

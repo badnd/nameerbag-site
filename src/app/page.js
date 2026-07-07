@@ -81,7 +81,10 @@ export default function HomePage() {
               <article className="card info-card" key={title}><div className="card-body"><div className="icon-bubble">{num}</div><h3 className="card-title">{title}</h3><p className="muted">{text}</p></div></article>
             ))}
           </div>
-          <p className="price-guidance">Reference MOQ price ranges: waist bags from about USD 2.00-5.50, basic backpacks from about USD 4.80-11.80, and mommy, gym or travel bags from about USD 5.50-15.80 depending on material, logo method, structure and order quantity.</p>
+          <div className="price-guidance">
+            <strong>Factory-direct pricing, quoted per project.</strong>
+            <span>Exact pricing depends on style, fabric, quantity and logo method. Send your requirements and Anna will reply within 24 hours with a tiered quotation (per-unit prices at different MOQ levels).</span>
+          </div>
           <div className="cta-banner article-cta">
             <div>
               <h2>Integrated Factory & Export Team</h2>
@@ -97,7 +100,7 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container">
-          <div className="section-head"><div><span className="badge">Featured Products</span><h2>Popular custom bag collections and new additions</h2><p>Each product page includes unified price wording: "Contact us for best price".</p></div></div>
+          <div className="section-head"><div><span className="badge">Featured Products</span><h2>Popular custom bag collections and new additions</h2><p>Each product page uses inquiry-first wording and directs buyers to request a project-based quotation.</p></div></div>
           <div className="grid grid-3">
             {featured.map(([slug, product]) => <ProductCard key={slug} slug={slug} product={product} showLogoZone />)}
           </div>
