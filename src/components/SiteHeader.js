@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { siteData } from '@/data/site-data';
 import { assetPath, whatsappUrl } from '@/lib/paths';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -9,6 +10,8 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isRu = pathname === '/ru' || pathname?.startsWith('/ru/');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -19,7 +22,7 @@ export function SiteHeader() {
 
   const links = [
     ['Home', '/'],
-    ['Products', '/products'],
+    ['Products', isRu ? '/ru/products' : '/products'],
     ['Customization', '/custom-service'],
     ['Factory', '/factory'],
     ['About Us', '/about'],

@@ -9,15 +9,69 @@ function categoryName(category) {
 
 function productType(slug, product) {
   const text = `${slug} ${product.title || ''} ${product.category || ''}`.toLowerCase();
-  if (text.includes('mommy')) return 'сумка для мам';
-  if (text.includes('gym')) return 'спортивная сумка';
-  if (text.includes('waist')) return 'поясная сумка';
-  if (text.includes('chest')) return 'нагрудная сумка';
-  if (text.includes('shoulder')) return 'сумка на плечо';
-  if (text.includes('crossbody') || text.includes('sling')) return 'сумка через плечо';
-  if (text.includes('backpack')) return 'рюкзак';
-  return 'сумка на заказ';
+  if (text.includes('mommy')) return 'mommy';
+  if (text.includes('gym')) return 'gym';
+  if (text.includes('waist')) return 'waist';
+  if (text.includes('chest')) return 'chest';
+  if (text.includes('shoulder')) return 'shoulder';
+  if (text.includes('crossbody') || text.includes('sling')) return 'crossbody';
+  if (text.includes('backpack')) return 'backpack';
+  return 'custom';
 }
+
+const productTypeLabels = {
+  mommy: 'сумка для мам',
+  gym: 'спортивная сумка',
+  waist: 'поясная сумка',
+  chest: 'нагрудная сумка',
+  shoulder: 'сумка на плечо',
+  crossbody: 'сумка через плечо',
+  backpack: 'рюкзак',
+  custom: 'сумка на заказ',
+};
+
+const productTypeIntro = {
+  mommy: 'Органайзер для мам и детских товаров: можно настроить ткань, карманы, логотип и упаковку под бренд.',
+  gym: 'Спортивная и дорожная сумка для фитнес-брендов, промо-наборов и private label коллекций.',
+  waist: 'Компактная поясная модель для мероприятий, туризма и городской розницы с гибким MOQ от 50 шт.',
+  chest: 'Нагрудная модель для бега и outdoor-заказов, где важны легкий вес, посадка и быстрый доступ.',
+  shoulder: 'Сумка на плечо для повседневных коллекций, корпоративных подарков и брендированной упаковки.',
+  crossbody: 'Crossbody/слинг модель для городских брендов: логотип, цвет фурнитуры и ткань согласуются перед образцом.',
+  backpack: 'Рюкзак для школы, бизнеса или путешествий с настройкой материала, отделений, логотипа и упаковки.',
+  custom: 'Модель подходит для OEM/ODM заказа: логотип, материал, цвет, упаковка и образец согласуются перед производством.',
+};
+
+const badgeTranslations = {
+  '15.6-inch Laptop': 'ноутбук 15,6"',
+  '17-inch Laptop': 'ноутбук 17"',
+  '6 Colors': '6 цветов',
+  'Business Backpack': 'бизнес-рюкзак',
+  'Business Travel': 'для деловых поездок',
+  'Compact Business': 'компактный бизнес-формат',
+  'Compact Carry': 'компактная переноска',
+  'Compact Size': 'компактный размер',
+  'Custom Branding': 'брендинг на заказ',
+  'Custom Logo': 'логотип на заказ',
+  Drawstring: 'кулиска',
+  'Fashion Colorways': 'модные расцветки',
+  'Fashion Style': 'модный стиль',
+  'Five Logo Methods': '5 способов нанесения логотипа',
+  'Laptop Backpack': 'рюкзак для ноутбука',
+  Lightweight: 'легкий',
+  'Lightweight Nylon': 'легкий нейлон',
+  'Low MOQ': 'низкий MOQ',
+  'Luggage Strap': 'ремень для чемодана',
+  'Multi-pocket': 'много карманов',
+  'Private Label': 'private label',
+  'Reflective Nylon': 'светоотражающий нейлон',
+  'Ripstop Nylon': 'ripstop-нейлон',
+  'Running Fit': 'посадка для бега',
+  'Travel Friendly': 'удобно для поездок',
+  'Travel-ready': 'готово для путешествий',
+  'Urban Style': 'городской стиль',
+  'Water-resistant': 'водоотталкивающий',
+  Waterproof: 'водонепроницаемый',
+};
 
 function productCategorySlug(slug, product) {
   return product.categorySlug || slug;
@@ -30,12 +84,14 @@ function matchesCategory(slug, product, activeCategory) {
 }
 
 function translatedBadges(product) {
-  return (product.badges || []).slice(0, 3).map((badge) => ruPhase2.badges[badge] || badge);
+  return (product.badges || []).slice(0, 3).map((badge) => badgeTranslations[badge] || ruPhase2.badges[badge] || badge);
 }
 
 export function RuProductCard({ slug, product }) {
   const model = product.model || slug.toUpperCase();
-  const type = productType(slug, product);
+  const typeKey = productType(slug, product);
+  const type = productTypeLabels[typeKey] || productTypeLabels.custom;
+  const intro = productTypeIntro[typeKey] || productTypeIntro.custom;
   const title = `${model} ${type}`;
 
   return (
@@ -49,7 +105,7 @@ export function RuProductCard({ slug, product }) {
           {translatedBadges(product).map((badge) => <span className="badge" key={badge}>{badge}</span>)}
         </div>
         <h3 className="card-title">{title}</h3>
-        <p className="muted">{ruPhase2.productIntro[type] || ruPhase2.productIntro.default}</p>
+        <p className="muted">{intro}</p>
         <div className="card-price">{ruPhase2.priceText}</div>
       </div>
       <div className="card-actions">
