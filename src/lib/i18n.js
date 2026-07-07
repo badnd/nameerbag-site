@@ -5,7 +5,8 @@ export const coreI18nRoutes = {
   '/custom-service': '/ru/custom-service',
   '/factory': '/ru/factory',
   '/about': '/ru/about',
-  '/contact': '/ru/contact'
+  '/contact': '/ru/contact',
+  '/products': '/ru/products'
 };
 
 export function i18nAlternates(route) {

@@ -10,7 +10,7 @@ const redirectedBlogSlugs = new Set([
 export default function sitemap() {
   const now = new Date();
   const staticRoutes = ['/', '/products', '/custom-service', '/factory', '/about', '/contact', '/privacy-policy', '/blog'];
-  const ruRoutes = ['/ru/', '/ru/custom-service', '/ru/factory', '/ru/about', '/ru/contact'];
+  const ruRoutes = ['/ru/', '/ru/products', '/ru/custom-service', '/ru/factory', '/ru/about', '/ru/contact'];
   const canonicalBlogPosts = blogPosts.filter((post) => !redirectedBlogSlugs.has(post.slug));
   return [
     ...staticRoutes.map((route) => ({ url: `${siteUrl}${route === '/' ? '' : route}`, lastModified: now })),

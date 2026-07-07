@@ -2,15 +2,24 @@ import Link from 'next/link';
 import { siteData } from '@/data/site-data';
 import { ProductCard } from '@/components/ProductCard';
 import { assetPath } from '@/lib/paths';
+import { i18nAlternates } from '@/lib/i18n';
 
 export const metadata = {
   title: 'Custom Bag Product Catalog',
   description: 'Browse custom backpacks, waist bags, chest bags, mommy bags, shoulder bags and gym bags for OEM/ODM, low MOQ and private label projects.',
-  alternates: { canonical: '/products' }
+  alternates: i18nAlternates('/products')
 };
 
-export default function ProductsPage() {
-  const products = Object.entries(siteData.products);
+function matchesCategory(slug, product, activeCategory) {
+  if (!activeCategory) return true;
+  return slug === activeCategory || slug.includes(activeCategory) || (product.category || '').toLowerCase().includes(activeCategory.replaceAll('-', ' '));
+}
+
+export default async function ProductsPage({ searchParams }) {
+  const params = await searchParams;
+  const activeCategory = params?.category || '';
+  const activeCategoryName = siteData.categories.find((category) => category.slug === activeCategory)?.name;
+  const products = Object.entries(siteData.products).filter(([slug, product]) => matchesCategory(slug, product, activeCategory));
 
   return (
     <>
@@ -19,14 +28,20 @@ export default function ProductsPage() {
           <div className="section-head">
             <div>
               <span className="badge">Product Catalog</span>
-              <h1>Custom bag categories for B2B buyers</h1>
+              <h1>{activeCategoryName || 'Custom bag categories for B2B buyers'}</h1>
               <p>Each product page is now rendered as static SEO-friendly HTML from one product data layer, so future uploads can be added cleanly.</p>
             </div>
             <Link className="btn btn-primary" href="/contact">Request Quote</Link>
           </div>
+          <div className="filter-row">
+            <Link className={`filter-pill ${!activeCategory ? 'is-active' : ''}`} href="/products">All Products</Link>
+            {siteData.categories.map((category) => (
+              <Link className={`filter-pill ${activeCategory === category.slug ? 'is-active' : ''}`} href={`/products?category=${category.slug}`} key={category.slug}>{category.name}</Link>
+            ))}
+          </div>
           <div className="grid grid-4">
             {siteData.categories.map((category) => (
-              <Link className="card category-mini" href={`/products/${category.slug}`} key={category.slug}>
+              <Link className="card category-mini" href={`/products?category=${category.slug}`} key={category.slug}>
                 <img src={assetPath(category.image)} alt={category.name} />
                 <strong>{category.name}</strong>
               </Link>
@@ -39,7 +54,7 @@ export default function ProductsPage() {
           <div className="section-head">
             <div>
               <span className="badge">All Items</span>
-              <h2>Available custom bag products</h2>
+              <h2>{activeCategoryName ? `${activeCategoryName} products` : 'Available custom bag products'}</h2>
               <p>Designed for importers, wholesalers, corporate buyers and private label brands.</p>
             </div>
           </div>

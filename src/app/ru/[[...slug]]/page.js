@@ -1,17 +1,27 @@
 import { notFound } from 'next/navigation';
 import { RuQuoteForm } from '@/components/RuQuoteForm';
 import { ruPages, ruShared, ruSite } from '@/data/ru-phase1';
+import { RuHomePhase2, RuProductsPage } from '@/components/RuPhase2Sections';
 
 function pageKey(params) {
   return (params?.slug || []).join('/');
 }
 
 function pageByParams(params) {
-  return ruPages[pageKey(params)];
+  const key = pageKey(params);
+  if (key === 'products') {
+    return {
+      route: '/ru/products',
+      enRoute: '/products',
+      title: 'Каталог сумок на заказ | OEM ODM продукция',
+      description: 'Русский каталог сумок Nameer: рюкзаки, поясные сумки, сумки для мам, спортивные и дорожные модели. MOQ от 50 шт, запросите расчёт.'
+    };
+  }
+  return ruPages[key];
 }
 
 export function generateStaticParams() {
-  return Object.keys(ruPages).map((slug) => ({ slug: slug ? slug.split('/') : [] }));
+  return [...Object.keys(ruPages), 'products'].map((slug) => ({ slug: slug ? slug.split('/') : [] }));
 }
 
 export async function generateMetadata({ params }) {
@@ -33,13 +43,20 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function RussianPhaseOnePage({ params }) {
+export default async function RussianPhaseOnePage({ params, searchParams }) {
   const resolvedParams = await params;
+  const key = pageKey(resolvedParams);
   const page = pageByParams(resolvedParams);
   if (!page) notFound();
 
+  if (key === 'products') {
+    const resolvedSearchParams = await searchParams;
+    return <RuProductsPage activeCategory={resolvedSearchParams?.category || ''} />;
+  }
+
   return (
     <>
+      {key === '' ? <RuHomePhase2 /> : null}
       <section className="section bg-soft">
         <div className="container process-grid">
           <div>
