@@ -2,11 +2,11 @@ import { siteUrl } from '@/lib/paths';
 
 export const coreI18nRoutes = {
   '/': '/ru/',
-  '/custom-service': '/ru/custom-service',
-  '/factory': '/ru/factory',
-  '/about': '/ru/about',
-  '/contact': '/ru/contact',
-  '/products': '/ru/products'
+  '/custom-service': '/ru/custom-service/',
+  '/factory': '/ru/factory/',
+  '/about': '/ru/about/',
+  '/contact': '/ru/contact/',
+  '/products': '/ru/products/'
 };
 
 export function i18nAlternates(route) {
