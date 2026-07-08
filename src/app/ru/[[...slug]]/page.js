@@ -11,7 +11,7 @@ function pageByParams(params) {
   const key = pageKey(params);
   if (key === 'products') {
     return {
-      route: '/ru/products/',
+      route: '/ru/products',
       enRoute: '/products',
       title: 'Каталог сумок на заказ | OEM ODM продукция',
       description: 'Русский каталог сумок Nameer: рюкзаки, поясные сумки, сумки для мам, спортивные и дорожные модели. MOQ от 50 шт, запросите расчёт.'
@@ -24,10 +24,6 @@ export function generateStaticParams() {
   return [...Object.keys(ruPages), 'products'].map((slug) => ({ slug: slug ? slug.split('/') : [] }));
 }
 
-function canonicalRuPath(route) {
-  return route.endsWith('/') ? route : `${route}/`;
-}
-
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const page = pageByParams(resolvedParams);
@@ -37,10 +33,10 @@ export async function generateMetadata({ params }) {
     title: page.title,
     description: page.description,
     alternates: {
-      canonical: canonicalRuPath(page.route),
+      canonical: page.route,
       languages: {
         en: `${ruSite.baseUrl}${page.enRoute === '/' ? '' : page.enRoute}`,
-        ru: `${ruSite.baseUrl}${canonicalRuPath(page.route)}`,
+        ru: `${ruSite.baseUrl}${page.route}`,
         'x-default': `${ruSite.baseUrl}${page.enRoute === '/' ? '' : page.enRoute}`
       }
     }
