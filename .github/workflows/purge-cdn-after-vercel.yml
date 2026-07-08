@@ -14,13 +14,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          DEPLOY_URL="${{ github.event.deployment_status.environment_url }}"
-          if [ -z "$DEPLOY_URL" ]; then
-            echo "No deployment environment_url found; skipping CDN purge."
-            exit 0
-          fi
-
-          PURGE_URL="${DEPLOY_URL%/}/api/purge-cdn"
+          PURGE_URL="https://www.nameerbag.com/api/purge-cdn"
           echo "Triggering CDN purge: $PURGE_URL"
 
           for attempt in 1 2 3; do
