@@ -24,12 +24,12 @@ jobs:
           echo "Triggering CDN purge: $PURGE_URL"
 
           for attempt in 1 2 3; do
-            http_code="$(curl -sS -X POST "$PURGE_URL" -o purge-response.json -w "%{http_code}")"
+            http_code="$(curl -sS -L -X POST "$PURGE_URL" -o purge-response.json -w "%{http_code}")"
             echo "Attempt $attempt returned HTTP $http_code"
             cat purge-response.json || true
             echo
 
-            if [ "$http_code" -ge 200 ] && [ "$http_code" -lt 500 ]; then
+            if [ "$http_code" -ge 200 ] && [ "$http_code" -lt 300 ]; then
               exit 0
             fi
 
