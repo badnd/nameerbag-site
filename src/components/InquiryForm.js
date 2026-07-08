@@ -74,11 +74,11 @@ export function InquiryForm({ productTitle = 'Custom Bag Project', productOption
           </select>
           <select name="qty" required defaultValue="">
             <option value="">Estimated Quantity</option>
-            <option value="50-100 pcs">50-100 pcs</option>
-            <option value="100-300 pcs">100-300 pcs</option>
-            <option value="300-500 pcs">300-500 pcs</option>
-            <option value="500-1,000 pcs">500-1,000 pcs</option>
-            <option value="1,000-3,000 pcs">1,000-3,000 pcs</option>
+            <option value="50 pcs">50 pcs</option>
+            <option value="100 pcs">100 pcs</option>
+            <option value="300 pcs">300 pcs</option>
+            <option value="500 pcs">500 pcs</option>
+            <option value="1,000 pcs">1,000 pcs</option>
             <option value="3,000+ pcs">3,000+ pcs</option>
           </select>
         </div>
