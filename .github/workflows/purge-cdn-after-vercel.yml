@@ -1,0 +1,40 @@
+name: Purge Cloudflare CDN after Vercel production deploy
+
+on:
+  deployment_status:
+
+jobs:
+  purge-cdn:
+    if: >
+      github.event.deployment_status.state == 'success' &&
+      (github.event.deployment.environment == 'Production' || github.event.deployment.environment == 'production')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger production CDN purge
+        shell: bash
+        run: |
+          set +e
+          DEPLOY_URL="${{ github.event.deployment_status.environment_url }}"
+          if [ -z "$DEPLOY_URL" ]; then
+            echo "No deployment environment_url found; skipping CDN purge."
+            exit 0
+          fi
+
+          PURGE_URL="${DEPLOY_URL%/}/api/purge-cdn"
+          echo "Triggering CDN purge: $PURGE_URL"
+
+          for attempt in 1 2 3; do
+            http_code="$(curl -sS -X POST "$PURGE_URL" -o purge-response.json -w "%{http_code}")"
+            echo "Attempt $attempt returned HTTP $http_code"
+            cat purge-response.json || true
+            echo
+
+            if [ "$http_code" -ge 200 ] && [ "$http_code" -lt 500 ]; then
+              exit 0
+            fi
+
+            sleep 10
+          done
+
+          echo "CDN purge callback failed after retries; deployment remains successful."
+          exit 0
