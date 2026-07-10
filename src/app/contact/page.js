@@ -16,7 +16,7 @@ export default function ContactPage() {
         <div>
           <span className="badge">Contact Sales</span>
           <h1>Get a custom bag factory quote</h1>
-          <p className="muted">Send product type, quantity, logo method and target market. Anna Wei will reply with MOQ tiers, sample and pricing suggestions.</p>
+          <p className="muted">Send product type, quantity, logo method and target market. Anna Wei will reply with MOQ tiers, sample options and production suggestions.</p>
           <div className="contact-mini">
             <div><strong>Email:</strong> <a href={`mailto:${siteData.company.email}`}>{siteData.company.email}</a></div>
             <div><strong>WhatsApp:</strong> <a href={whatsappUrl(siteData)} target="_blank" rel="noopener">{siteData.company.whatsapp}</a></div>
