@@ -19,7 +19,7 @@ export function HomeInquiry() {
           <div className="icon-bubble">A</div>
           <div>
             <strong>Hi, I'm Anna Wei</strong>
-            <div className="muted">Your bag sourcing consultant. Send your requirements below and I'll personally reply within 24 hours with MOQ, sample and pricing suggestions.</div>
+            <div className="muted">Your bag sourcing consultant. Send your requirements below and I'll personally reply within 24 hours with MOQ, sample and customization suggestions.</div>
           </div>
         </div>
         <h3>Get a Factory Quote</h3>
