@@ -80,7 +80,7 @@ export default async function ProductPage({ params }) {
           </article>
           <aside className="quote-card">
             <h3>Request a Factory Quote</h3>
-            <p className="muted">Send quantity, logo and material details. We will reply with MOQ, sample and bulk pricing suggestions.</p>
+            <p className="muted">Send quantity, logo and material details. We will reply with MOQ, sample and production suggestions.</p>
             <InquiryForm productTitle={`${product.title} (${product.model})`} compact />
           </aside>
         </div>
