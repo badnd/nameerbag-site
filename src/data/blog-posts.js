@@ -185,7 +185,7 @@ export const blogPosts = [
         body: 'Send the bag type, reference photos, target size, logo file, estimated quantity, preferred material, target market and delivery timeline. These details make the quotation faster and more practical.'
       },
       {
-        heading: 'FAQ: Is the lowest unit price always the best choice?',
+        heading: 'FAQ: Is the lowest quote always the best choice?',
         body: 'No. A very low quote may remove important details such as lining, reinforced stitching, better zipper quality or proper packaging. Compare quotes by specification, not only by price.'
       },
       {
@@ -222,7 +222,7 @@ export const blogPosts = [
           },
           {
             '@type': 'Question',
-            name: 'Is the lowest unit price always the best choice?',
+            name: 'Is the lowest quote always the best choice?',
             acceptedAnswer: { '@type': 'Answer', text: 'No. A very low quote may remove important details such as lining, reinforced stitching, better zipper quality or proper packaging. Compare quotes by specification, not only by price.' }
           },
           {
@@ -340,7 +340,7 @@ export const blogPosts = [
         body: 'Custom bag projects involve material, logo placement, sample approval and packing details. Direct factory communication keeps technical questions closer to the production team and reduces repeated relay messages.'
       },
       {
-        heading: 'Pricing is easier to understand',
+        heading: 'Factory quote logic is easier to understand',
         body: 'A factory quote reflects real production factors such as fabric, hardware, logo method, labor and packing. This makes it easier for buyers to compare different customization levels and plan margin.'
       },
       {
