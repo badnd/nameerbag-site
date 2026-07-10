@@ -82,13 +82,13 @@ export default function HomePage() {
             ))}
           </div>
           <div className="price-guidance">
-            <strong>Factory-direct pricing, quoted per project.</strong>
-            <span>Exact pricing depends on style, fabric, quantity and logo method. Send your requirements and Anna will reply within 24 hours with a tiered quotation (per-unit prices at different MOQ levels).</span>
+            <strong>Factory-direct support, planned around your project.</strong>
+            <span>Share the bag style, fabric, quantity and logo method you need. Anna will reply within 24 hours with practical MOQ guidance, sampling steps and production suggestions.</span>
           </div>
           <div className="cta-banner article-cta">
             <div>
               <h2>Integrated Factory & Export Team</h2>
-              <p>We operate as an integrated manufacturer and exporter: our own sewing factory in Baigou, Hebei - one of China's largest bag manufacturing hubs - handles production, while our Tianjin-based export team manages international communication, documentation and logistics. You get factory pricing with professional export service, under one roof.</p>
+              <p>We operate as an integrated manufacturer and exporter: our own sewing factory in Baigou, Hebei - one of China's largest bag manufacturing hubs - handles production, while our Tianjin-based export team manages international communication, documentation and logistics. You work directly with factory-side production support and professional export service, under one roof.</p>
             </div>
           </div>
           <div className="trust-showcase">
