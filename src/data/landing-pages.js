@@ -81,7 +81,7 @@ export const landingPages = [
     badge: 'Cosmetic Bag Manufacturing',
     serviceType: 'Custom cosmetic bag manufacturing',
     hero: 'Cosmetic bags are a strong repeat-order category for beauty brands, subscription boxes and promotional buyers. We manufacture flat zip pouches, structured train cases, brush organizers and travel sets with private label support.',
-    relatedProducts: ['mini-crossbody', 'shoulder-bag', 'compact-crossbody-bag-ytljy5634'],
+    relatedProducts: [],
     relatedLinks: [['Custom Tote Bags', '/custom-tote-bags'], ['Custom Crossbody Bags', '/custom-crossbody-bags'], ['Custom Service', '/custom-service']],
     sections: [
       {
@@ -118,7 +118,7 @@ export const landingPages = [
     badge: 'Tote Bag Manufacturing',
     serviceType: 'Custom tote bag manufacturing',
     hero: 'From giveaway shoppers to premium zip-top canvas totes, we manufacture tote bags for promotional buyers, retail brands and eco-conscious product lines.',
-    relatedProducts: ['gym-bag', 'shoulder-bag', 'student-backpack'],
+    relatedProducts: [],
     relatedLinks: [['Custom Cosmetic Bags', '/custom-cosmetic-bags'], ['Custom Waist Bags', '/custom-waist-bags'], ['Custom Service', '/custom-service']],
     sections: [
       {
