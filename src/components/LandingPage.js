@@ -124,16 +124,18 @@ export function LandingPage({ page }) {
         </section>
       ))}
 
-      <section className="section bg-soft">
-        <div className="container">
-          <div className="section-head">
-            <div><span className="badge">Related Products</span><h2>Real product references for this project type</h2><p>Use these existing models as starting points for quotation, logo placement and construction discussion.</p></div>
+      {page.relatedProducts?.length ? (
+        <section className="section bg-soft">
+          <div className="container">
+            <div className="section-head">
+              <div><span className="badge">Related Products</span><h2>Real product references for this project type</h2><p>Use these existing models as starting points for quotation, logo placement and construction discussion.</p></div>
+            </div>
+            <div className="grid grid-3">
+              {page.relatedProducts.map((slug) => <ProductCard slug={slug} key={slug} />)}
+            </div>
           </div>
-          <div className="grid grid-3">
-            {page.relatedProducts.map((slug) => <ProductCard slug={slug} key={slug} />)}
-          </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section className="section">
         <div className="container">
