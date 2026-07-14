@@ -17,8 +17,13 @@ jobs:
           PURGE_URL="https://www.nameerbag.com/api/purge-cdn"
           echo "Triggering CDN purge: $PURGE_URL"
 
+          if [ -z "${{ secrets.CDN_PURGE_SECRET }}" ]; then
+            echo "Missing required GitHub secret: CDN_PURGE_SECRET"
+            exit 1
+          fi
+
           for attempt in 1 2 3; do
-            http_code="$(curl -sS -L -X POST "$PURGE_URL" -o purge-response.json -w "%{http_code}")"
+            http_code="$(curl -sS -L -X POST "$PURGE_URL" -H "Authorization: Bearer ${{ secrets.CDN_PURGE_SECRET }}" -o purge-response.json -w "%{http_code}")"
             echo "Attempt $attempt returned HTTP $http_code"
             cat purge-response.json || true
             echo

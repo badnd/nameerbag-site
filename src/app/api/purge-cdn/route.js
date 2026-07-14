@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { timingSafeEqual } from 'node:crypto';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,7 +22,21 @@ async function purgeCloudflare(zoneId, token) {
   return result;
 }
 
-export async function POST() {
+function isAuthorized(request) {
+  const secret = process.env.CDN_PURGE_SECRET;
+  const authorization = request.headers.get('authorization') || '';
+  if (!secret) return false;
+
+  const supplied = Buffer.from(authorization);
+  const expected = Buffer.from(`Bearer ${secret}`);
+  return supplied.length === expected.length && timingSafeEqual(supplied, expected);
+}
+
+export async function POST(request) {
+  if (!isAuthorized(request)) {
+    return NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 });
+  }
+
   if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production') {
     return NextResponse.json({ ok: true, skipped: true, reason: `VERCEL_ENV=${process.env.VERCEL_ENV}` });
   }
@@ -43,5 +58,5 @@ export async function POST() {
 }
 
 export async function GET() {
-  return NextResponse.json({ ok: true, siteHost, route: '/api/purge-cdn', method: 'POST' });
+  return NextResponse.json({ ok: true, siteHost, route: '/api/purge-cdn', method: 'POST', authentication: 'Bearer token required' });
 }

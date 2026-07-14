@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
-import { assetPath, whatsappUrl } from '@/lib/paths';
+import { assetPath, siteUrl, whatsappUrl } from '@/lib/paths';
+import { PlainEmail } from '@/components/PlainEmail';
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -21,7 +22,7 @@ export function SiteFooter() {
           </div>
           <div>
             <h4>Products</h4>
-            <ul>{siteData.categories.slice(0, 7).map((category) => <li key={category.slug}><Link href={`/products/${category.slug}`}>{category.name}</Link></li>)}</ul>
+            <ul>{siteData.categories.map((category) => <li key={category.slug}><Link href={`${siteUrl}/products/${category.slug}`}>{category.name}</Link></li>)}</ul>
             <h4 className="footer-subhead">Custom Solutions</h4>
             <ul>
               <li><Link href="/custom-waist-bags">Custom Waist Bags</Link></li>
@@ -43,7 +44,7 @@ export function SiteFooter() {
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>Email: <a href={`mailto:${siteData.company.email}`}>{siteData.company.email}</a></li>
+              <li>Email: <PlainEmail email={siteData.company.email} /></li>
               <li>WhatsApp: <a href={whatsappUrl(siteData)} target="_blank" rel="noopener">{siteData.company.whatsapp}</a></li>
               <li>WeChat: {siteData.company.wechat}</li>
               <li>{siteData.company.priceText}</li>

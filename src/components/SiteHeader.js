@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { siteData } from '@/data/site-data';
 import { assetPath, whatsappUrl } from '@/lib/paths';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { PlainEmail } from '@/components/PlainEmail';
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -35,7 +36,7 @@ export function SiteHeader() {
       <div className="topbar">
         <div className="container">
           <div className="topbar-items">
-            <span>Email: {siteData.company.email}</span>
+            <span>Email: <PlainEmail email={siteData.company.email} /></span>
             <span>WhatsApp: {siteData.company.whatsapp}</span>
             <span>WeChat: {siteData.company.wechat}</span>
           </div>

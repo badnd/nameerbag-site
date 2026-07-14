@@ -2,6 +2,7 @@ import { siteData } from '@/data/site-data';
 import { InquiryForm } from '@/components/InquiryForm';
 import { whatsappUrl } from '@/lib/paths';
 import { i18nAlternates } from '@/lib/i18n';
+import { PlainEmail } from '@/components/PlainEmail';
 
 export const metadata = {
   title: 'Contact Nameer | Custom Bag Factory Quote',
@@ -18,7 +19,7 @@ export default function ContactPage() {
           <h1>Get a custom bag factory quote</h1>
           <p className="muted">Send product type, quantity, logo method and target market. Anna Wei will reply with MOQ tiers, sample options and production suggestions.</p>
           <div className="contact-mini">
-            <div><strong>Email:</strong> <a href={`mailto:${siteData.company.email}`}>{siteData.company.email}</a></div>
+            <div><strong>Email:</strong> <PlainEmail email={siteData.company.email} /></div>
             <div><strong>WhatsApp:</strong> <a href={whatsappUrl(siteData)} target="_blank" rel="noopener">{siteData.company.whatsapp}</a></div>
             <div><strong>WeChat:</strong> {siteData.company.wechat}</div>
             <div><strong>Sample fee refund policy:</strong> Sample cost varies with design complexity. For bulk orders of 1,000+ pcs the sample fee is refunded; for 500-1,000 pcs refund is negotiable.</div>
