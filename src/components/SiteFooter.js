@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
 import { assetPath, siteUrl, whatsappUrl } from '@/lib/paths';
-import { PlainEmail } from '@/components/PlainEmail';
+import { PlainEmail, PlainEmailLink } from '@/components/PlainEmail';
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -56,7 +56,7 @@ export function SiteFooter() {
       <a className="floating-wa" href={whatsappUrl(siteData)} target="_blank" rel="noopener" aria-label="WhatsApp inquiry">WA</a>
       <div className="floating-label">WhatsApp Inquiry</div>
       <div className="mobile-contact-bar">
-        <a className="btn btn-secondary" href={`mailto:${siteData.company.email}`}>Email</a>
+        <PlainEmailLink email={siteData.company.email} label="Email" className="btn btn-secondary" />
         <a className="btn btn-primary" href={whatsappUrl(siteData)} target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </>

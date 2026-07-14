@@ -9,3 +9,14 @@ export function PlainEmail({ email, link = true }) {
     />
   );
 }
+
+export function PlainEmailLink({ email, label, className }) {
+  return (
+    <span
+      style={{ display: 'contents' }}
+      dangerouslySetInnerHTML={{
+        __html: `<!--email_off--><a class="${className}" href="mailto:${email}">${label}</a><!--/email_off-->`
+      }}
+    />
+  );
+}
