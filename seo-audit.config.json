@@ -27,7 +27,8 @@
       "people": [15, 35, 50],
       "annualCapacity": [200000],
       "exportMarkets": [10],
-      "locations": ["Baigou", "Tianjin"]
+      "locations": ["Baigou", "Tianjin"],
+      "companyNames": ["Tianjin Junyi Premium Trading Co.,Ltd."]
     },
     "pricePatterns": [
       "\\$\\s*\\d+(?:\\.\\d{1,2})?",
@@ -42,6 +43,7 @@
     "contentWhitelists": [
       "Contact us for best price",
       "Please contact us to get best price",
+      "Please contact us to get the best price",
       "500-1,000 pcs",
       "500–1,000 pcs",
       "MOQ from 50 pcs",

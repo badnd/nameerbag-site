@@ -24,7 +24,9 @@ export async function run(ctx) {
     const numericRules = [
       [/(\d+)\+?\s*years?\b/ig, rules.approvedFactoryFacts.years, "years"],
       [/(\d[\d,]*)\s*(?:m²|sqm|square meters?)\b/ig, rules.approvedFactoryFacts.squareMeters, "square meters"],
-      [/(\d[\d,]*)\+?\s*(?:employees|workers|people)\b/ig, rules.approvedFactoryFacts.people, "people"]
+      [/(\d[\d,]*)\+?\s*(?:employees|workers|people)\b/ig, rules.approvedFactoryFacts.people, "people"],
+      [/(?:annual(?: production)? capacity|annual output).{0,25}?(\d[\d,]*)/ig, rules.approvedFactoryFacts.annualCapacity, "annual capacity"],
+      [/(?:export(?:ed)? to|exports? to).{0,20}?(\d+)\+?\s*(?:countries|markets)/ig, rules.approvedFactoryFacts.exportMarkets, "export markets"]
     ];
     for (const [regex, allowed, label] of numericRules) {
       let match; while ((match = regex.exec(text))) {
