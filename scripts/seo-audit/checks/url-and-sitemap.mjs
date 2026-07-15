@@ -19,8 +19,8 @@ export async function run(ctx) {
     for (const [check, url, label] of probes) {
       const chain = await redirectChain(ctx.client, url);
       const last = chain.at(-1);
-      if (chain.length < 2 || chain[0].status !== 301 || !last?.url.startsWith(ctx.site.origin)) {
-        ctx.add(check, "critical", "CANONICAL_REDIRECT", `${label} probe must 301 to the canonical origin`, { url, actual: JSON.stringify(chain) });
+      if (chain.length < 2 || ![301, 308].includes(chain[0].status) || !last?.url.startsWith(ctx.site.origin)) {
+        ctx.add(check, "critical", "CANONICAL_REDIRECT", `${label} probe must permanently redirect (301/308) to the canonical origin`, { url, actual: JSON.stringify(chain) });
       }
       if (chain.length > 2) ctx.add(4, "warning", "REDIRECT_CHAIN", `${label} uses ${chain.length - 1} redirect hops`, { url, actual: JSON.stringify(chain) });
     }

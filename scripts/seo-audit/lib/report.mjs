@@ -33,6 +33,8 @@ export async function writeReport({ results, previous, reportDir, startedAt, dur
     lines.push("| Severity | Check | Code | Site / URL | Source | Expected / Finding | Actual |", "|---|---:|---|---|---|---|---|");
     for (const item of issues) lines.push(`| ${item.severity.toUpperCase()} | ${item.check} | ${item.code} | ${esc(item.url || item.site)} | ${esc(item.source)} | ${esc(item.message || item.expected)} | ${esc(item.actual)} |`);
   }
+  lines.push("", "## Skipped By Design", "");
+  for (const result of results) for (const note of result.notes || []) lines.push(`- ${result.site.origin}: ${note}`);
   lines.push("", "## Trend Details", "", `- New fingerprints: ${newCount}`, `- Fixed fingerprints: ${fixedCount}`, `- Previous run available: ${oldFingerprints.size ? "yes" : "no (baseline created)"}`, "");
   const content = `${lines.join("\n")}\n`;
   const stamp = startedAt.toISOString().replaceAll(":", "-").replace(/\.\d{3}Z$/, "Z");

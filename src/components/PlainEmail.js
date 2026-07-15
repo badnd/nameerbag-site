@@ -10,12 +10,13 @@ export function PlainEmail({ email, link = true }) {
   );
 }
 
-export function PlainEmailLink({ email, label, className }) {
+export function PlainEmailLink({ email, label, className, subject = '' }) {
+  const href = `mailto:${email}${subject ? `?subject=${encodeURIComponent(subject)}` : ''}`;
   return (
     <span
       style={{ display: 'contents' }}
       dangerouslySetInnerHTML={{
-        __html: `<!--email_off--><a class="${className}" href="mailto:${email}">${label}</a><!--/email_off-->`
+        __html: `<!--email_off--><a class="${className}" href="${href}">${label}</a><!--/email_off-->`
       }}
     />
   );

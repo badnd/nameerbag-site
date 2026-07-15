@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
-import { blogPosts } from '@/data/blog-posts';
+import { canonicalBlogPosts } from '@/data/blog-posts';
 import { ProductCard } from '@/components/ProductCard';
 import { HomeInquiry } from '@/components/HomeInquiry';
 import { JsonLd } from '@/components/JsonLd';
@@ -137,7 +137,7 @@ export default function HomePage() {
             <Link className="btn btn-secondary" href="/blog">View all guides</Link>
           </div>
           <div className="grid grid-3">
-            {blogPosts.slice(0, 3).map((post) => (
+            {canonicalBlogPosts.slice(0, 3).map((post) => (
               <article className="card" key={post.slug}>
                 <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(post.hero)} alt={post.title} /></Link>
                 <div className="card-body"><span className="badge">{post.category}</span><h3 className="card-title">{post.title}</h3><p className="muted">{post.description}</p></div>

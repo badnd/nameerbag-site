@@ -4,6 +4,7 @@ import { siteData } from '@/data/site-data';
 import { JsonLd } from '@/components/JsonLd';
 import { ProductGallery } from '@/components/ProductGallery';
 import { InquiryForm } from '@/components/InquiryForm';
+import { PlainEmailLink } from '@/components/PlainEmail';
 import { assetPath, assetUrl, productPath, productSchema, siteUrl, whatsappUrl } from '@/lib/paths';
 
 export function generateStaticParams() {
@@ -75,7 +76,7 @@ export default async function ProductPage({ params }) {
             </table>
             <div className="hero-cta">
               <a className="btn btn-primary" href={whatsappUrl(siteData, product)} target="_blank" rel="noopener">WhatsApp Quote</a>
-              <a className="btn btn-secondary" href={`mailto:${siteData.company.email}?subject=${encodeURIComponent(product.model + ' inquiry')}`}>Email Us</a>
+              <PlainEmailLink className="btn btn-secondary" email={siteData.company.email} label="Email Us" subject={`${product.model} inquiry`} />
             </div>
           </article>
           <aside className="quote-card">

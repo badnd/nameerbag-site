@@ -31,7 +31,7 @@ for (const site of config.sites) {
   for (const checker of [urlAndSitemap, links, metadata, robots, content, schema]) {
     try { await checker.run(ctx); } catch (error) { ctx.add(30, "critical", "CHECK_RUNTIME_ERROR", `${checker.constructor?.name || "Checker"} failed: ${error.stack || error}`); }
   }
-  results.push({ site, issues: ctx.issues, sitemapCount: ctx.urls.length, robots: ctx.robots || "" });
+  results.push({ site, issues: ctx.issues, notes: ctx.notes, sitemapCount: ctx.urls.length, robots: ctx.robots || "" });
   console.log(`  ${ctx.urls.length} URLs, ${ctx.issues.length} findings`);
 }
 const durationMs = Date.now() - startedAt.getTime();

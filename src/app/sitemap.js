@@ -1,18 +1,12 @@
 import { siteData } from '@/data/site-data';
-import { blogPosts } from '@/data/blog-posts';
+import { canonicalBlogPosts } from '@/data/blog-posts';
 import { landingPages } from '@/data/landing-pages';
 import { productPath, siteUrl } from '@/lib/paths';
-
-const redirectedBlogSlugs = new Set([
-  'oem-vs-odm-bag-manufacturing',
-  'custom-backpack-manufacturer-china'
-]);
 
 export default function sitemap() {
   const now = new Date();
   const staticRoutes = ['/', '/products', '/custom-service', '/factory', '/about', '/contact', '/privacy-policy', '/blog'];
   const ruRoutes = ['/ru', '/ru/products', '/ru/custom-service', '/ru/factory', '/ru/about', '/ru/contact'];
-  const canonicalBlogPosts = blogPosts.filter((post) => !redirectedBlogSlugs.has(post.slug));
   return [
     ...staticRoutes.map((route) => ({ url: `${siteUrl}${route === '/' ? '' : route}`, lastModified: now })),
     ...ruRoutes.map((route) => ({ url: `${siteUrl}${route}`, lastModified: now })),

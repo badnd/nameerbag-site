@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { blogPosts } from '@/data/blog-posts';
+import { canonicalBlogPosts } from '@/data/blog-posts';
 import { assetPath } from '@/lib/paths';
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function BlogPage() {
           </div>
         </div>
         <div className="grid grid-3">
-          {blogPosts.map((post) => (
+          {canonicalBlogPosts.map((post) => (
             <article className="card blog-card" key={post.slug}>
               <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(post.hero)} alt={post.title} /></Link>
               <div className="card-body">

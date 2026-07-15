@@ -350,3 +350,10 @@ export const blogPosts = [
     ]
   }
 ];
+
+export const redirectedBlogSlugs = new Set([
+  'oem-vs-odm-bag-manufacturing',
+  'custom-backpack-manufacturer-china'
+]);
+
+export const canonicalBlogPosts = blogPosts.filter((post) => !redirectedBlogSlugs.has(post.slug));

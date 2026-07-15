@@ -5,10 +5,11 @@ export function createContext(site, config, client, previous = {}) {
   const issues = [];
   const pages = new Map();
   return {
-    site, config, client, previous, issues, pages, urls: [], checksRun: new Set(),
+    site, config, client, previous, issues, pages, urls: [], notes: [], checksRun: new Set(),
     add(check, severity, code, message, details = {}) {
       issues.push(issue(check, severity, code, site.origin, message, details));
     },
+    note(message) { this.notes.push(message); },
     mark(...ids) { ids.forEach((id) => this.checksRun.add(id)); },
     async page(url) {
       if (!pages.has(url)) {

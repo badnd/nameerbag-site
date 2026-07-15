@@ -1,8 +1,8 @@
 {
   "sites": [
-    { "name": "Nameer Bag", "origin": "https://www.nameerbag.com" },
-    { "name": "Junyi Bags", "origin": "https://www.junyibags.com" },
-    { "name": "Custom Backpack Factory", "origin": "https://www.custombackpackfactory.com" }
+    { "name": "Nameer Bag", "origin": "https://www.nameerbag.com", "multilingualPaths": ["/", "/products", "/custom-service", "/factory", "/about", "/contact"] },
+    { "name": "Junyi Bags", "origin": "https://www.junyibags.com", "multilingualPaths": ["/", "/products", "/custom-service", "/factory", "/about", "/contact"] },
+    { "name": "Custom Backpack Factory", "origin": "https://www.custombackpackfactory.com", "multilingualPaths": ["/", "/products", "/custom-service", "/factory", "/about", "/contact"] }
   ],
   "runtime": {
     "concurrencyPerSite": 6,
