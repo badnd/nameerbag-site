@@ -49,14 +49,15 @@ export async function run(ctx) {
 
   await mapLimit(ctx.urls, ctx.config.runtime.concurrencyPerSite, async (url) => {
     const { html } = await ctx.page(url);
-    if (!languagePair(ctx, url).covered) return;
-    for (const [lang, targetUrl] of Object.entries(html.alternates)) {
-      if (!['en', 'ru'].includes(lang)) continue;
-      const target = await ctx.page(targetUrl);
-      const returnLang = lang === "ru" ? "en" : "ru";
-      if (target.response.status !== 200 || target.html.alternates[returnLang] !== url) {
-        ctx.add(14, "critical", "HREFLANG_NOT_RECIPROCAL", `${lang} alternate is not reciprocal`, { url, actual: targetUrl });
-      }
+    const pair = languagePair(ctx, url);
+    if (!pair.covered) return;
+    const targetLang = pair.isRussian ? "en" : "ru";
+    const returnLang = pair.isRussian ? "ru" : "en";
+    const targetUrl = html.alternates[targetLang];
+    if (!targetUrl) return;
+    const target = await ctx.page(targetUrl);
+    if (target.response.status !== 200 || !target.html.alternates[returnLang] || !sameUrl(target.html.alternates[returnLang], url)) {
+      ctx.add(14, "critical", "HREFLANG_NOT_RECIPROCAL", `${targetLang} alternate is not reciprocal`, { url, actual: targetUrl });
     }
   });
 }

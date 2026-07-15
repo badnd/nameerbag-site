@@ -36,7 +36,7 @@ export async function run(ctx) {
       }
     }
   });
-  const allText = aggregate.join(" ");
+  const allText = aggregate.join(" ").replaceAll("\\u003e", ">").replaceAll("\\u003c", "<");
   const contacts = rules.contacts;
   for (const [field, expected] of Object.entries(contacts)) if (!allText.toLowerCase().includes(expected.toLowerCase())) ctx.add(24, "critical", "CONTACT_MISSING", `Approved ${field} was not found site-wide`, { expected });
   const emailMatches = [...new Set(allText.match(/[\w.+-]+@[\w.-]+\.[a-z]{2,}/ig) || [])].filter((email) => email.toLowerCase() !== contacts.email.toLowerCase());
