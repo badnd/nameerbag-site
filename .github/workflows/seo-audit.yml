@@ -1,0 +1,65 @@
+name: Weekly automated SEO audit
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-seo-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Restore previous audit state
+        uses: actions/cache/restore@v4
+        with:
+          path: .seo-audit-state
+          key: seo-audit-state-${{ github.run_id }}
+          restore-keys: seo-audit-state-
+
+      - name: Run fault-injection self-test
+        run: npm run seo:audit:test-injection
+
+      - name: Audit all production sites
+        id: audit
+        continue-on-error: true
+        run: npm run seo:audit -- --report-dir artifacts/seo-audit --state-dir .seo-audit-state
+
+      - name: Add report to job summary
+        if: always()
+        run: cat artifacts/seo-audit/latest.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Markdown report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-report-${{ github.run_id }}
+          path: artifacts/seo-audit/
+          retention-days: 90
+
+      - name: Save audit state for trend comparison
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .seo-audit-state
+          key: seo-audit-state-${{ github.run_id }}
+
+      - name: Fail on critical SEO findings
+        if: steps.audit.outcome == 'failure'
+        run: exit 1

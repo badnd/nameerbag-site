@@ -7,3 +7,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
+.seo-audit-state/
+artifacts/seo-audit/

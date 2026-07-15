@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "seo:audit": "node scripts/seo-audit/index.mjs",
+    "seo:audit:test-injection": "node scripts/seo-audit/test-injection.mjs",
     "cdn:purge": "node scripts/purge-cdn-cache.mjs",
     "r2:upload": "powershell -ExecutionPolicy Bypass -File scripts/upload-r2-assets.ps1"
   },
@@ -16,9 +18,10 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "cheerio": "^1.1.2",
+    "typescript": "latest"
   }
 }

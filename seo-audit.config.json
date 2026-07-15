@@ -1,0 +1,52 @@
+{
+  "sites": [
+    { "name": "Nameer Bag", "origin": "https://www.nameerbag.com" },
+    { "name": "Junyi Bags", "origin": "https://www.junyibags.com" },
+    { "name": "Custom Backpack Factory", "origin": "https://www.custombackpackfactory.com" }
+  ],
+  "runtime": {
+    "concurrencyPerSite": 6,
+    "timeoutMs": 15000,
+    "retries": 2,
+    "sitemapDeltaWarningPercent": 20,
+    "sitemapDeltaMinimumUrls": 5
+  },
+  "probes": {
+    "uppercasePath": "/Products"
+  },
+  "rules": {
+    "contacts": {
+      "email": "annawei@nameerbag.com",
+      "whatsapp": "008615102249548",
+      "wechat": "15102249548",
+      "person": "Anna Wei"
+    },
+    "approvedFactoryFacts": {
+      "years": [15],
+      "squareMeters": [3000],
+      "people": [15, 35, 50],
+      "annualCapacity": [200000],
+      "exportMarkets": [10],
+      "locations": ["Baigou", "Tianjin"]
+    },
+    "pricePatterns": [
+      "\\$\\s*\\d+(?:\\.\\d{1,2})?",
+      "\\bUSD\\s*\\d+(?:\\.\\d{1,2})?",
+      "\\b(?:per[- ]unit|unit) price\\b",
+      "\\btiered quotation\\b"
+    ],
+    "moqRangePatterns": [
+      "\\bMOQ.{0,35}\\d[\\d,]*\\s*(?:-|–|to)\\s*\\d[\\d,]*\\s*(?:pcs|pieces|units)\\b",
+      "\\b\\d[\\d,]*\\s*(?:-|–|to)\\s*\\d[\\d,]*\\s*(?:pcs|pieces)\\b.{0,35}MOQ\\b"
+    ],
+    "contentWhitelists": [
+      "Contact us for best price",
+      "Please contact us to get best price",
+      "500-1,000 pcs",
+      "500–1,000 pcs",
+      "MOQ from 50 pcs",
+      "MOQ tiers from 50 pcs",
+      "50/100/300/500/1,000/3,000+"
+    ]
+  }
+}
