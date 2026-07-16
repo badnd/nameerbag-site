@@ -61,7 +61,10 @@ export default async function BlogPostPage({ params }) {
           <h1>{post.title}</h1>
           <p className="article-lead">{post.description}</p>
           <div className="blog-meta article-meta"><span>{post.category}</span><span>{post.date}</span></div>
-          <img className="article-hero" src={assetPath(post.hero)} alt={post.title} />
+          <figure className="article-hero-figure">
+            <img className="article-hero" src={assetPath(post.hero)} alt={post.heroAlt || post.title} />
+            {post.heroCaption ? <figcaption>{post.heroCaption}</figcaption> : null}
+          </figure>
           <div className="article-content">
             {post.sections.map((section) => (
               <section key={section.heading}>

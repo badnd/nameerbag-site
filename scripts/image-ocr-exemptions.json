@@ -1,0 +1,10 @@
+{
+  "version": "2026-07-16.1",
+  "exemptions": [
+    {
+      "sha256": "ec189294a5c0c5f1d869d0d2f6765de281c2af7592e9c365685e60e37e6cd1a2",
+      "ruleIds": ["public-price"],
+      "reason": "Human visual review confirmed that the OCR '$0' reading is a false positive; the image says 'competitive price' and contains no numeric price."
+    }
+  ]
+}

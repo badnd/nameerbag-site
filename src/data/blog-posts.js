@@ -333,7 +333,9 @@ export const blogPosts = [
     category: 'Sourcing Guide',
     date: '2026-06-30',
     keywords: ['factory direct custom bags', 'China bag factory', 'trading company vs factory'],
-    hero: '/assets/images/trust/trust-company-stats-banner-1600.jpg',
+    hero: '/assets/images/trust/factory-exterior.jpg',
+    heroAlt: 'Nameerbag factory building and entrance at the shared Baigou production site',
+    heroCaption: 'The Nameerbag-marked production building at the shared Baigou factory site, where sampling and bulk bag programs are coordinated.',
     sections: [
       {
         heading: 'Factory-direct communication reduces delays',

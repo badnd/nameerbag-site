@@ -22,7 +22,7 @@ export default function BlogPage() {
         <div className="grid grid-3">
           {canonicalBlogPosts.map((post) => (
             <article className="card blog-card" key={post.slug}>
-              <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(post.hero)} alt={post.title} /></Link>
+              <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(post.hero)} alt={post.heroAlt || post.title} /></Link>
               <div className="card-body">
                 <div className="blog-meta"><span>{post.category}</span><span>{post.date}</span></div>
                 <h2 className="card-title">{post.title}</h2>

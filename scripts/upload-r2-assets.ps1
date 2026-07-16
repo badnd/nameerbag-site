@@ -30,6 +30,8 @@ $resolvedAssets = (Resolve-Path -LiteralPath $AssetsDir).Path
 $files = Get-ChildItem -LiteralPath $resolvedAssets -Recurse -File
 
 if (-not $DryRun) {
+  npm run ocr:guard
+  if ($LASTEXITCODE -ne 0) { throw "R2 upload blocked by OCR preflight." }
   $wrangler = Get-Command wrangler -ErrorAction SilentlyContinue
   if (-not $wrangler) {
     throw "Cloudflare Wrangler was not found. Install it or run this script from a shell where 'wrangler' is available."
