@@ -22,7 +22,7 @@
       "person": "Anna Wei"
     },
     "approvedFactoryFacts": {
-      "years": [15],
+      "years": [20],
       "squareMeters": [3000],
       "people": [15, 35, 50],
       "annualCapacity": [200000],
@@ -40,6 +40,14 @@
       "\\bMOQ.{0,35}\\d[\\d,]*\\s*(?:-|–|to)\\s*\\d[\\d,]*\\s*(?:pcs|pieces|units)\\b",
       "\\b\\d[\\d,]*\\s*(?:-|–|to)\\s*\\d[\\d,]*\\s*(?:pcs|pieces)\\b.{0,35}MOQ\\b"
     ],
+    "unauthorizedCertificationPatterns": [
+      "\\b(?:BSCI|GRS|ISO|FSC|SGS|BRC)\\b",
+      "Global Recycled Standard",
+      "Business Social Compliance Initiative",
+      "\\bREACH\\b(?=\\s+(?:certified|compliant|compliance|certification))",
+      "Prop\\s*65"
+    ],
+    "certificationWhitelists": [],
     "contentWhitelists": [
       "Contact us for best price",
       "Please contact us to get best price",

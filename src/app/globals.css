@@ -374,3 +374,15 @@ body.lightbox-open{overflow:hidden}
   .hero-metrics{grid-template-columns:1fr}
   .hero-media{right:24px;bottom:26px}
 }
+.hero-proof-line { font-weight: 700; color: #fff; max-width: 920px; }
+.hero-positioning-line a { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.hero-mockup { display: grid; gap: 4px; max-width: 720px; padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(0,0,0,.34); }
+.hero-mockup strong, .hero-mockup span, .hero-footnote { color: #fff; }
+.hero-footnote { font-size: .78rem; opacity: .86; max-width: 720px; }
+.card-facts { display: grid; gap: 5px; margin: 14px 0; font-size: .84rem; color: var(--text); }
+.export-markets .market-list { font-weight: 700; line-height: 1.8; }
+.story-layout { display: grid; grid-template-columns: minmax(220px,.7fr) minmax(0,1.3fr); gap: 48px; align-items: start; }
+.story-copy { display: grid; gap: 12px; }
+.story-copy p { margin: 0; line-height: 1.75; }
+.story-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+@media (max-width: 760px) { .story-layout { grid-template-columns: 1fr; gap: 20px; } }

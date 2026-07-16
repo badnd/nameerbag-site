@@ -106,6 +106,11 @@ export function RuProductCard({ slug, product }) {
         </div>
         <h3 className="card-title">{title}</h3>
         <p className="muted">{intro}</p>
+        <div className="card-facts">
+          <span>MOQ: от 50 шт*</span>
+          <span>Сроки: образец 7-15 дней · партия 15-30 дней</span>
+          <span>Логотип: шелкография / вышивка / патч / private label</span>
+        </div>
         <div className="card-price">{ruPhase2.priceText}</div>
       </div>
       <div className="card-actions">
@@ -204,7 +209,7 @@ export function RuHomePhase2() {
             {siteData.categories.slice(0, 9).map((category) => (
               <article className="card category-card" key={category.slug}>
                 <Link className="card-media" href={`/ru/products?category=${category.slug}`}><img src={assetPath(category.image)} alt={categoryName(category)} /></Link>
-                <div className="card-body"><h3 className="card-title">{categoryName(category)}</h3><p className="muted">{ruPhase2.categoryDesc[category.slug] || 'Категория для OEM/ODM заказов, логотипа, материала, цвета и упаковки под ваш бренд.'}</p><div className="card-price">{ruPhase2.priceText}</div></div>
+                <div className="card-body"><h3 className="card-title">{categoryName(category)}</h3><p className="muted">{ruPhase2.categoryDesc[category.slug] || 'Категория для OEM/ODM заказов, логотипа, материала, цвета и упаковки под ваш бренд.'}</p><div className="card-facts"><span>MOQ: от 50 шт*</span><span>Сроки: образец 7-15 дней · партия 15-30 дней</span><span>Логотип: шелкография / вышивка / патч / private label</span></div><div className="card-price">{ruPhase2.priceText}</div></div>
                 <div className="card-actions"><Link className="btn btn-primary" href={`/ru/products?category=${category.slug}`}>Смотреть модели</Link><Link className="btn btn-secondary" href={`/ru/contact?product=${category.slug}`}>Получить расчёт</Link></div>
               </article>
             ))}

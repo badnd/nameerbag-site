@@ -19,6 +19,11 @@ export async function run(ctx) {
       const regex = new RegExp(source, "ig"); let match;
       while ((match = regex.exec(scrubbed))) ctx.add(23, "critical", "MOQ_RANGE", "Old MOQ range wording detected", { url, actual: excerpt(scrubbed, match.index, match[0].length) });
     }
+    const certificationText = (rules.certificationWhitelists || []).reduce((value, allowed) => value.replaceAll(allowed, ""), text);
+    for (const source of rules.unauthorizedCertificationPatterns || []) {
+      const regex = new RegExp(source, "ig"); let match;
+      while ((match = regex.exec(certificationText))) ctx.add(25, "critical", "CERTIFICATION_UNAUTHORIZED", "Unauthorized certification claim detected", { url, actual: excerpt(certificationText, match.index, match[0].length) });
+    }
     if (response.body.includes("/cdn-cgi/l/email-protection")) ctx.add(26, "critical", "CF_EMAIL_PROTECTION", "Cloudflare email protection markup detected", { url });
 
     const numericRules = [

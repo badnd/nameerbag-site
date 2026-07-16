@@ -14,7 +14,7 @@ function normalizeSlideHref(href) {
   return map[href] || href || '/products';
 }
 
-export function HeroCarousel({ slides }) {
+export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, footnote }) {
   const validSlides = useMemo(() => slides.filter(Boolean), [slides]);
   const [active, setActive] = useState(0);
   const [copyActive, setCopyActive] = useState(0);
@@ -91,15 +91,19 @@ export function HeroCarousel({ slides }) {
           <span className="badge">{current.subtitle}</span>
           <h2>{current.title}</h2>
           <p>{current.text}</p>
+          {proofLine ? <p className="hero-proof-line">{proofLine}</p> : null}
+          {positioningLine ? <p className="hero-positioning-line"><Link href="/about">{positioningLine}</Link></p> : null}
           <div className="hero-metrics">
             <div><strong>OEM/ODM</strong><span>Custom Service</span></div>
             <div><strong>Low MOQ</strong><span>Flexible Orders</span></div>
             <div><strong>Factory</strong><span>Direct Support</span></div>
           </div>
+          {mockupText ? <div className="hero-mockup"><strong>Free Logo Mockup</strong><span>{mockupText}</span></div> : null}
           <div className="hero-cta">
             <Link className="btn btn-primary" href={primaryHref}>{current.cta}</Link>
             <Link className="btn btn-secondary" href={secondaryHref}>{secondaryLabel}</Link>
           </div>
+          {footnote ? <p className="hero-footnote">{footnote}</p> : null}
         </div>
         <div className="hero-media">
           {validSlides.length > 1 ? (

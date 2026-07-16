@@ -27,13 +27,19 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <HeroCarousel slides={siteData.heroSlides} />
+      <HeroCarousel
+        slides={siteData.heroSlides}
+        proofLine="MOQ from 50 pcs* · Free Logo Mockup · Samples in 7-15 Days · 20+ Years Making Bags · Exporting to 10+ Markets"
+        positioningLine="From 50-piece trial orders to 3,000+ production runs — we scale with your brand."
+        mockupText="Send your logo and target style. Anna will send a visual mockup for your review before you commit to anything."
+        footnote="* Final MOQ depends on style, fabric and logo method. Anna will confirm in your quotation."
+      />
 
       <section className="section">
         <div className="container">
           <div className="stats">
             {[
-              ['15+', 'Years in Bag Manufacturing'],
+              ['20+', 'Years in Bag Manufacturing'],
               ['3,000', 'sqm Sewing Workshop'],
               ['50', 'Team Members (35 production + 15 sales & support)'],
               ['200,000+', 'Units Produced Annually'],
@@ -60,11 +66,20 @@ export default function HomePage() {
             {siteData.categories.slice(0, 9).map((category) => (
               <article className="card category-card" key={category.slug}>
                 <Link className="card-media" href={`/products/${category.slug}`}><img src={assetPath(category.image)} alt={category.name} /></Link>
-                <div className="card-body"><h3 className="card-title">{category.name}</h3><p className="muted">{category.desc}</p><div className="card-price">{siteData.company.priceText}</div></div>
+                <div className="card-body"><h3 className="card-title">{category.name}</h3><p className="muted">{category.desc}</p><div className="card-facts"><span>MOQ: from 50 pcs*</span><span>Lead Time: Sample 7-15 days · Bulk 15-30 days</span><span>Logo: Screen print / Embroidery / Patch / Private label</span></div><div className="card-price">{siteData.company.priceText}</div></div>
                 <div className="card-actions"><Link className="btn btn-primary" href={`/products/${category.slug}`}>View Details</Link><Link className="btn btn-secondary" href={`/contact?product=${category.slug}`}>Request Quote</Link></div>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section export-markets">
+        <div className="container">
+          <span className="badge">Export Markets</span>
+          <h2>Multi-category bag programs shipped to repeat buyers</h2>
+          <p className="market-list">USA · Russia · UK · Canada · Mexico · Peru · Japan · Singapore · Malaysia · Bangladesh · Djibouti</p>
+          <p>Serving importers, wholesalers and private-label brands across 10+ markets with backpacks, waist bags, crossbody bags and other custom categories.</p>
         </div>
       </section>
 
