@@ -11,6 +11,7 @@ import * as metadata from "./checks/metadata.mjs";
 import * as robots from "./checks/robots.mjs";
 import * as content from "./checks/content.mjs";
 import * as schema from "./checks/schema.mjs";
+import * as images from "./checks/images.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const arg = (name, fallback) => { const index = process.argv.indexOf(name); return index >= 0 ? process.argv[index + 1] : fallback; };
@@ -28,7 +29,7 @@ for (const site of config.sites) {
   const client = new HttpClient({ ...config.runtime, concurrency: config.runtime.concurrencyPerSite });
   const oldSite = previous.sites?.[site.origin] || {};
   const ctx = createContext(site, config, client, oldSite);
-  for (const checker of [urlAndSitemap, links, metadata, robots, content, schema]) {
+  for (const checker of [urlAndSitemap, links, metadata, robots, content, schema, images]) {
     try { await checker.run(ctx); } catch (error) { ctx.add(30, "critical", "CHECK_RUNTIME_ERROR", `${checker.constructor?.name || "Checker"} failed: ${error.stack || error}`); }
   }
   results.push({ site, issues: ctx.issues, notes: ctx.notes, sitemapCount: ctx.urls.length, robots: ctx.robots || "" });

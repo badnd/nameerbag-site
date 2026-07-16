@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { severityRank } from "./issues.mjs";
 
-const CHECK_COUNT = 32;
+const CHECK_COUNT = 33;
 const esc = (value = "") => String(value).replaceAll("|", "\\|").replaceAll("\n", " ");
 
 export async function writeReport({ results, previous, reportDir, startedAt, durationMs }) {
@@ -28,7 +28,7 @@ export async function writeReport({ results, previous, reportDir, startedAt, dur
   }
   lines.push("", "## Findings", "");
   const issues = results.flatMap((result) => result.issues).sort((a, b) => severityRank[a.severity] - severityRank[b.severity] || a.check - b.check);
-  if (!issues.length) lines.push("All 32 checks passed for all configured sites.");
+  if (!issues.length) lines.push("All 33 checks passed for all configured sites.");
   else {
     lines.push("| Severity | Check | Code | Site / URL | Source | Expected / Finding | Actual |", "|---|---:|---|---|---|---|---|");
     for (const item of issues) lines.push(`| ${item.severity.toUpperCase()} | ${item.check} | ${item.code} | ${esc(item.url || item.site)} | ${esc(item.source)} | ${esc(item.message || item.expected)} | ${esc(item.actual)} |`);

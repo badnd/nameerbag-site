@@ -11,7 +11,7 @@ export class HttpClient {
   }
 
   async request(url, options = {}) {
-    const key = `${options.method || "GET"}:${url}:${options.redirect || "follow"}`;
+    const key = `${options.method || "GET"}:${url}:${options.redirect || "follow"}:${options.readBody === false ? "headers" : "body"}`;
     if (!options.noCache && this.cache.has(key)) return this.cache.get(key);
     const task = this.#enqueue(() => this.#attempt(url, options));
     if (!options.noCache) this.cache.set(key, task);
@@ -30,7 +30,9 @@ export class HttpClient {
           signal: controller.signal,
           headers: { "user-agent": "Nameer-SEO-Audit/1.0", accept: "text/html,application/xml;q=0.9,*/*;q=0.8", ...(options.headers || {}) }
         });
-        const body = options.method === "HEAD" ? "" : await response.text();
+        const skipBody = options.method === "HEAD" || options.readBody === false;
+        const body = skipBody ? "" : await response.text();
+        if (skipBody) await response.body?.cancel();
         clearTimeout(timer);
         return { url, finalUrl: response.url, status: response.status, ok: response.ok, headers: Object.fromEntries(response.headers), body };
       } catch (error) {
