@@ -26,12 +26,15 @@ export default function AboutPage() {
             </div>
             <div className="hero-cta"><Link className="btn btn-primary" href="/contact">Contact Sales</Link><Link className="btn btn-secondary" href="/products">View Products</Link></div>
           </div>
-          <div className="media-panel"><img src={assetPath('/assets/images/trust/factory-exterior.jpg')} alt="Tianjin Junyi factory exterior" /></div>
+          <figure className="media-panel trust-figure">
+            <img src={assetPath('/assets/images/trust/factory-exterior.jpg')} alt="Nameer-marked production building at the shared Baigou factory site" />
+            <figcaption>Nameer-marked production building within our single, multi-building Baigou factory site.</figcaption>
+          </figure>
         </div>
       </section>
       <section className="section">
         <div className="container">
-          <div className="section-head"><div><span className="badge">Our Focus</span><h2>One OEM team for multiple bag categories</h2><p>Our Baigou sewing workshop develops and produces different bag types, while the Tianjin export team coordinates specifications, documentation and logistics for importers managing more than one product category.</p></div></div>
+          <div className="section-head"><div><span className="badge">Our Focus</span><h2>One OEM team for multiple bag categories</h2><p>Our Baigou sewing workshop develops and produces different bag types, while the Tianjin export team coordinates specifications, documentation and logistics for importers managing more than one product category.</p><p>The Baigou operation is one factory site with separate production and office buildings; its sewing workshop covers 3,000 sqm. Tianjin Nameer International Trade Co., Ltd. and Tianjin Junyi Premium Trading Co., Ltd. use this workshop and the same production team, which is why different company names appear on site. Trade staff in Tianjin confirm specifications and manage export documents and logistics.</p></div></div>
           <div className="grid grid-3">
             {[
               ['Category Development', 'Translate references and buyer requirements into sample-ready plans for backpacks, waist bags, crossbody bags and related styles.'],

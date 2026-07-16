@@ -28,7 +28,10 @@
       "annualCapacity": [200000],
       "exportMarkets": [10],
       "locations": ["Baigou", "Tianjin"],
-      "companyNames": ["Tianjin Junyi Premium Trading Co.,Ltd."]
+      "companyNames": [
+        "Tianjin Nameer International Trade Co., Ltd.",
+        "Tianjin Junyi Premium Trading Co., Ltd."
+      ]
     },
     "pricePatterns": [
       "\\$\\s*\\d+(?:\\.\\d{1,2})?",
@@ -42,6 +45,8 @@
     ],
     "unauthorizedCertificationPatterns": [
       "\\b(?:BSCI|GRS|ISO|FSC|SGS|BRC)\\b",
+      "\\bT[ÜU]V\\b",
+      "Alibaba Verified",
       "Global Recycled Standard",
       "Business Social Compliance Initiative",
       "\\bREACH\\b(?=\\s+(?:certified|compliant|compliance|certification))",
