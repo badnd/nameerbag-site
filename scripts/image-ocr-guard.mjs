@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import os from 'node:os';
+import sharp from 'sharp';
 import { createWorker } from 'tesseract.js';
 import englishData from '@tesseract.js-data/eng';
 
@@ -28,6 +29,34 @@ function readJson(filePath, fallback) {
 
 function sha256(buffer) {
   return crypto.createHash('sha256').update(buffer).digest('hex');
+}
+
+function bitsToHex(bits) {
+  let value = 0n;
+  for (const bit of bits) value = (value << 1n) | BigInt(bit);
+  return value.toString(16).padStart(Math.ceil(bits.length / 4), '0');
+}
+
+async function perceptualHash(buffer) {
+  const size = 32;
+  const low = 8;
+  const { data } = await sharp(buffer).rotate().resize(size, size, { fit: 'fill' }).grayscale().raw().toBuffer({ resolveWithObject: true });
+  const coefficients = [];
+  for (let u = 0; u < low; u += 1) {
+    for (let v = 0; v < low; v += 1) {
+      let sum = 0;
+      for (let x = 0; x < size; x += 1) {
+        const cosX = Math.cos(((2 * x + 1) * u * Math.PI) / (2 * size));
+        for (let y = 0; y < size; y += 1) {
+          sum += data[y * size + x] * cosX * Math.cos(((2 * y + 1) * v * Math.PI) / (2 * size));
+        }
+      }
+      coefficients.push(sum);
+    }
+  }
+  const ac = coefficients.slice(1);
+  const median = [...ac].sort((a, b) => a - b)[Math.floor(ac.length / 2)];
+  return bitsToHex(coefficients.map((value, index) => (index === 0 ? 0 : value > median ? 1 : 0)));
 }
 
 function walk(root) {
@@ -80,8 +109,11 @@ function ruleFindings(text, dictionary) {
   return findings;
 }
 
-function exemptionFor(hash, ruleId, exemptions) {
-  return (exemptions.exemptions || []).find((item) => item.sha256 === hash && (item.ruleIds || []).includes(ruleId));
+async function exemptionFor(image, ruleId, exemptions) {
+  const candidates = (exemptions.exemptions || []).filter((item) => item.sha256 === image.hash && (item.ruleIds || []).includes(ruleId));
+  if (!candidates.length) return null;
+  image.phash ||= await perceptualHash(image.buffer);
+  return candidates.find((item) => item.phash && item.phash === image.phash && item.reason) || null;
 }
 
 async function createOcrWorker() {
@@ -171,15 +203,15 @@ function writeReport({ dictionary, scanned, skipped, findings, exempted, manualR
     `- Unique hashes OCR-scanned: ${scanned}`,
     `- Known hashes skipped in preflight: ${skipped}`,
     `- Blocking findings: ${findings.length}`,
-    `- Exempted false positives: ${exempted.length}`,
+    `- Exempted reviewed findings: ${exempted.length}`,
     '',
     '## Blocking findings',
     '',
     ...(findings.length ? findings.map((item) => `- \`${item.ruleId}\` in \`${item.source}\`: \`${item.evidence}\` (OCR confidence ${item.confidence.toFixed(1)}%)`) : ['- None.']),
     '',
-    '## Recorded false-positive exemptions',
+    '## Recorded hash-bound exemptions',
     '',
-    ...(exempted.length ? exempted.map((item) => `- \`${item.ruleId}\` in \`${item.source}\`: ${item.reason}`) : ['- None used in this run.']),
+    ...(exempted.length ? exempted.map((item) => `- \`${item.ruleId}\` in \`${item.source}\`: ${item.reason} (SHA-256 \`${item.sha256}\`, pHash \`${item.phash}\`)`) : ['- None used in this run.']),
     '',
     '## Suggested human visual review list',
     '',
@@ -242,9 +274,9 @@ async function main() {
     for (const item of queue) {
       const result = await recognize(worker, item);
       for (const finding of ruleFindings(result.text, dictionary)) {
-        const exemption = exemptionFor(item.hash, finding.ruleId, exemptions);
+        const exemption = await exemptionFor(item, finding.ruleId, exemptions);
         if (exemption) {
-          exempted.push({ ...finding, source: item.source, reason: exemption.reason });
+          exempted.push({ ...finding, source: item.source, reason: exemption.reason, sha256: item.hash, phash: exemption.phash });
           continue;
         }
         const fingerprint = findingFingerprint(item.hash, finding.ruleId, finding.evidence);

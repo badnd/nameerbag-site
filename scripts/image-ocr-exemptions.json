@@ -1,10 +1,270 @@
 {
-  "version": "2026-07-16.1",
+  "version": "2026-07-17.1",
+  "hashBinding": "Exact SHA-256 and exact pHash are both required. A changed image automatically invalidates the exemption.",
   "exemptions": [
     {
       "sha256": "ec189294a5c0c5f1d869d0d2f6765de281c2af7592e9c365685e60e37e6cd1a2",
-      "ruleIds": ["public-price"],
+      "phash": "7e41a1346c4b93b5",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "public/assets/images/trust/buyer-reviews.jpg",
+      "reviewedEvidence": "$0",
+      "reviewedAt": "2026-07-16",
       "reason": "Human visual review confirmed that the OCR '$0' reading is a false positive; the image says 'competitive price' and contains no numeric price."
+    },
+    {
+      "sha256": "52bf1e1eec3d81e3e76f7eab944acabd3ff6920825c58435b4ffdf9ecac04a64",
+      "phash": "6b97926bc40e9c61",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/company/custom-bag-manufacturer-poster.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "6f169b3415df86c6974f08b368a66cece30e50a178108dd4cd79be9aae45519f",
+      "phash": "59c413c07f58b4d3",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy5634/ytljy5634-01.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "b043d0a6aa79e1d9cfcccfbd1ad3e8da71412b526bae273468bf19b4957e60a8",
+      "phash": "55e5821fe4de31c0",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy5634/ytljy5634-02.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "fb297416ab86933d482bad5646969078d6d61375348c11a34d357e71a758cf25",
+      "phash": "5dc31777386081ce",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy5634/ytljy5634-03.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "63e07543d132e8f50d7edc4f498fae2a414a59fd975a419f75db8e847251e726",
+      "phash": "56e983ea1d1ce03c",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy5634/ytljy5634-04.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "7f3a1a66557f967c0bb073e290169040b405ba55430dc9f791a64614d146b1cf",
+      "phash": "59c483fc3bc1a456",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy5634/ytljy5634-05.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "fba236c98bb7ce5da0037bd26c2789507f00b0ea6545d21c642919f013649cc4",
+      "phash": "55c2a239bf3196e0",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6824/ytljy6824-01.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "31f491569ba28502420905a174b9a8bef046b5aa8cb19c4fb9ee817594c02d47",
+      "phash": "66c59a48fb38c1c3",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6824/ytljy6824-04.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "0919b0491370a8d240f7127ae58f0e21a6a8a5fdca1a53e77df0de2fc06e3a5c",
+      "phash": "33c30dd8d30cfcc8",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6824/ytljy6824-05.png",
+      "reviewedEvidence": "£3",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the OCR currency-and-number reading is a false positive. The image contains no currency symbol and no public price."
+    },
+    {
+      "sha256": "0919b0491370a8d240f7127ae58f0e21a6a8a5fdca1a53e77df0de2fc06e3a5c",
+      "phash": "33c30dd8d30cfcc8",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6824/ytljy6824-05.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "88e41be041091b79c107a15e8a527d071372714a46f5e70313916042c233a783",
+      "phash": "51ec01c87ff19392",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6825/ytljy6825-01.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "c6aed04b5a573e23711272036ead113cc9c2b03c1d02e65904d1efad29d6ab05",
+      "phash": "53cc810c7ff093c3",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6825/ytljy6825-02.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "7a32e08e80c28f88d48660734e021679b9e10e29d4e76cd6017001e41d174b96",
+      "phash": "55c39594d9c93263",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6825/ytljy6825-03.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "8cba6dc90a60e1574c02b4da4c0943dfbc707e0ac44d97d9c21bb38d5ebeba89",
+      "phash": "71d28dcd323863f0",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6825/ytljy6825-05.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "b069d3e15e61ff6adf461f8024def34e324ebaed1a51c07e69c341e29df9725f",
+      "phash": "76a5c934307bd909",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6835/ytljy6835-01.png",
+      "reviewedEvidence": "£8",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the OCR currency-and-number reading is a false positive. The image contains no currency symbol and no public price."
+    },
+    {
+      "sha256": "b069d3e15e61ff6adf461f8024def34e324ebaed1a51c07e69c341e29df9725f",
+      "phash": "76a5c934307bd909",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6835/ytljy6835-01.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "e99d26e52724bbd7d1c23520966d4766985c9c5e9c50f3e8a369d40997a0bac1",
+      "phash": "7197cf689438c899",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy944/ytljy944-01.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "16333f2038c738bf238e07ba724a9d260598b899ba5bdae93a12a3e1c016b949",
+      "phash": "4d20cd1b36d31de4",
+      "ruleIds": [
+        "moq-vague-low"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy944/ytljy944-02.png",
+      "reviewedEvidence": "LOW MOQ",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the image says 'LOW MOQ' without any MOQ number, range, or obsolete quantity. It does not conflict with the approved 'MOQ from 50 pcs' wording."
+    },
+    {
+      "sha256": "e8a73f1f40ac1bdc02011da4b7cf4b8c4dd9f818712a7b7bd4f4e56d1207f3af",
+      "phash": "5c9497c59ce709a8",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/company/trade-show-collage.png",
+      "reviewedEvidence": "$1",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the OCR currency-and-number reading is a false positive. The image contains no currency symbol and no public price."
+    },
+    {
+      "sha256": "5b322647249136de87fec361a38a35fbeec6d55ee87e061a676da4bf66f82979",
+      "phash": "5508e7c692f3981b",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6824/ytljy6824-03.png",
+      "reviewedEvidence": "£5",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the OCR currency-and-number reading is a false positive. The image contains no currency symbol and no public price."
+    },
+    {
+      "sha256": "e5d155cdc3a54bdf6588be8bb163e38a6b584ecf3f587544b3fcb2fc64054a63",
+      "phash": "556ac4279230f9ce",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6835/ytljy6835-03.png",
+      "reviewedEvidence": "$7",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the OCR currency-and-number reading is a false positive. The image contains no currency symbol and no public price."
+    },
+    {
+      "sha256": "827dc4caf8d4537da8c4c1255195d52478316b264709b174e954c70e9235b04e",
+      "phash": "76e9c884b37619e0",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy6835/ytljy6835-05.png",
+      "reviewedEvidence": "£7",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the OCR currency-and-number reading is a false positive. The image contains no currency symbol and no public price."
+    },
+    {
+      "sha256": "406ab15256e2f634cdacd5c8d102204ce9eac16a51cdf08dcb405178f4276f9c",
+      "phash": "2546c63c93b19be1",
+      "ruleIds": [
+        "public-price"
+      ],
+      "source": "https://images.junyibags.com/assets/images/junyi/products/ytljy8083/ytljy8083-03.png",
+      "reviewedEvidence": "$0",
+      "reviewedAt": "2026-07-17",
+      "reason": "Human visual review on 2026-07-17 confirmed that the OCR currency-and-number reading is a false positive. The image contains no currency symbol and no public price."
     }
   ]
 }
