@@ -18,6 +18,7 @@ const productRedirects = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+  experimental: { cpus: 1 },
   async redirects() {
     const baseRedirects = [
       { source: '/pages/products.html', destination: '/products', permanent: true },

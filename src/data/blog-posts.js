@@ -241,7 +241,7 @@ export const blogPosts = [
     category: 'Customization',
     date: '2026-06-26',
     keywords: ['bag logo printing', 'embroidered backpack logo', 'custom bag logo method'],
-    hero: '/assets/images/context/logo-options.webp',
+    hero: '/assets/images/context/factory-machine-close.webp',
     sections: [
       {
         heading: 'Printing is clean and flexible',
