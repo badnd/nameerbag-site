@@ -393,3 +393,11 @@ main > section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:a
 main > section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:auto 800px}
 
 .contact-ball{position:fixed;z-index:90;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;border:3px solid #fff;box-shadow:0 12px 28px rgba(37,211,102,.36);font-size:1.3rem;font-weight:900;cursor:grab;touch-action:pan-y;user-select:none}.contact-ball:active{cursor:grabbing}.contact-ball:focus-visible{outline:3px solid #f4b942;outline-offset:3px}@media(max-width:600px){.contact-ball{width:58px;height:58px}}
+
+/* Shared four-site contact pulse */
+.contact-ball{isolation:isolate;overflow:visible}
+.contact-ball::before,.contact-ball::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.55);pointer-events:none;animation:contact-ball-pulse 2.2s ease-out infinite}
+.contact-ball::after{animation-delay:1.1s}
+.contact-ball>span{position:relative;z-index:1}
+@keyframes contact-ball-pulse{0%{transform:scale(.9);opacity:.75}75%,100%{transform:scale(1.75);opacity:0}}
+@media(prefers-reduced-motion:reduce){.contact-ball::before,.contact-ball::after{animation:none;opacity:0}}
