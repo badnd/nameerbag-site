@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { siteData } from '@/data/site-data';
 import { assetPath, siteUrl, whatsappUrl } from '@/lib/paths';
 import { PlainEmail, PlainEmailLink } from '@/components/PlainEmail';
+import { FloatingContactBall } from '@/components/FloatingContactBall';
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -53,12 +54,7 @@ export function SiteFooter() {
         </div>
         <div className="container footer-bottom"><span>&copy; {year} {siteData.company.name}. All rights reserved.</span></div>
       </footer>
-      <a className="floating-wa" href={whatsappUrl(siteData)} target="_blank" rel="noopener" aria-label="WhatsApp inquiry">WA</a>
-      <div className="floating-label">WhatsApp Inquiry</div>
-      <div className="mobile-contact-bar">
-        <PlainEmailLink email={siteData.company.email} label="Email" className="btn btn-secondary" />
-        <a className="btn btn-primary" href={whatsappUrl(siteData)} target="_blank" rel="noopener">WhatsApp</a>
-      </div>
+      <FloatingContactBall siteName="nameerbag.com" />
     </>
   );
 }

@@ -391,3 +391,5 @@ body.lightbox-open{overflow:hidden}
 main > section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:auto 800px}
 
 main > section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:auto 800px}
+
+.contact-ball{position:fixed;z-index:90;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;border:3px solid #fff;box-shadow:0 12px 28px rgba(37,211,102,.36);font-size:1.3rem;font-weight:900;cursor:grab;touch-action:pan-y;user-select:none}.contact-ball:active{cursor:grabbing}.contact-ball:focus-visible{outline:3px solid #f4b942;outline-offset:3px}@media(max-width:600px){.contact-ball{width:58px;height:58px}}
