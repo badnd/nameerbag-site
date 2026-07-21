@@ -19,7 +19,7 @@ export function ProductGallery({ product }) {
         <div className="gallery-thumbs">
           {images.map((image, index) => (
             <button className="thumb-button" type="button" onClick={() => setActive(index)} key={image} aria-label={`View product image ${index + 1}`}>
-              <img className={index === active ? 'active' : ''} src={image} alt={altText(index)} />
+              <img className={index === active ? 'active' : ''} src={image} alt={altText(index)} loading="lazy" decoding="async" />
             </button>
           ))}
         </div>

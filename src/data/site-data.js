@@ -1,3 +1,5 @@
+import { nameerCrossbodyBatch } from './nameer-crossbody-batch-20260719';
+
 export const siteData = {
   "company": {
     "name": "Tianjin Junyi Premium Trading Co.,Ltd.",
@@ -170,6 +172,7 @@ export const siteData = {
     }
   ],
   "products": {
+    ...nameerCrossbodyBatch,
     "student-backpack": {
       "category": "Backpacks",
       "title": "Custom Student Backpack / Custom Casual Backpack",

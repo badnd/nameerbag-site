@@ -389,6 +389,8 @@ body.lightbox-open{overflow:hidden}
 @media (max-width: 760px) { .story-layout { grid-template-columns: 1fr; gap: 20px; } }
 
 main > section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:auto 800px}
+.product-facts-panel{margin-top:28px;padding:22px;border:1px solid var(--border);border-radius:16px;background:#fff;box-shadow:var(--shadow)}
+.product-facts-panel p{margin:8px 0}
 
 main > section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:auto 800px}
 

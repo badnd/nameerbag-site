@@ -28,8 +28,8 @@ export function productLegacyPath(slug) {
 export function whatsappUrl(data, product, variant = '') {
   const base = data.company.whatsappLink.split('?')[0];
   const message = product
-    ? `Hi, I'm interested in the ${product.title} (${product.model})${variant ? ` - ${variant}` : ''}. Please send MOQ tiers, sample cost and lead time. - Anna Wei, Sales`
-    : 'Hi, I am interested in your custom bag products. Please send your product catalog, MOQ tiers, sample cost and lead time. - Anna Wei, Sales';
+    ? `Hi, I'm interested in the ${product.title} (${product.model})${variant ? ` - ${variant}` : ''}. Please send MOQ tiers, sample cost and lead time. Source: nameerbag.com - Anna Wei, Sales`
+    : 'Hi, I am interested in your custom bag products. Please send your product catalog, MOQ tiers, sample cost and lead time. Source: nameerbag.com - Anna Wei, Sales';
   return `${base}?text=${encodeURIComponent(message)}`;
 }
 

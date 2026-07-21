@@ -19,7 +19,10 @@ export async function generateMetadata({ params }) {
   return {
     title: product.metaTitle ?? `${product.title} | ${product.model}`,
     description: product.metaDescription ?? `${product.intro} OEM/ODM custom bag manufacturer with low MOQ, logo options and factory quotation support.`,
-    alternates: { canonical: productPath(slug) },
+    alternates: {
+      canonical: productPath(slug),
+      ...(product.ru ? { languages: { en: `${siteUrl}${productPath(slug)}`, ru: `${siteUrl}/ru/products/${slug}`, 'x-default': `${siteUrl}${productPath(slug)}` } } : {})
+    },
     openGraph: {
       title: product.metaTitle ?? product.title,
       description: product.metaDescription ?? product.intro,
@@ -59,6 +62,7 @@ export default async function ProductPage({ params }) {
           <article className="detail-main">
             <span className="badge">{product.category}</span>
             <h1>{product.title}</h1>
+            {product.tagline ? <p><strong>{product.tagline}</strong></p> : null}
             <p className="muted">{product.intro}</p>
             <div className="chip-list">
               {product.badges.map((badge) => <span className="badge" key={badge}>{badge}</span>)}
@@ -103,6 +107,19 @@ export default async function ProductPage({ params }) {
               </div>
             ))}
           </div>
+          {product.inquiry ? (
+            <div className="product-facts-panel">
+              <p><strong>Colors:</strong> {product.colors}</p>
+              <p><strong>{product.inquiry.moq}</strong></p>
+              <p>{product.inquiry.sampling} · {product.inquiry.bulk}</p>
+              <p>{product.inquiry.sampleFee}</p>
+              <p>{product.inquiry.logoMethods}</p>
+              <p>{product.inquiry.pricing}</p>
+              <p>{product.inquiry.services}</p>
+              <p className="muted">{product.inquiry.note}</p>
+              <p><strong>Contact Anna Wei:</strong><br />Email: <a href={`mailto:${siteData.company.email}`}>{siteData.company.email}</a> · WhatsApp: +86 151 0224 9548 · WeChat: 15102249548</p>
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -128,7 +145,7 @@ export default async function ProductPage({ params }) {
         </section>
       ) : null}
 
-      <section className="section bg-soft">
+      {product.variants.length ? <section className="section bg-soft">
         <div className="container">
           <div className="section-head">
             <div>
@@ -156,7 +173,7 @@ export default async function ProductPage({ params }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> : null}
     </>
   );
 }

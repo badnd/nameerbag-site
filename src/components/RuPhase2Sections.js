@@ -92,11 +92,12 @@ export function RuProductCard({ slug, product }) {
   const typeKey = productType(slug, product);
   const type = productTypeLabels[typeKey] || productTypeLabels.custom;
   const intro = productTypeIntro[typeKey] || productTypeIntro.custom;
-  const title = `${model} ${type}`;
+  const title = product.ru?.title || `${model} ${type}`;
+  const detailsPath = product.ru ? `/ru/products/${slug}` : productPath(slug);
 
   return (
     <article className="card product-card">
-      <Link className="card-media" href={productPath(slug)}>
+      <Link className="card-media" href={detailsPath}>
         <img src={assetPath(product.cardImage || product.hero)} alt={title} loading="lazy" decoding="async" />
         <span className="logo-location-pill">Зона логотипа</span>
       </Link>
@@ -114,7 +115,7 @@ export function RuProductCard({ slug, product }) {
         <div className="card-price">{ruPhase2.priceText}</div>
       </div>
       <div className="card-actions">
-        <Link className="btn btn-primary" href={productPath(slug)}>Смотреть детали</Link>
+        <Link className="btn btn-primary" href={detailsPath}>Смотреть детали</Link>
         <Link className="btn btn-secondary" href={`/ru/contact?product=${encodeURIComponent(slug)}`}>Получить расчёт</Link>
       </div>
     </article>

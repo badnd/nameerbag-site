@@ -3,6 +3,8 @@ import { siteData } from '@/data/site-data';
 import { ProductCard } from '@/components/ProductCard';
 import { assetPath } from '@/lib/paths';
 import { i18nAlternates } from '@/lib/i18n';
+import { JsonLd } from '@/components/JsonLd';
+import { assetUrl, productPath, siteUrl } from '@/lib/paths';
 
 export const metadata = {
   title: 'Custom Bag Product Catalog',
@@ -20,9 +22,27 @@ export default async function ProductsPage({ searchParams }) {
   const activeCategory = params?.category || '';
   const activeCategoryName = siteData.categories.find((category) => category.slug === activeCategory)?.name;
   const products = Object.entries(siteData.products).filter(([slug, product]) => matchesCategory(slug, product, activeCategory));
+  const collectionUrl = `${siteUrl}/products${activeCategory ? `?category=${encodeURIComponent(activeCategory)}` : ''}`;
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: activeCategoryName ? `${activeCategoryName} products` : 'Custom bag product catalog',
+    url: collectionUrl,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: products.map(([slug, product], index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${siteUrl}${productPath(slug)}`,
+        name: product.title,
+        image: assetUrl(product.hero)
+      }))
+    }
+  };
 
   return (
     <>
+      <JsonLd data={collectionSchema} />
       <section className="section bg-soft">
         <div className="container">
           <div className="section-head">
