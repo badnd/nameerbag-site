@@ -1,4 +1,7 @@
+import { blogBatch20260721 } from './blog-batch-20260721';
+
 export const blogPosts = [
+  ...blogBatch20260721,
   {
     slug: 'oem-vs-odm-bags-difference',
     title: "OEM vs ODM Bags: What's the Difference and Which Fits Your Brand?",

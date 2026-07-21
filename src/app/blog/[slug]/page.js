@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog-posts';
 import { JsonLd } from '@/components/JsonLd';
+import { RichBlogContent } from '@/components/RichBlogContent';
 import { assetPath, assetUrl, siteUrl } from '@/lib/paths';
 
 export function generateStaticParams() {
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }) {
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Blog`,
+    title: post.metaTitle ? { absolute: post.metaTitle } : `${post.title} | Blog`,
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: `/blog/${post.slug}` },
@@ -50,7 +51,16 @@ export default async function BlogPostPage({ params }) {
     mainEntityOfPage: `${siteUrl}/blog/${post.slug}`
   };
 
-  const schemas = post.schemas ?? [articleSchema];
+  const faqSchema = post.faq?.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer }
+    }))
+  } : null;
+  const schemas = post.schemas ?? [articleSchema, faqSchema].filter(Boolean);
 
   return (
     <>
@@ -65,7 +75,7 @@ export default async function BlogPostPage({ params }) {
             <img className="article-hero" src={assetPath(post.hero)} alt={post.heroAlt || post.title} />
             {post.heroCaption ? <figcaption>{post.heroCaption}</figcaption> : null}
           </figure>
-          <div className="article-content">
+          {post.blocks ? <RichBlogContent post={post} /> : <><div className="article-content">
             {post.sections.map((section) => (
               <section key={section.heading}>
                 <h2>{section.heading}</h2>
@@ -79,7 +89,7 @@ export default async function BlogPostPage({ params }) {
               <p>Send your bag type, logo method, quantity and target market. We will help review the most practical order plan.</p>
             </div>
             <Link className="btn btn-light" href="/contact">Get Factory Quote</Link>
-          </div>
+          </div></>}
         </div>
       </article>
     </>
