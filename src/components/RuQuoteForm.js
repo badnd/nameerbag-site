@@ -1,46 +1,81 @@
+'use client';
+
+import { useState } from 'react';
 import { siteData } from '@/data/site-data';
 
-const whatsappText = 'Здравствуйте! Меня интересуют ваши сумки на заказ. Пришлите, пожалуйста, каталог, уровни MOQ, стоимость образца и сроки. — Anna Wei, Sales';
+const sourceSite = 'nameerbag.com';
 
-export function RuQuoteForm({ product = 'Сумки на заказ' }) {
+export function RuQuoteForm({ product = '????? ?? ?????' }) {
+  const [status, setStatus] = useState('');
+  const [sending, setSending] = useState(false);
+  const whatsappText = `????????????! ???? ?????????? ??????: ${product}. ????????: ${sourceSite}`;
   const whatsapp = `https://wa.me/${siteData.company.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappText)}`;
+
+  async function onSubmit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    if (formData.get('_honey')) return;
+
+    const details = [
+      formData.get('details') ? `???????? ???????: ${formData.get('details')}` : '',
+      formData.get('material') ? `????????: ${formData.get('material')}` : '',
+      formData.get('logo') ? `???????: ${formData.get('logo')}` : ''
+    ].filter(Boolean).join('\n');
+
+    const payload = new FormData();
+    payload.set('name', formData.get('name') || '');
+    payload.set('email', formData.get('email') || '');
+    payload.set('product', formData.get('product') || product);
+    payload.set('quantity', formData.get('quantity') || '');
+    payload.set('message', details);
+    payload.set('source_site', sourceSite);
+    payload.set('_subject', `[${sourceSite}] ????? ?????? - ${formData.get('product') || product}`);
+    payload.set('_template', 'table');
+    payload.set('_captcha', 'false');
+    payload.set('_honey', '');
+
+    setSending(true);
+    setStatus('?????????? ??????...');
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${siteData.company.email}`, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: payload
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success !== 'true') throw new Error('Submission failed');
+      form.reset();
+      setStatus('???????! ?? ??????? ? ??????? 24 ?????.');
+    } catch {
+      setStatus('?? ??????? ????????? ?????. ????????? ? ???? ?? WhatsApp ??? email.');
+    } finally {
+      setSending(false);
+    }
+  }
 
   return (
     <div className="quote-card ru-quote-card">
       <div className="feature-item">
         <div className="icon-bubble">A</div>
         <div>
-          <strong>Здравствуйте, я Anna Wei 👋</strong>
-          <div className="muted">ваш консультант по производству сумок.</div>
-          <div className="muted">Отправьте ваши требования ниже, и я лично отвечу в течение 24 часов с предложениями по MOQ, образцам и ценам.</div>
+          <strong>????????????, ? Anna Wei</strong>
+          <div className="muted">??? ??????????? ?? ???????????? ?????.</div>
+          <div className="muted">????????? ?????????? ????, ? ? ????? ?????? ? ??????? 24 ?????.</div>
         </div>
       </div>
-      <form className="inquiry-form">
-        <label>
-          <span>Интересующий товар</span>
-          <input name="product" defaultValue={product} />
-        </label>
-        <label>
-          <span>Планируемое количество</span>
-          <input name="quantity" placeholder="50 / 100 / 300 / 500 / 1 000 / 3 000+ шт" />
-        </label>
-        <label>
-          <span>Материал / Ткань</span>
-          <input name="material" placeholder="Нужна рекомендация" />
-        </label>
-        <label>
-          <span>Способ нанесения логотипа</span>
-          <input name="logo" placeholder="Нужна рекомендация" />
-        </label>
-        <label>
-          <span>Email / WhatsApp</span>
-          <input name="contact" placeholder={siteData.company.email} />
-        </label>
-        <label>
-          <span>Комментарий</span>
-          <textarea name="message" rows="4" placeholder="Опишите модель, размер, цвет, упаковку и целевой рынок." />
-        </label>
-        <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noopener">Отправить запрос</a>
+      <form className="inquiry-form" onSubmit={onSubmit}>
+        <input className="form-honey" type="text" name="_honey" tabIndex="-1" autoComplete="off" aria-hidden="true" />
+        <label><span>???</span><input name="name" required autoComplete="name" /></label>
+        <label><span>Email</span><input name="email" type="email" required autoComplete="email" /></label>
+        <label><span>???????????? ?????</span><input name="product" defaultValue={product} required /></label>
+        <label><span>??????????? ??????????</span><input name="quantity" placeholder="50 / 100 / 300 / 500 / 1 000 / 3 000+ ??." required /></label>
+        <label><span>???????? / ?????</span><input name="material" placeholder="????? ????????????" /></label>
+        <label><span>?????? ????????? ????????</span><input name="logo" placeholder="????? ????????????" /></label>
+        <label><span>???????? ???????</span><textarea name="details" rows="4" placeholder="??????? ??????, ??????, ????, ???????? ? ??????? ?????." required /></label>
+        <button className="btn btn-primary" type="submit" disabled={sending}>{sending ? '????????...' : '????????? ??????'}</button>
+        <a className="btn btn-secondary" href={whatsapp} target="_blank" rel="noopener">???????? ? WhatsApp</a>
+        <p className={status.startsWith('???????') ? 'form-status success' : status.startsWith('?? ???????') ? 'form-status error' : 'form-status'} aria-live="polite">{status}</p>
       </form>
     </div>
   );

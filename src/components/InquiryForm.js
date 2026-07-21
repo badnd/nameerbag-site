@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { siteData } from '@/data/site-data';
 import { whatsappUrl } from '@/lib/paths';
 
+const sourceSite = 'nameerbag.com';
+
 export function InquiryForm({ productTitle = 'Custom Bag Project', productOptions = [], compact = false }) {
   const [status, setStatus] = useState('');
   const [sending, setSending] = useState(false);
@@ -31,7 +33,8 @@ export function InquiryForm({ productTitle = 'Custom Bag Project', productOption
     payload.set('logo', formData.get('logo') || '');
     payload.set('dimensions', formData.get('dimensions') || '');
     payload.set('message', details);
-    payload.set('_subject', `[Website Inquiry] ${productTitle}`);
+    payload.set('source_site', sourceSite);
+    payload.set('_subject', `[${sourceSite}] New Inquiry - ${productTitle}`);
     payload.set('_template', 'table');
     payload.set('_captcha', 'false');
     payload.set('_honey', '');
@@ -83,7 +86,7 @@ export function InquiryForm({ productTitle = 'Custom Bag Project', productOption
           </select>
         </div>
       ) : (
-        <input name="qty" placeholder="Quantity / MOQ target" />
+        <input name="qty" placeholder="Quantity / MOQ target" required />
       )}
       <div className="form-two">
         <select name="material" defaultValue="">
@@ -102,7 +105,7 @@ export function InquiryForm({ productTitle = 'Custom Bag Project', productOption
         </select>
       </div>
       <input name="dimensions" placeholder="Target Size / Reference Style" />
-      <textarea name="message" placeholder="Tell us color, packing, delivery market or any special requirements" />
+      <textarea name="message" placeholder="Tell us color, packing, delivery market or any special requirements" required />
       <button className="btn btn-primary btn-block" type="submit" disabled={sending}>
         {sending ? 'Sending...' : 'Send My Request'}
       </button>
