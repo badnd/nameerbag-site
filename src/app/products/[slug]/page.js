@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { siteData } from '@/data/site-data';
+import { PlainEmail } from '@/components/PlainEmail';
 import { JsonLd } from '@/components/JsonLd';
 import { ProductGallery } from '@/components/ProductGallery';
 import { InquiryForm } from '@/components/InquiryForm';
@@ -117,7 +118,7 @@ export default async function ProductPage({ params }) {
               <p>{product.inquiry.pricing}</p>
               <p>{product.inquiry.services}</p>
               <p className="muted">{product.inquiry.note}</p>
-              <p><strong>Contact Anna Wei:</strong><br />Email: <a href={`mailto:${siteData.company.email}`}>{siteData.company.email}</a> · WhatsApp: +86 151 0224 9548 · WeChat: 15102249548</p>
+              <p><strong>Contact Anna Wei:</strong><br />Email: <PlainEmail email={siteData.company.email} /> · WhatsApp: +86 151 0224 9548 · WeChat: 15102249548</p>
             </div>
           ) : null}
         </div>

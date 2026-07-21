@@ -3,6 +3,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { ProductGallery } from '@/components/ProductGallery';
 import { RuQuoteForm } from '@/components/RuQuoteForm';
 import { siteData } from '@/data/site-data';
+import { PlainEmail } from '@/components/PlainEmail';
 import { assetUrl, siteUrl } from '@/lib/paths';
 
 export function RuProductPage({ slug, product }) {
@@ -69,7 +70,7 @@ export function RuProductPage({ slug, product }) {
             <p>{localized.inquiry.pricing}</p>
             <p>{localized.inquiry.services}</p>
             <p className="muted">{localized.inquiry.note}</p>
-            <p><strong>Связаться с Anna Wei:</strong><br />Email: <a href={`mailto:${siteData.company.email}`}>{siteData.company.email}</a> · WhatsApp: +86 151 0224 9548 · WeChat: 15102249548</p>
+            <p><strong>Связаться с Anna Wei:</strong><br />Email: <PlainEmail email={siteData.company.email} /> · WhatsApp: +86 151 0224 9548 · WeChat: 15102249548</p>
           </div>
         </div>
       </section>
