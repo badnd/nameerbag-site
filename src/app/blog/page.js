@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { canonicalBlogPosts } from '@/data/blog-posts';
 import { assetPath } from '@/lib/paths';
+import { blogCardImage } from '@/lib/card-images';
 
 export const metadata = {
   title: 'Custom Bag Buying Guides',
@@ -20,9 +21,9 @@ export default function BlogPage() {
           </div>
         </div>
         <div className="grid grid-3">
-          {canonicalBlogPosts.map((post) => (
+          {canonicalBlogPosts.map((post, index) => (
             <article className="card blog-card" key={post.slug}>
-              <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(post.hero)} alt={post.heroAlt || post.title} /></Link>
+              <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(blogCardImage(index))} alt={post.heroAlt || post.title} /></Link>
               <div className="card-body">
                 <div className="blog-meta"><span>{post.category}</span><span>{post.date}</span></div>
                 <h2 className="card-title">{post.title}</h2>

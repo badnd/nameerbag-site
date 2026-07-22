@@ -7,13 +7,15 @@ import { JsonLd } from '@/components/JsonLd';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { assetPath } from '@/lib/paths';
 import { i18nAlternates } from '@/lib/i18n';
+import { selectFeaturedProducts } from '@/lib/featured-products';
+import { blogCardImage } from '@/lib/card-images';
 
 export const metadata = {
   alternates: i18nAlternates('/')
 };
 
 export default function HomePage() {
-  const featured = siteData.homeFeaturedProducts.map((slug) => [slug, siteData.products[slug]]).filter(([, product]) => product);
+  const featured = selectFeaturedProducts(siteData.products, siteData.featuredProductBaseline);
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -152,9 +154,9 @@ export default function HomePage() {
             <Link className="btn btn-secondary" href="/blog">View all guides</Link>
           </div>
           <div className="grid grid-3">
-            {canonicalBlogPosts.slice(0, 3).map((post) => (
+            {canonicalBlogPosts.slice(0, 3).map((post, index) => (
               <article className="card" key={post.slug}>
-                <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(post.hero)} alt={post.title} /></Link>
+                <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(blogCardImage(index))} alt={post.title} /></Link>
                 <div className="card-body"><span className="badge">{post.category}</span><h3 className="card-title">{post.title}</h3><p className="muted">{post.description}</p></div>
                 <div className="card-actions"><Link className="btn btn-primary" href={`/blog/${post.slug}`}>Read Guide</Link></div>
               </article>

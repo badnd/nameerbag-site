@@ -64,7 +64,8 @@ export const siteData = {
       "link": "pages/contact.html"
     }
   ],
-  "homeFeaturedProducts": [
+  // Migration baseline only. New products enter the homepage through publishedAt.
+  "featuredProductBaseline": [
     "yqjy2286-business-laptop-backpack",
     "urban-essential-backpack",
     "waist-bag",

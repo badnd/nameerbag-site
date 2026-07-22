@@ -32,6 +32,7 @@ export const nameerCrossbodyBatch = {
     metaDescription: 'Reflective nylon crossbody phone pouch YTLJY5626 for OEM/ODM orders. Front zipper, back slip pocket, custom colors and logo options.',
     schemaDescription: 'A compact reflective nylon crossbody phone pouch with front zipper pocket, back slip pocket and custom branding options.',
     model: 'YTLJY5626',
+    publishedAt: '2026-07-21',
     hero: `${imageRoot('ytljy5626')}/739e54be-1668-4e83-8c1e-487528077264.webp`,
     gallery: [
       `${imageRoot('ytljy5626')}/739e54be-1668-4e83-8c1e-487528077264.webp`,
@@ -79,6 +80,7 @@ export const nameerCrossbodyBatch = {
     metaDescription: 'Ultra-light reflective phone pouch YTLJY8090A with snap flap and adjustable strap for OEM/ODM, private label and custom packaging.',
     schemaDescription: 'A slim ultra-light reflective nylon phone pouch with snap-button flap, adjustable strap and OEM/ODM branding options.',
     model: 'YTLJY8090A',
+    publishedAt: '2026-07-21',
     hero: `${imageRoot('ytljy8090a')}/61fa6cd7-bfcd-4046-a913-a7de8432237d.webp`,
     gallery: [
       `${imageRoot('ytljy8090a')}/61fa6cd7-bfcd-4046-a913-a7de8432237d.webp`,
@@ -112,6 +114,7 @@ export const nameerCrossbodyBatch = {
     metaTitle: 'Lightweight Crossbody Bag YTLJY5633 | Nameer',
     metaDescription: 'Water-resistant nylon crossbody bag YTLJY5633 with front zipper, inner pocket and detachable hook for OEM/ODM and private label orders.',
     schemaDescription: 'A lightweight water-resistant nylon crossbody bag with organized pockets, adjustable strap and custom branding options.', model: 'YTLJY5633',
+    publishedAt: '2026-07-21',
     hero: `${imageRoot('ytljy5633')}/3c1dd2aa-cd11-4582-b51e-7d0dbcb6881e.webp`,
     gallery: [
       `${imageRoot('ytljy5633')}/3c1dd2aa-cd11-4582-b51e-7d0dbcb6881e.webp`, `${imageRoot('ytljy5633')}/41ab56cc-11e2-4d43-ba30-31bef166e603.webp`,
@@ -139,6 +142,7 @@ export const nameerCrossbodyBatch = {
     metaTitle: 'Ripstop Nylon Mini Crossbody Bag YTLJY5642 | Nameer',
     metaDescription: 'Ripstop nylon mini crossbody bag YTLJY5642 with organized pockets, adjustable strap and custom logo options for OEM/ODM buyers.',
     schemaDescription: 'A compact water-resistant ripstop nylon crossbody bag with multiple pockets, adjustable strap and custom branding options.', model: 'YTLJY5642',
+    publishedAt: '2026-07-21',
     hero: `${imageRoot('ytljy5642')}/d6011d8f-9381-4dec-9ab5-984a636306fc.webp`,
     gallery: [
       `${imageRoot('ytljy5642')}/d6011d8f-9381-4dec-9ab5-984a636306fc.webp`, `${imageRoot('ytljy5642')}/23cd6635-a7fd-437d-a22f-f44e87b89117.webp`,

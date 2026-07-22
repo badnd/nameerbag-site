@@ -1,0 +1,470 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-22",
+  "entries": [
+    {
+      "slug": "outdoor-tactical-chest-bag",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/products/outdoor-tactical-chest-bag/02.webp",
+      "crop": {
+        "left": 0,
+        "top": 210,
+        "width": 763,
+        "height": 393
+      },
+      "cardImage": "assets/products/outdoor-tactical-chest-bag/thumb-card.webp",
+      "sha256": "b4457dcb1b49b8f8fec1a9bb82a37d90ac1d1789550a1d88bb4bc850c774216a",
+      "phash": "3433c393cdc68c6c",
+      "dhash": "00e1c884eae29000",
+      "sourcePath": "public/assets/products/outdoor-tactical-chest-bag/thumb-card.webp"
+    },
+    {
+      "slug": "reflective-crossbody-phone-pouch-ytljy5626",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/products/ytljy5626/739e54be-1668-4e83-8c1e-487528077264.webp",
+      "crop": {
+        "left": 393,
+        "top": 70,
+        "width": 651,
+        "height": 561
+      },
+      "cardImage": "assets/products/reflective-crossbody-phone-pouch-ytljy5626/thumb-card.webp",
+      "sha256": "044ff492df7e3cf355f70dd3af0b482086ba3dea05e89f491cfd58f9bec5bd91",
+      "phash": "22659f8ec8b0acbc",
+      "dhash": "b29acaa6b290b0b2",
+      "sourcePath": "public/assets/products/reflective-crossbody-phone-pouch-ytljy5626/thumb-card.webp"
+    },
+    {
+      "slug": "reflective-crossbody-phone-pouch-slim-ytljy8090a",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/products/ytljy8090a/61fa6cd7-bfcd-4046-a913-a7de8432237d.webp",
+      "crop": {
+        "left": 471,
+        "top": 42,
+        "width": 561,
+        "height": 883
+      },
+      "cardImage": "assets/products/reflective-crossbody-phone-pouch-slim-ytljy8090a/thumb-card.webp",
+      "sha256": "6e487ef3fd2d005796f783d98499e697685053b71d32aa1d85008e1dc9ac77a1",
+      "phash": "1873e78413583ce7",
+      "dhash": "7169696148c8f0f0",
+      "sourcePath": "public/assets/products/reflective-crossbody-phone-pouch-slim-ytljy8090a/thumb-card.webp"
+    },
+    {
+      "slug": "lightweight-crossbody-bag-ytljy5633",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/products/ytljy5633/41ab56cc-11e2-4d43-ba30-31bef166e603.webp",
+      "crop": {
+        "left": 314,
+        "top": 280,
+        "width": 808,
+        "height": 631
+      },
+      "cardImage": "assets/products/lightweight-crossbody-bag-ytljy5633/thumb-card.webp",
+      "sha256": "c78c65fffbf5f9b286cda073c149fd429a7395acb52b8aa1d1ab46166ca85cc6",
+      "phash": "27d9f1229c65d261",
+      "dhash": "dcd4bc9c3ab6ccc5",
+      "sourcePath": "public/assets/products/lightweight-crossbody-bag-ytljy5633/thumb-card.webp"
+    },
+    {
+      "slug": "ripstop-nylon-mini-crossbody-bag-ytljy5642",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/products/ytljy5642/d6011d8f-9381-4dec-9ab5-984a636306fc.webp",
+      "crop": {
+        "left": 337,
+        "top": 14,
+        "width": 359,
+        "height": 1178
+      },
+      "cardImage": "assets/products/ripstop-nylon-mini-crossbody-bag-ytljy5642/thumb-card.webp",
+      "sha256": "309d6a0b2be6233cb216642dbb1c709c69855f76582003596d3fe0d6c9805512",
+      "phash": "1f1de0e21f1da0e2",
+      "dhash": "b0b2a0b2b2a2b2b0",
+      "sourcePath": "public/assets/products/ripstop-nylon-mini-crossbody-bag-ytljy5642/thumb-card.webp"
+    },
+    {
+      "slug": "student-backpack",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/cat-student.webp",
+      "crop": {
+        "left": 724,
+        "top": 54,
+        "width": 652,
+        "height": 836
+      },
+      "cardImage": "assets/products/student-backpack/thumb-card.webp",
+      "sha256": "7c7a21733088b2f702a492ae1f90844878e53b43e292c06feaeb1bc81d11a5df",
+      "phash": "7fe4801b857a78e0",
+      "dhash": "f0f0686868e8e8e8",
+      "sourcePath": "public/assets/products/student-backpack/thumb-card.webp"
+    },
+    {
+      "slug": "urban-essential-backpack",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/urban-essential-backpack/yqjy0014-brand-poster.jpg",
+      "crop": {
+        "left": 112,
+        "top": 280,
+        "width": 393,
+        "height": 631
+      },
+      "cardImage": "assets/products/urban-essential-backpack/thumb-card.webp",
+      "sha256": "3617ecbc4b47caf31100ae01ea1b0b507d3820b0cb28e0dca5f761758229abf0",
+      "phash": "6ac4913b0fe07acc",
+      "dhash": "b179696969696979",
+      "sourcePath": "public/assets/products/urban-essential-backpack/thumb-card.webp"
+    },
+    {
+      "slug": "yqjy2286-business-laptop-backpack",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/yqjy2286-business-laptop-backpack/gallery-1.jpg",
+      "crop": {
+        "left": 434,
+        "top": 217,
+        "width": 413,
+        "height": 796
+      },
+      "cardImage": "assets/products/yqjy2286-business-laptop-backpack/thumb-card.webp",
+      "sha256": "e600ce3f9ee313b40f584588bd91309283925510a6718d2e8a857309d5c20110",
+      "phash": "2dd9d20029df7d28",
+      "dhash": "7171797979717179",
+      "sourcePath": "public/assets/products/yqjy2286-business-laptop-backpack/thumb-card.webp"
+    },
+    {
+      "slug": "yqjy616-business-travel-backpack",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/yqjy616-business-travel-backpack/gallery-1.jpg",
+      "crop": {
+        "left": 449,
+        "top": 168,
+        "width": 449,
+        "height": 743
+      },
+      "cardImage": "assets/products/yqjy616-business-travel-backpack/thumb-card.webp",
+      "sha256": "c138c97e4d82bc46e2033db9d33241105d83af074c7aa92d46701c56e1dd8001",
+      "phash": "2dfad20028d775aa",
+      "dhash": "7969696969696169",
+      "sourcePath": "public/assets/products/yqjy616-business-travel-backpack/thumb-card.webp"
+    },
+    {
+      "slug": "yqjy2989-travel-ready-business-backpack",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/yqjy2989-travel-ready-business-backpack/gallery-1.jpg",
+      "crop": {
+        "left": 561,
+        "top": 70,
+        "width": 482,
+        "height": 701
+      },
+      "cardImage": "assets/products/yqjy2989-travel-ready-business-backpack/thumb-card.webp",
+      "sha256": "c920b65ea30ce9e817d21bcce45078a389d5f66c5f1c39653efb8e46d58c93c6",
+      "phash": "1c4ae3b5b41b196a",
+      "dhash": "f8686868d8c8c8c8",
+      "sourcePath": "public/assets/products/yqjy2989-travel-ready-business-backpack/thumb-card.webp"
+    },
+    {
+      "slug": "yqjy2977-compact-business-backpack",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/yqjy2977-compact-business-backpack/gallery-1.jpg",
+      "crop": {
+        "left": 449,
+        "top": 168,
+        "width": 426,
+        "height": 701
+      },
+      "cardImage": "assets/products/yqjy2977-compact-business-backpack/thumb-card.webp",
+      "sha256": "9a89820dedea64fa1ce7cf4d71f139b2bdaf42a303baf288fda04fc5f98d69f9",
+      "phash": "6bf594026bfd6880",
+      "dhash": "7979797979797971",
+      "sourcePath": "public/assets/products/yqjy2977-compact-business-backpack/thumb-card.webp"
+    },
+    {
+      "slug": "women-backpack",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/cat-women.webp",
+      "crop": {
+        "left": 478,
+        "top": 239,
+        "width": 710,
+        "height": 706
+      },
+      "cardImage": "assets/products/women-backpack/thumb-card.webp",
+      "sha256": "cae8ba35a3ab6861fab04ab805938caa48d93fb4c827e8b016d4f3f517d1e7a1",
+      "phash": "7f3e80c1a6d8e087",
+      "dhash": "d2d2d1c1d9d8d8c8",
+      "sourcePath": "public/assets/products/women-backpack/thumb-card.webp"
+    },
+    {
+      "slug": "mommy-bag",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/cat-mommy.webp",
+      "crop": {
+        "left": 72,
+        "top": 87,
+        "width": 724,
+        "height": 815
+      },
+      "cardImage": "assets/products/mommy-bag/thumb-card.webp",
+      "sha256": "84f7ae7738be0a9fc3831c01b9afc5936d2b227f4a6fcce266a1aff29d828a79",
+      "phash": "2f30d4e5d0d3250f",
+      "dhash": "dad8c9f0d8d8f0c4",
+      "sourcePath": "public/assets/products/mommy-bag/thumb-card.webp"
+    },
+    {
+      "slug": "waist-bag",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/waist-bag-collection-banner.webp",
+      "crop": {
+        "left": 439,
+        "top": 100,
+        "width": 690,
+        "height": 426
+      },
+      "cardImage": "assets/products/waist-bag/thumb-card.webp",
+      "sha256": "fae48757b931824bedf86334b07ad26fcc42622dbba5447284ada90ba5f9054e",
+      "phash": "2b9494d294cad8cf",
+      "dhash": "c6c7a5a1a3d2fec0",
+      "sourcePath": "public/assets/products/waist-bag/thumb-card.webp"
+    },
+    {
+      "slug": "chest-bag",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/sling-chest-bag-banner.webp",
+      "crop": {
+        "left": 443,
+        "top": 119,
+        "width": 422,
+        "height": 626
+      },
+      "cardImage": "assets/products/chest-bag/thumb-card.webp",
+      "sha256": "63f4b8b0b177542650e3ea11ab5cf6d775daddac1f595cb3beffb278ba709359",
+      "phash": "6a6a95951b796246",
+      "dhash": "d0f0a06040e868c8",
+      "sourcePath": "public/assets/products/chest-bag/thumb-card.webp"
+    },
+    {
+      "slug": "shoulder-bag",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/shoulder-bag-display.webp",
+      "crop": {
+        "left": 72,
+        "top": 272,
+        "width": 1303,
+        "height": 434
+      },
+      "cardImage": "assets/products/shoulder-bag/thumb-card.webp",
+      "sha256": "664ebee2b8c212904d2e5194e7d7ebeda01dcc045c5ca70997cd39e6ade280e3",
+      "phash": "6d906d6d6d923093",
+      "dhash": "0000aa2b691b0000",
+      "sourcePath": "public/assets/products/shoulder-bag/thumb-card.webp"
+    },
+    {
+      "slug": "mini-crossbody",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/mini-crossbody-banner.webp",
+      "crop": {
+        "left": 796,
+        "top": 87,
+        "width": 507,
+        "height": 565
+      },
+      "cardImage": "assets/products/mini-crossbody/thumb-card.webp",
+      "sha256": "715a36c6e3593ec645da907955b5305832bce42c6355833e8fd85a778fe07012",
+      "phash": "36cac924ad3474da",
+      "dhash": "bcf4fc7c7cfcc8cc",
+      "sourcePath": "public/assets/products/mini-crossbody/thumb-card.webp"
+    },
+    {
+      "slug": "running-chest-bag",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/running-chest-bag-banner.webp",
+      "crop": {
+        "left": 125,
+        "top": 439,
+        "width": 1066,
+        "height": 376
+      },
+      "cardImage": "assets/products/running-chest-bag/thumb-card.webp",
+      "sha256": "3fe74ec38d9b5431194d0594a8c3e3bc45d42379e24404f5c409614808565432",
+      "phash": "6992333e69333392",
+      "dhash": "00006f6d65350000",
+      "sourcePath": "public/assets/products/running-chest-bag/thumb-card.webp"
+    },
+    {
+      "slug": "gym-bag",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/generated/cat-gym.webp",
+      "crop": {
+        "left": 652,
+        "top": 33,
+        "width": 724,
+        "height": 869
+      },
+      "cardImage": "assets/products/gym-bag/thumb-card.webp",
+      "sha256": "646d09af57d66f276973752c08390b7e62902b447d7e4f84834b024870c18444",
+      "phash": "4de0b28fa37058ec",
+      "dhash": "d4d4e4e4e4e4e4ec",
+      "sourcePath": "public/assets/products/gym-bag/thumb-card.webp"
+    },
+    {
+      "slug": "crossbody-waist-bag-ytljy944",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/crossbody-waist-bag-ytljy944/crossbody-waist-bag-ripstop-ytljy944-1.webp",
+      "crop": {
+        "left": 359,
+        "top": 112,
+        "width": 482,
+        "height": 336
+      },
+      "cardImage": "assets/products/crossbody-waist-bag-ytljy944/thumb-card.webp",
+      "sha256": "9fcfb9b292d9f8127007920991a99d717fee4724803a35ca7a85d89b68016e59",
+      "phash": "3dc20f3e70696782",
+      "dhash": "8b9fb56d7a6e1f00",
+      "sourcePath": "public/assets/products/crossbody-waist-bag-ytljy944/thumb-card.webp"
+    },
+    {
+      "slug": "reflective-mini-crossbody-bag-ytljy8083",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/reflective-mini-crossbody-bag-ytljy8083/reflective-mini-crossbody-bag-ytljy8083-1.webp",
+      "crop": {
+        "left": 56,
+        "top": 351,
+        "width": 640,
+        "height": 603
+      },
+      "cardImage": "assets/products/reflective-mini-crossbody-bag-ytljy8083/thumb-card.webp",
+      "sha256": "13ee32157cafe0d2583a5b6e0d8dc068a43e77cbc6c6beaf6d263b23b1cbee6e",
+      "phash": "6bca8eb1b0b4a531",
+      "dhash": "8e8e9ada8a8a9a96",
+      "sourcePath": "public/assets/products/reflective-mini-crossbody-bag-ytljy8083/thumb-card.webp"
+    },
+    {
+      "slug": "urban-waist-bag-ytljy6858",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/urban-waist-bag-ytljy6858/urban-waist-bag-ytljy6858-1.webp",
+      "crop": {
+        "left": 168,
+        "top": 196,
+        "width": 527,
+        "height": 336
+      },
+      "cardImage": "assets/products/urban-waist-bag-ytljy6858/thumb-card.webp",
+      "sha256": "485e18ea6f4b831776667a1c284fcefb79f80069b9227a9085b9ac0a9ad0c889",
+      "phash": "3c3cc332c36c93e4",
+      "dhash": "09a090989292c021",
+      "sourcePath": "public/assets/products/urban-waist-bag-ytljy6858/thumb-card.webp"
+    },
+    {
+      "slug": "compact-crossbody-sling-bag-ytljy6825",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/compact-crossbody-sling-bag-ytljy6825/compact-crossbody-sling-bag-ytljy6825-1.webp",
+      "crop": {
+        "left": 393,
+        "top": 168,
+        "width": 482,
+        "height": 505
+      },
+      "cardImage": "assets/products/compact-crossbody-sling-bag-ytljy6825/thumb-card.webp",
+      "sha256": "5a3a11e6d512d66c9677073edb2629d7e2b46257f3809e2cb9e40b4578f48b78",
+      "phash": "2435dae699c9641b",
+      "dhash": "c2c2d2d8d8e8e8e0",
+      "sourcePath": "public/assets/products/compact-crossbody-sling-bag-ytljy6825/thumb-card.webp"
+    },
+    {
+      "slug": "minimalist-flap-crossbody-bag-ytljy6830",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/minimalist-flap-crossbody-bag-ytljy6830/minimalist-flap-crossbody-bag-ytljy6830-1.webp",
+      "crop": {
+        "left": 168,
+        "top": 140,
+        "width": 561,
+        "height": 631
+      },
+      "cardImage": "assets/products/minimalist-flap-crossbody-bag-ytljy6830/thumb-card.webp",
+      "sha256": "b3260f58846f521a007f27dbc637fb2bb25fbe450db64bea3beec35907afc74b",
+      "phash": "6a2595dab4984b27",
+      "dhash": "e0c0d4c0d0d0f8dc",
+      "sourcePath": "public/assets/products/minimalist-flap-crossbody-bag-ytljy6830/thumb-card.webp"
+    },
+    {
+      "slug": "custom-waist-bag-ytljy6824",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/custom-waist-bag-ytljy6824/custom-waist-bag-ytljy6824-1.webp",
+      "crop": {
+        "left": 276,
+        "top": 150,
+        "width": 915,
+        "height": 828
+      },
+      "cardImage": "assets/products/custom-waist-bag-ytljy6824/thumb-card.webp",
+      "sha256": "bf34d0da1d51a3ac8d82fb2f2380681833fa7666eeaae5a4739cb5cdbbfcbf93",
+      "phash": "1bc6f67da010843f",
+      "dhash": "e4d2f2f4b89894ac",
+      "sourcePath": "public/assets/products/custom-waist-bag-ytljy6824/thumb-card.webp"
+    },
+    {
+      "slug": "custom-sling-bag-ytljy6835",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/custom-sling-bag-ytljy6835/custom-sling-bag-ytljy6835-1.webp",
+      "crop": {
+        "left": 393,
+        "top": 224,
+        "width": 337,
+        "height": 785
+      },
+      "cardImage": "assets/products/custom-sling-bag-ytljy6835/thumb-card.webp",
+      "sha256": "17cbeee89e2119b1cd7393b4b8b4c1fde591f4786560512ff0cae241a13c3fbe",
+      "phash": "7d75828a3d55c0aa",
+      "dhash": "3072727272717160",
+      "sourcePath": "public/assets/products/custom-sling-bag-ytljy6835/thumb-card.webp"
+    },
+    {
+      "slug": "compact-crossbody-bag-ytljy5634",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/compact-crossbody-bag-ytljy5634/compact-crossbody-bag-ytljy5634-1.webp",
+      "crop": {
+        "left": 449,
+        "top": 140,
+        "width": 449,
+        "height": 673
+      },
+      "cardImage": "assets/products/compact-crossbody-bag-ytljy5634/thumb-card.webp",
+      "sha256": "f6c90d79d10d08841fc78237d6c69cb36b8ad706dc25fd0b1f63b44820d21726",
+      "phash": "3bf1c40e069c3be2",
+      "dhash": "b0f868e879e9c968",
+      "sourcePath": "public/assets/products/compact-crossbody-bag-ytljy5634/thumb-card.webp"
+    },
+    {
+      "slug": "compact-crossbody-bag-ytljy956",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/compact-crossbody-bag-ytljy956/compact-crossbody-bag-ripstop-ytljy956-1.webp",
+      "crop": {
+        "left": 456,
+        "top": 116,
+        "width": 467,
+        "height": 463
+      },
+      "cardImage": "assets/products/compact-crossbody-bag-ytljy956/thumb-card.webp",
+      "sha256": "718748cd14c01c215e7d3f391a70f792ef00343488c8f74273c25cd22b5bd252",
+      "phash": "34dbc928ca25d62e",
+      "dhash": "ece8fce4ecfcf860",
+      "sourcePath": "public/assets/products/compact-crossbody-bag-ytljy956/thumb-card.webp"
+    },
+    {
+      "slug": "vertical-flap-crossbody-bag-ytljy6840",
+      "model": "",
+      "source": "https://images.nameerbag.com/assets/images/products/vertical-flap-crossbody-bag-ytljy6840/vertical-flap-crossbody-bag-ytljy6840-1.webp",
+      "crop": {
+        "left": 489,
+        "top": 145,
+        "width": 304,
+        "height": 869
+      },
+      "cardImage": "assets/products/vertical-flap-crossbody-bag-ytljy6840/thumb-card.webp",
+      "sha256": "82b93d5ee25f56393b1b2e0d412443487dd952ad8eaff18a88da95c56eda4efb",
+      "phash": "1ae0e51f18e0e71b",
+      "dhash": "b23232303030b230",
+      "sourcePath": "public/assets/products/vertical-flap-crossbody-bag-ytljy6840/thumb-card.webp"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { siteData } from '@/data/site-data';
+import { selectFeaturedProducts } from '@/lib/featured-products';
+import { productCardImage } from '@/lib/card-images';
 import { assetPath, productPath } from '@/lib/paths';
 import { ruPhase2, ruShared } from '@/data/ru-phase1';
 
@@ -98,7 +100,7 @@ export function RuProductCard({ slug, product }) {
   return (
     <article className="card product-card">
       <Link className="card-media" href={detailsPath}>
-        <img src={assetPath(product.cardImage || product.hero)} alt={title} loading="lazy" decoding="async" />
+        <img src={assetPath(productCardImage(slug))} alt={title} loading="lazy" decoding="async" />
         <span className="logo-location-pill">Зона логотипа</span>
       </Link>
       <div className="card-body">
@@ -174,7 +176,7 @@ export function RuProductsPage({ activeCategory = '' }) {
 
 export function RuHomePhase2() {
   const hero = siteData.heroSlides?.[0];
-  const featured = siteData.homeFeaturedProducts.map((slug) => [slug, siteData.products[slug]]).filter(([, product]) => product);
+  const featured = selectFeaturedProducts(siteData.products, siteData.featuredProductBaseline);
 
   return (
     <>
