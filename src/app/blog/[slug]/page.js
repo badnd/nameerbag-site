@@ -90,6 +90,7 @@ export default async function BlogPostPage({ params }) {
             </div>
             <Link className="btn btn-light" href="/contact">Get Factory Quote</Link>
           </div></>}
+          <aside className="related-resources"><h2>MOQ planning tool</h2><Link href="/resources/moq-order-tiers-guide">Custom bag MOQ and order tiers guide</Link></aside>
         </div>
       </article>
     </>

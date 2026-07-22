@@ -27,6 +27,7 @@ export function SiteHeader() {
     ['Customization', '/custom-service'],
     ['Factory', '/factory'],
     ['About Us', '/about'],
+    ['Resources', isRu ? '/ru/resources' : '/resources'],
     ['Blog', '/blog'],
     ['Contact', '/contact']
   ];

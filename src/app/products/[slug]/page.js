@@ -175,6 +175,7 @@ export default async function ProductPage({ params }) {
           </div>
         </div>
       </section> : null}
+      <section className="section"><div className="container related-resources"><h2>Plan MOQ and order tiers</h2><Link href="/resources/moq-order-tiers-guide">Read the custom bag MOQ and order tiers guide</Link></div></section>
     </>
   );
 }
