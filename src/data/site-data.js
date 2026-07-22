@@ -1,4 +1,5 @@
 import { nameerCrossbodyBatch } from './nameer-crossbody-batch-20260719';
+import { transferredOutdoorChestBag } from './transferred-outdoor-chest-bag-20260722';
 
 export const siteData = {
   "company": {
@@ -172,6 +173,7 @@ export const siteData = {
     }
   ],
   "products": {
+    ...transferredOutdoorChestBag,
     ...nameerCrossbodyBatch,
     "student-backpack": {
       "category": "Backpacks",
