@@ -12,6 +12,15 @@ function pageKey(params) {
 
 function pageByParams(params) {
   const key = pageKey(params);
+  if (key === 'products/mini-crossbody') {
+    return {
+      route: '/ru/products/mini-crossbody',
+      enRoute: '/products/mini-crossbody',
+      title: 'Мини-сумки через плечо на заказ | OEM/ODM Nameer',
+      description: 'Мини-сумки через плечо Nameer для OEM/ODM и private label проектов. Сравните модели, материалы и варианты логотипа. MOQ от 50 шт.',
+      categorySlug: 'mini-crossbody'
+    };
+  }
   if (key.startsWith('products/')) {
     const slug = key.slice('products/'.length);
     const product = siteData.products[slug];
@@ -38,7 +47,7 @@ function pageByParams(params) {
 
 export function generateStaticParams() {
   const productRoutes = Object.entries(siteData.products).filter(([, product]) => product.ru).map(([slug]) => `products/${slug}`);
-  return [...Object.keys(ruPages), 'products', ...productRoutes].map((slug) => ({ slug: slug ? slug.split('/') : [] }));
+  return [...new Set([...Object.keys(ruPages), 'products', 'products/mini-crossbody', ...productRoutes])].map((slug) => ({ slug: slug ? slug.split('/') : [] }));
 }
 
 export async function generateMetadata({ params }) {
@@ -67,6 +76,8 @@ export default async function RussianPhaseOnePage({ params, searchParams }) {
   if (!page) notFound();
 
   if (page.product) return <RuProductPage slug={page.productSlug} product={page.product} />;
+
+  if (page.categorySlug) return <RuProductsPage activeCategory={page.categorySlug} />;
 
   if (key === 'products') {
     const resolvedSearchParams = await searchParams;

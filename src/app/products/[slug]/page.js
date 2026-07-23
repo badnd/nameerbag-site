@@ -4,6 +4,7 @@ import { siteData } from '@/data/site-data';
 import { PlainEmail } from '@/components/PlainEmail';
 import { JsonLd } from '@/components/JsonLd';
 import { ProductGallery } from '@/components/ProductGallery';
+import { ProductCard } from '@/components/ProductCard';
 import { InquiryForm } from '@/components/InquiryForm';
 import { PlainEmailLink } from '@/components/PlainEmail';
 import { assetPath, assetUrl, productPath, productSchema, siteUrl, whatsappUrl } from '@/lib/paths';
@@ -16,13 +17,14 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const product = siteData.products[slug];
   if (!product) return {};
+  const hasRussianAlternate = Boolean(product.ru) || slug === 'mini-crossbody';
 
   return {
     title: product.metaTitle ?? `${product.title} | ${product.model}`,
     description: product.metaDescription ?? `${product.intro} OEM/ODM custom bag manufacturer with low MOQ, logo options and factory quotation support.`,
     alternates: {
       canonical: productPath(slug),
-      ...(product.ru ? { languages: { en: `${siteUrl}${productPath(slug)}`, ru: `${siteUrl}/ru/products/${slug}`, 'x-default': `${siteUrl}${productPath(slug)}` } } : {})
+      ...(hasRussianAlternate ? { languages: { en: `${siteUrl}${productPath(slug)}`, ru: `${siteUrl}/ru/products/${slug}`, 'x-default': `${siteUrl}${productPath(slug)}` } } : {})
     },
     openGraph: {
       title: product.metaTitle ?? product.title,
@@ -43,6 +45,9 @@ export default async function ProductPage({ params }) {
   const { slug } = await params;
   const product = siteData.products[slug];
   if (!product) notFound();
+  const categoryProducts = slug === 'mini-crossbody'
+    ? Object.entries(siteData.products).filter(([, item]) => item.categorySlug === 'mini-crossbody')
+    : [];
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -91,6 +96,26 @@ export default async function ProductPage({ params }) {
           </aside>
         </div>
       </section>
+
+      {categoryProducts.length ? (
+        <section className="section bg-soft">
+          <div className="container">
+            <div className="section-head">
+              <div>
+                <span className="badge">Mini Crossbody Bags</span>
+                <h2>Mini crossbody bag models</h2>
+                <p>Compare current Mini Crossbody Bags models for OEM/ODM, private label and wholesale enquiries.</p>
+              </div>
+              <Link className="btn btn-secondary" href="/contact?product=Mini%20Crossbody%20Bags">Request a Quote</Link>
+            </div>
+            <div className="grid grid-3">
+              {categoryProducts.map(([productSlug, item]) => (
+                <ProductCard key={productSlug} slug={productSlug} product={item} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section">
         <div className="container">
