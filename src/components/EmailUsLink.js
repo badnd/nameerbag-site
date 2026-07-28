@@ -28,11 +28,7 @@ export function EmailUsLink({ email, subject, label = 'Email Us', className = ''
   const handleClick = () => {
     copyEmail();
     window.clearTimeout(timer.current);
-    timer.current = window.setTimeout(() => {
-      if (document.visibilityState === 'visible' && document.hasFocus()) {
-        setShowFallback(true);
-      }
-    }, 900);
+    timer.current = window.setTimeout(() => setShowFallback(true), 900);
   };
 
   return <span className="email-fallback-wrap"><a className={className} href={href} onClick={handleClick}>{label}</a>{showFallback && <span className="email-fallback" role="status">{copied ? 'Email copied to clipboard' : `Email: ${email}`} <button type="button" onClick={copyEmail}>Copy email</button></span>}</span>;
