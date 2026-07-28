@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { siteData } from '@/data/site-data';
 import { assetPath, whatsappUrl } from '@/lib/paths';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
-import { PlainEmail, PlainEmailLink } from '@/components/PlainEmail';
+import { PlainEmail } from '@/components/PlainEmail';
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -65,7 +65,7 @@ export function SiteHeader() {
           </ul>
           <div className="nav-actions">
             <LanguageSwitcher />
-            <PlainEmailLink email={siteData.company.email} label="Email Us" className="btn btn-secondary" />
+            <Link className="btn btn-secondary" href="/contact">Email Us</Link>
             <a className="btn btn-primary" href={whatsappUrl(siteData)} target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>

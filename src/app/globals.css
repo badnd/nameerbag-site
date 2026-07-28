@@ -380,6 +380,7 @@ body.lightbox-open{overflow:hidden}
 .hero-mockup { display: grid; gap: 4px; max-width: 720px; padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(0,0,0,.34); }
 .hero-mockup strong, .hero-mockup span, .hero-footnote { color: #fff; }
 .hero-footnote { font-size: .78rem; opacity: .86; max-width: 720px; }
+@media (min-width:768px){.hero-grid{grid-template-columns:minmax(0,780px) 1fr}.hero-copy{max-width:780px}.hero-copy p{max-width:780px}}
 .card-facts { display: grid; gap: 5px; margin: 14px 0; font-size: .84rem; color: var(--text); }
 .export-markets .market-list { font-weight: 700; line-height: 1.8; }
 .story-layout { display: grid; grid-template-columns: minmax(220px,.7fr) minmax(0,1.3fr); gap: 48px; align-items: start; }
