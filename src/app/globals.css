@@ -52,6 +52,7 @@ button,input,textarea,select{font:inherit}
 .nav-links a{font-weight:600;color:#243042}
 .nav-links a:hover,.nav-links a.active{color:var(--primary)}
 .nav-actions{display:flex;align-items:center;gap:12px}
+.inquiry-cta-pair{display:flex;align-items:center;gap:8px}
 .language-switcher{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:.82rem;color:var(--muted)}
 .language-switcher a{color:var(--muted)}
 .language-switcher a.active{color:var(--primary)}
