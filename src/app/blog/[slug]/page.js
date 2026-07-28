@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog-posts';
+import { ruBlogPosts } from '@/data/ru-blog-posts';
 import { JsonLd } from '@/components/JsonLd';
 import { RichBlogContent } from '@/components/RichBlogContent';
 import { assetPath, assetUrl, siteUrl } from '@/lib/paths';
@@ -13,11 +14,17 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) return {};
+  const hasRussian = ruBlogPosts.some((item) => item.slug === slug);
+  const enUrl = `${siteUrl}/blog/${post.slug}`;
+  const ruUrl = `${siteUrl}/ru/blog/${post.slug}`;
   return {
     title: post.metaTitle ? { absolute: post.metaTitle } : `${post.title} | Blog`,
     description: post.description,
     keywords: post.keywords,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: {
+      canonical: enUrl,
+      languages: hasRussian ? { en: enUrl, ru: ruUrl, 'x-default': enUrl } : undefined
+    },
     openGraph: {
       title: post.title,
       description: post.description,

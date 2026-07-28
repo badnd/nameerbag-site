@@ -21,6 +21,11 @@ export function SiteHeader() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('mobile-nav-open', open);
+    return () => document.body.classList.remove('mobile-nav-open');
+  }, [open]);
+
   const links = [
     ['Home', '/'],
     ['Products', isRu ? '/ru/products' : '/products'],

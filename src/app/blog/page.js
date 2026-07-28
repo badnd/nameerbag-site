@@ -6,7 +6,14 @@ import { blogCardImage } from '@/lib/card-images';
 export const metadata = {
   title: 'Custom Bag Buying Guides',
   description: 'Custom bag sourcing guides for importers and wholesale buyers, including MOQ, logo methods, backpack features and OEM/ODM planning.',
-  alternates: { canonical: '/blog' }
+  alternates: {
+    canonical: 'https://www.nameerbag.com/blog',
+    languages: {
+      en: 'https://www.nameerbag.com/blog',
+      ru: 'https://www.nameerbag.com/ru/blog',
+      'x-default': 'https://www.nameerbag.com/blog'
+    }
+  }
 };
 
 export default function BlogPage() {
