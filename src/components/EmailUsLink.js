@@ -25,10 +25,20 @@ export function EmailUsLink({ email, subject, label = 'Email Us', className = ''
     }
   };
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
     copyEmail();
+    setShowFallback(true);
     window.clearTimeout(timer.current);
-    timer.current = window.setTimeout(() => setShowFallback(true), 900);
+    timer.current = window.setTimeout(() => {
+      const frame = document.createElement('iframe');
+      frame.setAttribute('aria-hidden', 'true');
+      frame.tabIndex = -1;
+      frame.style.display = 'none';
+      frame.src = href;
+      document.body.appendChild(frame);
+      window.setTimeout(() => frame.remove(), 1500);
+    }, 0);
   };
 
   return <span className="email-fallback-wrap"><a className={className} href={href} onClick={handleClick}>{label}</a>{showFallback && <span className="email-fallback" role="status">{copied ? 'Email copied to clipboard' : `Email: ${email}`} <button type="button" onClick={copyEmail}>Copy email</button></span>}</span>;
