@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { siteData } from '@/data/site-data';
 import { PlainEmail } from '@/components/PlainEmail';
+import { EmailUsLink } from '@/components/EmailUsLink';
 import { JsonLd } from '@/components/JsonLd';
 import { ProductGallery } from '@/components/ProductGallery';
 import { ProductCard } from '@/components/ProductCard';
@@ -86,7 +87,7 @@ export default async function ProductPage({ params }) {
             <div className="hero-cta">
               <a className="btn btn-primary" href={whatsappUrl(siteData, product)} target="_blank" rel="noopener">WhatsApp Quote</a>
               <Link className="btn btn-primary" href={`/contact?product=${encodeURIComponent(product.model)}`}>Send Request</Link>
-              <a className="btn btn-secondary" href={`mailto:${siteData.company.email}?subject=${encodeURIComponent(`nameerbag.com inquiry - ${product.model}`)}`}>Email Us</a>
+              <EmailUsLink className="btn btn-secondary" email={siteData.company.email} subject={`nameerbag.com inquiry - ${product.model}`} />
             </div>
           </article>
           <aside className="quote-card">

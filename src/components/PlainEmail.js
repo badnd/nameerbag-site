@@ -1,5 +1,5 @@
 export function PlainEmail({ email, link = true }) {
-  const content = link ? `<a href="mailto:${email}">${email}</a>` : email;
+  const content = link ? `<a href="mailto:${email}?subject=nameerbag.com%20inquiry">${email}</a>` : email;
 
   return (
     <span
