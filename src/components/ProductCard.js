@@ -14,7 +14,7 @@ export function ProductCard({ slug, product, showLogoZone = false }) {
       </Link>
       <div className="card-body">
         <div className="chip-list">
-          {product.badges.slice(0, 3).map((badge) => (
+          {product.badges.slice(0, 2).map((badge) => (
             <span className="badge" key={badge}>{badge}</span>
           ))}
         </div>
