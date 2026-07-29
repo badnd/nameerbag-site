@@ -399,11 +399,11 @@ body.lightbox-open{overflow:hidden}
   .topbar-items span:nth-child(3),.topbar-actions{display:none}
   .hero{min-height:620px;background:#10131a}
   .hero::after{height:70px}
-  .hero-bg-montage{position:absolute;inset:0;width:auto;height:auto}
+  .hero-bg-montage{position:absolute;top:0;right:0;left:0;bottom:auto;width:auto;height:360px}
   .hero-bg-slide{object-fit:cover;object-position:center}
   .hero-bg-video{display:none}
   .hero-bg-mobile-poster{display:block}
-  .hero-scrim{inset:0;height:auto;background:rgba(12,14,20,.62)}
+  .hero-scrim{top:0;right:0;left:0;bottom:auto;height:360px;background:rgba(12,14,20,.62)}
   .hero-grid{grid-template-columns:1fr;min-height:620px;padding:66px 0 92px;background:transparent}
   .hero-copy h2{font-size:2.35rem;max-width:12ch}
   .hero-metrics{grid-template-columns:1fr}
