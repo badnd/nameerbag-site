@@ -155,7 +155,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-3">
             {canonicalBlogPosts.slice(0, 3).map((post, index) => (
-              <article className="card" key={post.slug}>
+              <article className="card blog-card" key={post.slug}>
                 <Link className="card-media" href={`/blog/${post.slug}`}><img src={assetPath(blogCardImage(index))} alt={post.title} /></Link>
                 <div className="card-body"><span className="badge">{post.category}</span><h3 className="card-title">{post.title}</h3><p className="muted">{post.description}</p></div>
                 <div className="card-actions"><Link className="btn btn-primary" href={`/blog/${post.slug}`}>Read Guide</Link></div>
