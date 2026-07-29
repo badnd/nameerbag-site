@@ -75,7 +75,7 @@ export default function AboutPage() {
             <p>In 2005, a US gift company placed an order for 300 waist bags. More than 20 years later, that buyer still returns.</p>
             <p>In 2020, one urgent project required 200 waist bags to arrive by air within 15 days. That was an exceptional event, not our normal production promise. Standard timing remains 7-15 days for samples and 15-30 days for bulk production after approval.</p>
             <p>Over time, the buyer introduced outdoor clubs, billiards clubs and yacht clubs. Those friends introduced more friends. Today, around 15 buyers within that club circle source light-customized and fully printed bags for repeat markets in the USA, Canada, Mexico, UK, Peru, Japan and Singapore.</p>
-            <div className="story-actions"><Link className="btn btn-primary" href="/contact">Discuss Your Bag Program</Link><a className="btn btn-secondary" href="https://wa.me/8615102249548">WhatsApp Anna</a></div>
+            <div className="story-actions"><Link className="btn btn-primary" href="/contact">Discuss Your Bag Program</Link><a className="btn btn-secondary" href="https://wa.me/8615102249548?text=Hi%2C%20I%20am%20contacting%20you%20from%20nameerbag.com.%20I%20would%20like%20to%20discuss%20a%20custom%20bag%20project.%20Please%20send%20MOQ%20tiers%2C%20sample%20cost%20and%20lead%20time.%20-%20Anna%20Wei%2C%20Sales">WhatsApp Anna</a></div>
           </div>
         </div>
       </section>
