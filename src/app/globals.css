@@ -401,8 +401,10 @@ body.lightbox-open{overflow:hidden}
   .hero::after{height:70px}
   .hero-bg-montage{position:absolute;top:0;right:0;left:0;bottom:auto;width:auto;height:360px}
   .hero-bg-slide{object-fit:cover;object-position:center}
-  .hero-bg-video{display:none}
-  .hero-bg-mobile-poster{display:block}
+  /* Keep the real factory video sequence on mobile. Reusing one still poster made
+     the first three slides appear identical even though desktop was cycling media. */
+  .hero-bg-video{display:block}
+  .hero-bg-mobile-poster{display:none}
   .hero-scrim{top:0;right:0;left:0;bottom:auto;height:360px;background:rgba(12,14,20,.62)}
   .hero-grid{grid-template-columns:1fr;min-height:620px;padding:66px 0 92px;background:transparent}
   .hero-copy h2{font-size:2.35rem;max-width:12ch}
