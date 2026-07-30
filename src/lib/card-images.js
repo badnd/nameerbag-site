@@ -16,4 +16,9 @@ const productCardOverrides = {
   'ripstop-nylon-mini-crossbody-bag-ytljy5642': 'assets/products/ytljy5642/23cd6635-a7fd-437d-a22f-f44e87b89117.webp'
 };
 export const productCardImage = (slug) => productCardOverrides[slug] ?? `assets/products/${slug}/thumb-card.webp`;
+// These replacement images sit among the first visible cards in the Mini
+// Crossbody listing. Loading them eagerly avoids a browser lazy-load gap that
+// left the card media area blank on mobile while preserving lazy loading for
+// the rest of the catalogue.
+export const shouldEagerLoadProductCard = (slug) => Object.hasOwn(productCardOverrides, slug);
 export const blogCardImage = (index) => productCardImage(cardProductSlugs[index % cardProductSlugs.length]);

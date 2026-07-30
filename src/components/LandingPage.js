@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { JsonLd } from '@/components/JsonLd';
 import { siteData } from '@/data/site-data';
 import { assetPath, productPath, siteUrl } from '@/lib/paths';
-import { productCardImage } from '@/lib/card-images';
+import { productCardImage, shouldEagerLoadProductCard } from '@/lib/card-images';
 
 function serviceSchema(page) {
   const url = `${siteUrl}/${page.slug}`;
@@ -63,7 +63,13 @@ function ProductCard({ slug }) {
   return (
     <article className="card product-card">
       <Link className="card-media" href={productPath(slug)}>
-        <img src={assetPath(productCardImage(slug))} alt={product.title} loading="lazy" decoding="async" />
+        <img
+          src={assetPath(productCardImage(slug))}
+          alt={product.title}
+          loading={shouldEagerLoadProductCard(slug) ? 'eager' : 'lazy'}
+          fetchPriority={shouldEagerLoadProductCard(slug) ? 'high' : 'auto'}
+          decoding="async"
+        />
       </Link>
       <div className="card-body">
         <div className="chip-list">{(product.badges || []).slice(0, 3).map((badge) => <span className="badge" key={badge}>{badge}</span>)}</div>
