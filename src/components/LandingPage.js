@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { JsonLd } from '@/components/JsonLd';
 import { siteData } from '@/data/site-data';
 import { assetPath, productPath, siteUrl } from '@/lib/paths';
-import { productCardImage, shouldEagerLoadProductCard } from '@/lib/card-images';
+import { productCardImage } from '@/lib/card-images';
 
 function serviceSchema(page) {
   const url = `${siteUrl}/${page.slug}`;
@@ -66,8 +66,7 @@ function ProductCard({ slug }) {
         <img
           src={assetPath(productCardImage(slug))}
           alt={product.title}
-          loading={shouldEagerLoadProductCard(slug) ? 'eager' : 'lazy'}
-          fetchPriority={shouldEagerLoadProductCard(slug) ? 'high' : 'auto'}
+          loading="lazy"
           decoding="async"
         />
       </Link>

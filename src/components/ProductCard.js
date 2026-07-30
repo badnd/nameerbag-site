@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { assetPath, productPath, whatsappUrl } from '@/lib/paths';
 import { siteData } from '@/data/site-data';
-import { productCardImage, shouldEagerLoadProductCard } from '@/lib/card-images';
+import { productCardImage } from '@/lib/card-images';
 
 export function ProductCard({ slug, product, showLogoZone = false }) {
   const process = (product.specs || []).find(([name]) => /logo|print|label/i.test(name));
@@ -12,8 +12,7 @@ export function ProductCard({ slug, product, showLogoZone = false }) {
         <img
           src={assetPath(productCardImage(slug))}
           alt={product.title}
-          loading={shouldEagerLoadProductCard(slug) ? 'eager' : 'lazy'}
-          fetchPriority={shouldEagerLoadProductCard(slug) ? 'high' : 'auto'}
+          loading="lazy"
           decoding="async"
         />
         {showLogoZone ? <span className="logo-location-pill">Custom Logo Zone</span> : null}

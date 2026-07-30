@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { assetPath } from '@/lib/paths';
 
@@ -18,6 +18,7 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
   const validSlides = useMemo(() => slides.filter(Boolean), [slides]);
   const [active, setActive] = useState(0);
   const [copyActive, setCopyActive] = useState(0);
+  const touchStartX = useRef(null);
   const current = validSlides[copyActive] || validSlides[active] || validSlides[0];
 
   useEffect(() => {
@@ -43,12 +44,29 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
     setActive((nextIndex + validSlides.length) % validSlides.length);
   };
 
+  const handlePointerDown = (event) => {
+    if (event.pointerType !== 'mouse') touchStartX.current = event.clientX;
+  };
+
+  const handlePointerUp = (event) => {
+    if (touchStartX.current === null) return;
+    const distance = event.clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(distance) < 42) return;
+    goTo(active + (distance < 0 ? 1 : -1));
+  };
+
   const primaryHref = normalizeSlideHref(current.link);
   const secondaryHref = primaryHref === '/custom-service' ? '/products' : '/custom-service';
   const secondaryLabel = primaryHref === '/custom-service' ? 'Browse Products' : 'View Custom Service';
 
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={() => { touchStartX.current = null; }}
+    >
       <div className="hero-bg-montage" aria-hidden="true">
         {validSlides.map((slide, index) => {
           const isActive = index === active;
@@ -57,6 +75,7 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
             <Fragment key={`${slide.title}-video`}>
               <img
                 className={`${mediaClassName} hero-bg-mobile-poster`}
+                data-hero-slide={index}
                 src={assetPath(slide.image)}
                 alt=""
                 loading={index === 0 ? 'eager' : 'lazy'}
@@ -64,6 +83,7 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
               />
               <video
                 className={`${mediaClassName} hero-bg-video`}
+                data-hero-slide={index}
                 src={assetPath(slide.video)}
                 autoPlay
                 muted
@@ -76,6 +96,7 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
           ) : (
             <img
               className={mediaClassName}
+              data-hero-slide={index}
               src={assetPath(slide.image)}
               alt=""
               loading={index === 0 ? 'eager' : 'lazy'}

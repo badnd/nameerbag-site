@@ -377,20 +377,20 @@ body.lightbox-open{overflow:hidden}
   .blog-card .card-actions{padding:0 20px 20px;gap:8px}
   @media(max-width:560px){.product-card .card-media,.category-card .card-media,.category-mini-media{min-height:300px}.product-card .card-media img,.category-card .card-media img,.category-mini img{height:300px}.blog-card .card-media{min-height:300px}.blog-card .card-media img{height:300px}}
 
-.hero{position:relative;width:100%;min-height:640px;overflow:hidden;background:#10131a}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff);z-index:4;pointer-events:none}
+.hero{position:relative;width:100%;min-height:640px;overflow:hidden;background:#10131a;touch-action:pan-y}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff);z-index:2;pointer-events:none}
 .hero-bg-montage{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero-bg-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0;transform:scale(1);transition:opacity 1.2s ease-in-out,transform 7s ease;will-change:opacity,transform}
+.hero-bg-slide{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0;transform:scale(1);transition:opacity 1.2s ease-in-out,transform 7s ease;will-change:opacity,transform}
 .hero-bg-slide.active{opacity:1;transform:scale(1.04)}
 .hero-bg-mobile-poster{display:none}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:rgba(12,14,20,.58);pointer-events:none}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,620px) 1fr;align-items:center;min-height:640px;padding:90px 0 104px}
+.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:minmax(0,620px) 1fr;align-items:center;min-height:640px;padding:90px 0 104px}
 .hero-copy{max-width:620px}
 .hero-copy h2{color:#fff;max-width:13ch}
 .hero-copy p{color:#edf3fb;text-shadow:0 1px 18px rgba(0,0,0,.28)}
 .hero-metrics div{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);box-shadow:none;backdrop-filter:blur(14px)}
 .hero-metrics strong{color:#fff}.hero-metrics span{color:#d8e5f8}
-.hero-media{position:absolute;right:44px;bottom:34px;z-index:5;display:flex;justify-content:flex-end;pointer-events:none}
+.hero-media{position:absolute;right:44px;bottom:34px;z-index:4;display:flex;justify-content:flex-end;pointer-events:none}
 .hero-dots{display:flex;gap:10px;margin:0;pointer-events:auto}.hero-dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.46);border:1px solid rgba(255,255,255,.38);padding:0}.hero-dot.active{background:#fff;transform:none}
 @media(max-width:767px){
   .topbar{font-size:.76rem}
@@ -401,10 +401,10 @@ body.lightbox-open{overflow:hidden}
   .hero::after{height:70px}
   .hero-bg-montage{position:absolute;top:0;right:0;left:0;bottom:auto;width:auto;height:360px}
   .hero-bg-slide{object-fit:cover;object-position:center}
-  /* Keep the real factory video sequence on mobile. Reusing one still poster made
-     the first three slides appear identical even though desktop was cycling media. */
-  .hero-bg-video{display:block}
-  .hero-bg-mobile-poster{display:none}
+  /* Mobile uses one poster per slide. Desktop video layers never enter the
+     mobile paint stack, so the copy cannot be covered by delayed video frames. */
+  .hero-bg-video{display:none}
+  .hero-bg-mobile-poster{display:block}
   .hero-scrim{top:0;right:0;left:0;bottom:auto;height:360px;background:rgba(12,14,20,.62)}
   .hero-grid{grid-template-columns:1fr;min-height:620px;padding:66px 0 92px;background:transparent}
   .hero-copy h2{font-size:2.35rem;max-width:12ch}
