@@ -74,6 +74,7 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
             <div
               className={`hero-slide-wrapper ${isActive ? 'active' : ''}`}
               data-hero-slide={index}
+              style={{ '--hero-mobile-backdrop': `url("${assetPath(slide.image)}")` }}
               aria-hidden={isActive ? undefined : 'true'}
               key={slide.title}
             >
