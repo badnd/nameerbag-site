@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { assetPath } from '@/lib/paths';
 
@@ -70,20 +70,24 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
       <div className="hero-bg-montage" aria-hidden="true">
         {validSlides.map((slide, index) => {
           const isActive = index === active;
-          const mediaClassName = `hero-bg-slide ${isActive ? 'active' : ''}`;
-          return slide.video ? (
-            <Fragment key={`${slide.title}-video`}>
+          return (
+            <div
+              className={`hero-slide-wrapper ${isActive ? 'active' : ''}`}
+              data-hero-slide={index}
+              aria-hidden={isActive ? undefined : 'true'}
+              key={slide.title}
+            >
+              {slide.video ? (
+                <>
               <img
-                className={`${mediaClassName} hero-bg-mobile-poster`}
-                data-hero-slide={index}
+                    className="hero-bg-mobile-poster"
                 src={assetPath(slide.image)}
                 alt=""
                 loading={index === 0 ? 'eager' : 'lazy'}
                 decoding="async"
               />
               <video
-                className={`${mediaClassName} hero-bg-video`}
-                data-hero-slide={index}
+                    className="hero-bg-video"
                 src={assetPath(slide.video)}
                 autoPlay
                 muted
@@ -92,17 +96,17 @@ export function HeroCarousel({ slides, proofLine, positioningLine, mockupText, f
                 preload="metadata"
                 poster={assetPath(slide.image)}
               />
-            </Fragment>
-          ) : (
-            <img
-              className={mediaClassName}
-              data-hero-slide={index}
-              src={assetPath(slide.image)}
-              alt=""
-              loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              key={`${slide.title}-image`}
-            />
+                </>
+              ) : (
+                <img
+                  className="hero-bg-image"
+                  src={assetPath(slide.image)}
+                  alt=""
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                />
+              )}
+            </div>
           );
         })}
       </div>
