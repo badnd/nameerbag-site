@@ -42,6 +42,7 @@ export function SiteHeader() {
     <>
       <div className="topbar">
         <div className="container">
+          <div className="topbar-mobile-promise">OEM/ODM Custom Bags · Low MOQ · Fast Response</div>
           <div className="topbar-items">
             <span>Email: <PlainEmail email={siteData.company.email} /></span>
             <span>WhatsApp: {siteData.company.whatsapp}</span>

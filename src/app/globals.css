@@ -459,3 +459,14 @@ main > section:nth-of-type(n+2){content-visibility:auto;contain-intrinsic-size:a
 /* Buyer resource pages */
 .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.resource-card{border:1px solid #dbe2ea;padding:26px;background:#fff;border-radius:6px}.resource-card h2{font-size:1.25rem;margin-top:0}.resource-article{max-width:900px}.resource-article h2{margin-top:42px}.resource-article h3{margin-top:30px}.resource-article p,.resource-article li{line-height:1.75}.resource-table-wrap{overflow-x:auto;margin:22px 0}.resource-table-wrap table{width:100%;border-collapse:collapse}.resource-table-wrap th,.resource-table-wrap td{padding:13px;text-align:left;border:1px solid #dbe2ea;vertical-align:top}.resource-table-wrap th{background:#f3f6f9}.resource-article blockquote{margin:24px 0;padding:18px 22px;border-left:4px solid #175cd3;background:#eef4ff}.related-resources{margin-top:44px;padding-top:26px;border-top:1px solid #dbe2ea}.related-resources a{display:inline-block;margin:0 16px 10px 0;font-weight:700}@media(max-width:720px){.resource-grid{grid-template-columns:1fr}.resource-card{padding:20px}.resource-table-wrap th,.resource-table-wrap td{min-width:150px;padding:10px}}
 @media(max-width:860px){body.mobile-nav-open .contact-ball{visibility:hidden;pointer-events:none}}
+
+/* Multisite mobile topbar standard: keep all buyer contact details visible. */
+.topbar-mobile-promise{display:none}
+@media(max-width:560px){
+  .topbar{background:rgb(8,63,151);font-size:11.5px}
+  .topbar .container{display:grid;grid-template-columns:minmax(0,1fr);gap:1px;align-items:start;justify-items:stretch;min-height:0;padding:6px 0;overflow:visible;white-space:normal}
+  .topbar-mobile-promise{display:block;order:0;font-size:10.5px;font-weight:800;line-height:1.35;white-space:nowrap}
+  .topbar-items{display:grid;order:1;gap:1px;align-items:start;flex:initial;white-space:normal}
+  .topbar-items>span{display:block!important;font-size:11.5px;line-height:1.35;opacity:1}
+  .topbar-actions{display:none!important}
+}
